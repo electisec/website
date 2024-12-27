@@ -15,7 +15,7 @@ function HeroSection() {
     <div className="h-full relative sm:my-16 lg:ml-40">
       <Lottie animationData={logo} className="md:hidden lg:hidden" />
       <div className="grid grid-cols-5 md:mx-6 sm:flex sm:flex-col sm:mx-6 sm:text-center">
-        <div className="col-span-2 flex flex-col lg:py-4 lg:my-40 md:my-32">
+        <div className="col-span-2 flex flex-col lg:py-4 lg:my-24 md:my-32">
           <h1 className="lg:leading-normal lg:text-7xl md:text-4xl sm:text-4xl font-bold">
             <GradientWord>ZK</GradientWord> & <br />
             <GradientWord>Smart Contract</GradientWord> Security
