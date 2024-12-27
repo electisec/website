@@ -22,15 +22,15 @@ const tabs = [
 export default function Summary() {
   const [currentTab, setCurrentTab] = useState("Smart Contract Fellowship");
 
-  useEffect(() => {
-    if (window.location.href.split("#")[1] === "zero-knowledge") {
-      setCurrentTab("Zero Knowledge Fellowship");
-    } else if (window.location.href.split("#")[1] === "guest-auditor") {
-      setCurrentTab("Guest Auditor Program");
-    } else if (window.location.href.split("#")[1] === "smart-contract") {
-      setCurrentTab("Smart Contract Fellowship");
-    }
-  }, [window.location.href]);
+  // useEffect(() => {
+  //   if (window.location.href.split("#")[1] === "zero-knowledge") {
+  //     setCurrentTab("Zero Knowledge Fellowship");
+  //   } else if (window.location.href.split("#")[1] === "guest-auditor") {
+  //     setCurrentTab("Guest Auditor Program");
+  //   } else if (window.location.href.split("#")[1] === "smart-contract") {
+  //     setCurrentTab("Smart Contract Fellowship");
+  //   }
+  // }, [window.location.href]);
 
   return (
     <div className="my-16">

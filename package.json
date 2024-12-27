@@ -3,10 +3,14 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
-    "dev": "next dev --turbopack",
+    "dev": "next dev",
     "build": "next build",
+    "export": "next export",
     "start": "next start",
     "lint": "next lint"
+  },
+  "engines": {
+    "node": "20.9.0"
   },
   "dependencies": {
     "@ant-design/icons": "^4.7.0",

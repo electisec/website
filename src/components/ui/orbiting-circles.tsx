@@ -1,3 +1,7 @@
+
+"use client";
+
+
 import { cn } from "@/lib/utils";
 
 export interface OrbitingCirclesProps {

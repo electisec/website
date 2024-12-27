@@ -19,7 +19,6 @@ const eslintConfig = [
         "@next/next/no-img-element": "off",
       },
     })
-    .extends("next/core-web-vitals", "next/typescript"),
 ];
 
 export default eslintConfig;
