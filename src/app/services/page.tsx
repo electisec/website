@@ -6,6 +6,10 @@ import { Navbar, MobileNavbar } from "@/modules/Navbar";
 import Sections from "@/modules/Services";
 import Footer from "@/modules/Footer";
 
+export function generateStaticParams() {
+  return [{ slug: 'services' }]
+}
+
 export default function ServicesPage() {
   const [menuOpen, setMenuOpen] = useState(false);
   return (

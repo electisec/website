@@ -20,6 +20,10 @@ import {
   ZBlock2,
 } from "../../modules/Members/3-Fellows";
 
+export function generateStaticParams() {
+  return [{ slug: 'members' }]
+}
+
 export default function MembersPage() {
   const [menuOpen, setMenuOpen] = useState(false);
   return (

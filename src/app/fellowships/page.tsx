@@ -7,6 +7,10 @@ import Stats from "@/modules/Fellowships/Stats";
 import Footer from "@/modules/Footer";
 import Summary from "@/modules/Fellowships/Mid";
 
+export function generateStaticParams() {
+  return [{ slug: 'fellowships' }]
+}
+
 export default function FellowshipsPage() {
   const [menuOpen, setMenuOpen] = useState(false);
   return (
