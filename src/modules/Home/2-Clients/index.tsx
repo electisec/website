@@ -148,7 +148,7 @@ export default function ClientSection() {
     <section className="bg-white m-6">
       <div className="lg:mx-40">
         <HyperText
-          className="lg:text-5xl text-3xl font-bold sm:text-center"
+          className="lg:text-5xl text-3xl font-bold"
           text="Clients"
         />
         <EllipticalOrbitDemo />

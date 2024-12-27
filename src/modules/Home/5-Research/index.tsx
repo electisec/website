@@ -90,8 +90,8 @@ export function AnimatedListDemo({ className }: { className?: string }) {
 export default function Research() {
   return (
     <>
-      <div className="grid grid-cols-2 sm:flex sm:flex-col sm:align-center gap-4 lg:my-16 my-16 lg:mx-48 text-justify sm:text-center">
-        <div className="col-span-1 mr-10 sm:mr-0 sm:flex sm:flex-col">
+      <div className="h-full grid lg:grid-cols-2 grid-cols-1 my-16 md:my-16 sm:my-16 sm:mx-6 md:mx-6 lg:mx-48 ">
+        <div className="cols-span-1 mr-10 sm:mr-0 sm:flex sm:flex-col">
           <HyperText
             className="lg:text-5xl text-3xl font-bold sm:text-center"
             text="Research"
@@ -99,7 +99,7 @@ export default function Research() {
           <AnimatedListDemo className="mt-8 md:hidden lg:hidden" />
           <p className="text-zinc-500 mb-8 sm:text-justify">
             <br />
-            We dig, that's what we do - always.
+            We dig, that&apos;s what we do - always.
             <br />
           </p>
           <a target="_blank" href="https://blog.electisec.dev/">
@@ -108,7 +108,7 @@ export default function Research() {
             </button>
           </a>
         </div>
-        <AnimatedListDemo className="col-span-1 sm:hidden" />
+        <AnimatedListDemo className="cols-span-1 sm:hidden" />
       </div>
     </>
   );

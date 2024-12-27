@@ -3,7 +3,7 @@ import Typewriter from "typewriter-effect";
 
 function HeroSection() {
   return (
-    <div className="h-full relative sm:my-16 lg:mx-40 lg:my-32 flex flex-row justify-between">
+    <div className="h-full relative sm:my-8 lg:mx-40 lg:my-32 flex flex-row sm:text-center justify-between">
       <div className="my-8">
         <h1 className="lg:leading-normal lg:text-5xl md:text-3xl sm:text-3xl font-bold">
           <Typewriter
@@ -44,7 +44,7 @@ function HeroSection() {
           </button>
         </Link>
       </div>
-      <img src="/illustrations/hero.svg" className="h-[26rem]" />
+      <img src="/illustrations/hero.svg" className="h-[26rem] sm:hidden" />
     </div>
   );
 }

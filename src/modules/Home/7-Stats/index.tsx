@@ -14,9 +14,9 @@ export function AuditStats() {
         height={1000}
         width={1600}
       />
-      <div className="m-48 flex flex-col gap-16">
-        <div className="grid grid-cols-3 gap-2 ">
-          <div className="flex flex-col items-center justify-center cols-span-1">
+      <div className="lg:m-48 md:my-40 sm:my-16 flex flex-col gap-16">
+        <div className="grid grid-cols-3 sm:grid-cols-1 gap-2 sm:gap-8">
+          <div className="flex flex-col items-center justify-center cols-span-1 ">
             <NumberTickerDemo num={100} text="Mn +" />
             <p>TVL Secured</p>
           </div>
@@ -29,7 +29,7 @@ export function AuditStats() {
             <p>Return Customers</p>
           </div>
         </div>
-        <div className="grid grid-cols-2 gap-2">
+        <div className="grid grid-cols-2 sm:grid-cols-1 gap-2 sm:gap-8">
           <div className="flex flex-col items-center justify-center cols-span-1">
             <NumberTickerDemo num={150} text="+" />
             <p>Fellows Graduated</p>
@@ -46,7 +46,7 @@ export function AuditStats() {
 
 export function NumberTickerDemo({ num, text }: { num: number; text: string }) {
   return (
-    <p className="whitespace-pre-wrap text-6xl font-medium tracking-tighter text-black dark:text-white">
+    <p className="whitespace-pre-wrap text-6xl sm:text-2xl font-medium tracking-tighter text-black dark:text-white">
       <NumberTicker value={num} />
       {text}
     </p>

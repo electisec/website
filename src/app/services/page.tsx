@@ -4,6 +4,7 @@ import { useState } from "react";
 import { Navbar, MobileNavbar } from "@/modules/Navbar";
 
 import Sections from "@/modules/Services";
+import Footer from "@/modules/Footer";
 
 export default function ServicesPage() {
   const [menuOpen, setMenuOpen] = useState(false);
@@ -15,6 +16,7 @@ export default function ServicesPage() {
             <Navbar menuOpen={menuOpen} setMenuOpen={setMenuOpen} />
           )}
       <Sections />
+      <Footer />
     </div>
   );
 }

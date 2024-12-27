@@ -105,11 +105,6 @@ export function MobileNavbar({ setMenuOpen }: MobileProps) {
             Reports
           </button>
         </a>
-        <a href="https://proxies.electisec.dev/">
-          <button className="p-6 rounded-xl w-full text-xl text-zinc-400 hover:text-emeraldlight hover:bg-darkgreen hover:bg-opacity-5 duration-700">
-            Proxies Research
-          </button>
-        </a>
         <a href="https://blog.electisec.dev/">
           <button className="p-6 rounded-xl w-full text-xl text-zinc-400 hover:text-emeraldlight hover:bg-darkgreen hover:bg-opacity-5 duration-700">
             Blog
@@ -126,25 +121,14 @@ export function MobileNavbar({ setMenuOpen }: MobileProps) {
             Fellowships
           </button>
         </Link>
-
-        <Link href={"/zBlock1"}>
+        <Link href={"/services"}>
           <button
             onClick={() => {
               setMenuOpen(false);
             }}
-            className="p-6 rounded-xl w-full text-xl text-zinc-400 hover:text-emeraldlight hover:bg-darkgreen hover:bg-opacity-5 duration-700"
+            className="p-6 rounded-xl w-full text-xl text-zinc-400 hover:text-emeraldlight hover:bg-white hover:bg-opacity-5 duration-700"
           >
-            zBlock1
-          </button>
-        </Link>
-        <Link href={"/zBlock2"}>
-          <button
-            onClick={() => {
-              setMenuOpen(false);
-            }}
-            className="p-6 rounded-xl w-full text-xl text-zinc-400 hover:text-emeraldlight hover:bg-darkgreen hover:bg-opacity-5 duration-700"
-          >
-            zBlock2
+            Services
           </button>
         </Link>
 

@@ -58,7 +58,7 @@ export default function Services() {
         className="lg:text-5xl text-3xl font-bold mb-16 sm:text-center"
         text="Auditing Services"
       />
-      <BentoGrid>
+      <BentoGrid className="grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
         {features.map((feature, idx) => (
           <BentoCard key={idx} {...feature} />
         ))}

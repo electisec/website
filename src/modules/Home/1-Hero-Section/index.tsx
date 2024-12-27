@@ -23,13 +23,11 @@ function HeroSection() {
           <h2 className="text-left sm:text-center my-4 text-zinc-500">
             Audits - Research - Training - Consulting
           </h2>
-          <div className="flex flex-row gap-2">
-            <Link href={"/services"}>
-              <button className="px-16 py-3 rounded-xl text-md text-darkgreen text-bold bg-emeraldlight bg-opacity-25 hover:bg-opacity-5 hover:text-emeraldlight duration-700">
-                Get an Audit
-              </button>
-            </Link>
-          </div>
+          <Link href={"/services"}>
+            <button className="px-16 py-3 rounded-xl text-md text-darkgreen text-bold bg-emeraldlight bg-opacity-25 hover:bg-opacity-5 hover:text-emeraldlight duration-700">
+              Get an Audit
+            </button>
+          </Link>
         </div>
         <div className="col-span-3 my-20 sm:hidden">
           <Lottie animationData={logo} />

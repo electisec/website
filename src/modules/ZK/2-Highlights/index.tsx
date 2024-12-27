@@ -48,14 +48,14 @@ export default function Highlights() {
 
   return (
     <div className="flex flex-col">
-      <div className="flex flex-col gap-2 my-24 p-12 px-44 bg-green-100">
+      <div className="flex flex-col gap-2 lg:my-24 p-12 lg:px-44 bg-green-100">
         <h2 className="lg:text-5xl text-3xl font-bold">
           Recent Work
         </h2>
-        <div className="grid grid-cols-3 gap-2 mt-10 ">
+        <div className="grid grid-cols-3 sm:grid-cols-1 gap-2 mt-10 ">
           {work.slice(0, 3).map((w) => (
             <div
-              className="bg-white flex flex-row p-6 gap-4 rounded-lg items-center font-semibold"
+              className="cols-span-1 bg-white flex flex-row p-6 gap-4 rounded-lg items-center font-semibold"
               key={w.title}
             >
               <img src={w.avatar} className="rounded-full h-[3rem]" />
@@ -69,10 +69,10 @@ export default function Highlights() {
             </div>
           ))}
         </div>
-        <div className="grid grid-cols-3 gap-2 ">
+        <div className="grid grid-cols-3 sm:grid-cols-1 gap-2 ">
           {work.slice(3, 6).map((w) => (
             <div
-              className="bg-white flex flex-row p-6 gap-4 rounded-lg items-center font-semibold"
+              className="cols-span-1 bg-white flex flex-row p-6 gap-4 rounded-lg items-center font-semibold"
               key={w.title}
             >
               <img src={w.avatar} className="rounded-full h-[3rem]" />
@@ -87,11 +87,11 @@ export default function Highlights() {
           ))}
         </div>
       </div>
-      <div className="flex flex-col gap-2 px-44 ">
+      <div className="flex flex-col gap-2 lg:px-44 sm:my-24 p-12">
         <h2 className="lg:text-5xl text-3xl font-bold mb-10 ">
           Audits
         </h2>
-        <div className="grid grid-cols-4 gap-2 ">
+        <div className="grid grid-cols-4 sm:grid-cols-1 gap-2 ">
           {reports.slice(0, 4).map((w) => (
             <div
               className="cols-span-1 flex flex-row gap-4 p-4 items-center rounded-2xl bg-[#E8FFF8]"
@@ -101,7 +101,7 @@ export default function Highlights() {
             </div>
           ))}
         </div>
-        <div className="flex flex-row gap-4 mt-2 items-center ">
+        <div className="flex flex-row sm:flex-col gap-4 mt-2 items-center">
           <p className="text-xl font-bold leading-10 text-gray-600">
             See all audits :
           </p>
