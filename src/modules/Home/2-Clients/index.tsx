@@ -1,4 +1,4 @@
-import { useEffect, useRef } from 'react';
+import { useEffect, useRef } from "react";
 import HyperText from "@/components/ui/hyper-text";
 import {
   Tooltip,
@@ -6,6 +6,7 @@ import {
   TooltipProvider,
   TooltipTrigger,
 } from "@/components/ui/tooltip";
+import Image from "next/image";
 
 const clients = [
   { name: "Exit10", logo: "exit10.png", website: "https://exit10.com/" },
@@ -91,51 +92,51 @@ interface EllipticalOrbitProps {
   className?: string;
 }
 
-const EllipticalOrbit: React.FC<EllipticalOrbitProps> = ({ 
-  children, 
+const EllipticalOrbit: React.FC<EllipticalOrbitProps> = ({
+  children,
   radiusX,
   radiusY,
   duration = 60,
   delay = 0,
-  className = ""
+  className = "",
 }) => {
   const elementRef = useRef<HTMLDivElement>(null);
   const animationRef = useRef<number | null>(null);
-  
+
   useEffect(() => {
     const element = elementRef.current;
     if (!element) return;
-    
+
     let startTime: number | null = null;
-    
+
     const animate = (timestamp: number) => {
       if (!startTime) startTime = timestamp;
       const elapsed = timestamp - startTime;
       const progress = ((elapsed / (duration * 1000)) % 1) * 2 * Math.PI;
-      const angle = progress + (delay * Math.PI / 180);
-      
+      const angle = progress + (delay * Math.PI) / 180;
+
       const x = Math.cos(angle) * radiusX;
       const y = Math.sin(angle) * radiusY;
-      
+
       element.style.transform = `translate(calc(-50% + ${x}px), calc(-50% + ${y}px))`;
       animationRef.current = requestAnimationFrame(animate);
     };
-    
+
     animationRef.current = requestAnimationFrame(animate);
-    
+
     return () => {
       if (animationRef.current) {
         cancelAnimationFrame(animationRef.current);
       }
     };
   }, [radiusX, radiusY, duration, delay]);
-  
+
   return (
-    <div 
+    <div
       ref={elementRef}
       className={`absolute left-1/2 top-1/2 ${className}`}
-      style={{ 
-        willChange: 'transform',
+      style={{
+        willChange: "transform",
       }}
     >
       {children}
@@ -147,10 +148,7 @@ export default function ClientSection() {
   return (
     <section className="bg-white m-6">
       <div className="lg:mx-40">
-        <HyperText
-          className="lg:text-5xl text-3xl font-bold"
-          text="Clients"
-        />
+        <HyperText className="lg:text-5xl text-3xl font-bold" text="Clients" />
         <EllipticalOrbitDemo />
       </div>
     </section>
@@ -163,42 +161,42 @@ function EllipticalOrbitDemo() {
     {
       radiusX: 450,
       radiusY: 180,
-      items: clients.slice(0, 10),  // More logos in outer orbit
+      items: clients.slice(0, 10), // More logos in outer orbit
       duration: 45,
-      startAngle: 30
+      startAngle: 30,
     },
     {
       radiusX: 350,
       radiusY: 130,
-      items: clients.slice(10, 18),  // Middle orbit
+      items: clients.slice(10, 18), // Middle orbit
       duration: 60,
-      startAngle: 0
+      startAngle: 0,
     },
     {
       radiusX: 200,
       radiusY: 70,
-      items: clients.slice(18),  // Rest of the logos in inner orbit
+      items: clients.slice(18), // Rest of the logos in inner orbit
       duration: 70,
-      startAngle: -30
-    }
+      startAngle: -30,
+    },
   ];
 
   return (
     <div className="relative flex h-[75vh] flex-col items-center justify-center overflow-hidden rounded-lg bg-white">
       {/* Center Logo */}
       {/* <div className="absolute left-1/2 top-1/2 transform -translate-x-1/2 -translate-y-1/2 z-10">
-        <img 
+        <Image alt=""  
           src="/favicon.ico" 
           alt="Company Logo" 
           className="h-8 object-contain"  // Larger size for center logo
         />
       </div> */}
       {/* SVG Orbit Paths */}
-      <svg 
+      <svg
         className="absolute top-0 left-0 w-full h-full"
-        style={{ 
-          pointerEvents: 'none',
-          zIndex: 0 
+        style={{
+          pointerEvents: "none",
+          zIndex: 0,
         }}
       >
         {orbits.map((orbit, i) => (
@@ -218,11 +216,11 @@ function EllipticalOrbitDemo() {
       </svg>
 
       <TooltipProvider>
-        {orbits.map((orbit) => 
+        {orbits.map((orbit) =>
           orbit.items.map((client, i) => {
             const itemCount = orbit.items.length;
             const angleStep = 360 / itemCount;
-            const delay = (i * angleStep) + orbit.startAngle;
+            const delay = i * angleStep + orbit.startAngle;
 
             return (
               <Tooltip key={`tooltip-${client.name}`}>
@@ -234,15 +232,15 @@ function EllipticalOrbitDemo() {
                   className="transition-transform"
                 >
                   <TooltipTrigger asChild>
-                    <a 
-                      href={client.website} 
-                      aria-label={client.name} 
-                      target="_blank" 
+                    <a
+                      href={client.website}
+                      aria-label={client.name}
+                      target="_blank"
                       rel="noopener noreferrer"
                       className="block w-12 h-12"
                     >
-                      <img 
-                        src={`./clients/${client.logo}`} 
+                      <Image
+                        src={`./clients/${client.logo}`}
                         alt={client.name}
                         className="w-10 h-10 object-contain hover:scale-110 transition-transform"
                       />

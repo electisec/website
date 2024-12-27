@@ -1,4 +1,5 @@
 import { useEffect, useState } from "react";
+import Image from "next/image";
 
 import SmartContracts from "../SC";
 import ZK from "../ZK";
@@ -60,7 +61,7 @@ export default function Summary() {
         {currentTab === "Guest Auditor Program" && <GuestAuditor />}
       </div>
       <div className="my-16 flex flex-row gap-4 p-8 items-center rounded-2xl bg-[#E8FFF8]">
-        <img src="./icons/bulb.svg" className="h-[4rem]" />
+        <Image alt="" src="./icons/bulb.svg" className="h-[4rem]" />
         <p className="text-darkgreen text-sm">
           If you think our program is too advanced for you now, fear not, you
           can still join after going through an introductory program such as{" "}

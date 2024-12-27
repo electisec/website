@@ -1,8 +1,9 @@
+import Image from "next/image";
 
 export default function Footer() {
   return (
     <div className="h-full flex flex-col bg-gray-100 justify-center p-16 items-center relative">
-      <img src="/logo.svg" className="h-[5rem]" />
+      <Image alt="" src="/logo.svg" className="h-[5rem]" />
       <DockDemo />
       <p className="text-sm text-zinc-500 mt-10 text-center">
         Copyright © 2025 Electisec. All rights reserved.
@@ -12,12 +13,7 @@ export default function Footer() {
 }
 
 import React from "react";
-import {
-  CalendarIcon,
-  MailIcon,
-  PencilIcon,
-  BookCopyIcon,
-} from "lucide-react";
+import { CalendarIcon, MailIcon, PencilIcon, BookCopyIcon } from "lucide-react";
 
 import { cn } from "@/lib/utils";
 import { buttonVariants } from "@/components/ui/button";

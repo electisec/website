@@ -1,5 +1,5 @@
 import { core } from "../Data/core";
-
+import Image from "next/image";
 export function Template({
   title,
   members,
@@ -11,7 +11,6 @@ export function Template({
     avatar?: string;
   }[];
 }) {
-
   return (
     <div className="my-24">
       <h1 className="text-4xl mb-12 sm:text-center">{title}</h1>
@@ -22,7 +21,7 @@ export function Template({
         {members.map((person) => (
           <li key={person.name}>
             <div className="flex flex-row sm:flex-col items-center gap-x-6">
-              <img
+              <Image
                 className="h-11 w-11 sm:h-9 sm:w-9 sm:mb-2 rounded-full items-center"
                 src={person.avatar ? person.avatar : "members/resident.png"}
                 alt={person.name}

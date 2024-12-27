@@ -1,3 +1,5 @@
+import Image from "next/image";
+
 function GuestAuditor() {
   return (
     <div>
@@ -50,7 +52,7 @@ function GuestAuditor() {
           </Link> */}
         </div>
         <div className="col-span-1 justify-self-center">
-          <img src="./illustrations/fist-bump.svg" className="py-4 h-[20rem]" />
+          <Image alt="fist-bump" src="./illustrations/fist-bump.svg" className="py-4 h-[20rem]" />
         </div>
       </div>
     </div>

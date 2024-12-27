@@ -1,5 +1,6 @@
 import Link from "next/link";
 import Typewriter from "typewriter-effect";
+import Image from "next/image";
 
 function HeroSection() {
   return (
@@ -44,7 +45,11 @@ function HeroSection() {
           </button>
         </Link>
       </div>
-      <img src="/illustrations/hero.svg" className="h-[26rem] sm:hidden" />
+      <Image
+        alt=""
+        src="/illustrations/hero.svg"
+        className="h-[26rem] sm:hidden"
+      />
     </div>
   );
 }

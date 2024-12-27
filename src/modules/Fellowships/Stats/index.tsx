@@ -1,3 +1,5 @@
+import Image from "next/image";
+
 function Stats() {
   return (
     <div className="pt-16 grid grid-cols-2 sm:flex sm:flex-col gap-4">
@@ -43,7 +45,11 @@ function Stats() {
         <br /> <br />
       </div>
       <div className="col-span-1 flex flex-col">
-        <img src="./illustrations/stats-pie.svg" className="h-[30rem]" />
+        <Image
+          alt=""
+          src="./illustrations/stats-pie.svg"
+          className="h-[30rem]"
+        />
         <p className="text-zinc-300 italic text-center">
           Our stats for the first 5 Smart Contract fellowships
         </p>

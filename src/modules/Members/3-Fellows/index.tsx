@@ -6,6 +6,7 @@ import { block3 } from "../Data/block3";
 import { block4 } from "../Data/block4";
 import { block5 } from "../Data/block5";
 import { block6 } from "../Data/block6";
+import Image from "next/image";
 
 export function ZBlock1() {
   return (
@@ -93,7 +94,7 @@ export function Template({
         {fellows.map((person) => (
           <li key={person.name}>
             <div className="flex flex-row sm:flex-col items-center gap-x-6">
-              <img
+              <Image
                 className={
                   "rounded-full items-center" +
                   ` ${

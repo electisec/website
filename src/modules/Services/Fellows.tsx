@@ -1,12 +1,14 @@
 import HyperText from "@/components/ui/hyper-text";
 import Link from "next/link";
+import Image from "next/image";
 
 export default function Fellows() {
   return (
     <>
       <div className="grid grid-cols-2 sm:flex sm:flex-col gap-4 my-32 md:my-16 sm:my-16 sm:mx-6 md:mx-6 text-justify">
         <div className="col-span-1 sm:hidden">
-          <img
+          <Image
+            alt=""
             src="./illustrations/hands on shield.svg"
             className="h-[24rem] md:h-[20rem] mt-8"
           />
@@ -16,7 +18,8 @@ export default function Fellows() {
             className="lg:text-5xl text-3xl font-bold sm:text-center"
             text="Boosted Audits"
           />
-          <img
+          <Image
+            alt=""
             src="./illustrations/hands on shield.svg"
             className="h-[24rem] sm:h-[16rem] mt-8 lg:hidden md:hidden"
           />

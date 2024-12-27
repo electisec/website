@@ -1,3 +1,4 @@
+import Image from "next/image";
 
 function SmartContracts() {
   return (
@@ -84,7 +85,8 @@ function SmartContracts() {
             <span className="text-green-600 font-bold">stake some ETH</span> to
             ensure engagement and participation from all fellows.
           </p>
-          <img
+          <Image
+            alt=""
             src="./illustrations/contract-window.svg"
             className="py-4 h-[32rem]"
           />

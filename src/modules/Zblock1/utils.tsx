@@ -1,4 +1,5 @@
 import { SiGoogleslides } from "react-icons/si";
+import Image from "next/image";
 
 export const VideoSection = ({
   videoData,
@@ -13,13 +14,10 @@ export const VideoSection = ({
   return (
     <div className="flex flex-col bg-[#E8FFF8] my-6 rounded-lg ">
       {videoData.map((video) => (
-        <div
-          key={video.id}
-          className="p-4 duration-700"
-        >
+        <div key={video.id} className="p-4 duration-700">
           <div className="flex flex-row justify-between">
             <div className="flex flex-row items-center gap-4">
-              <img src="/icons/youtube.svg" className="h-[1rem]" />
+              <Image alt="" src="/icons/youtube.svg" className="h-[1rem]" />
               <h3 className="hover:underline font-bold">
                 <a
                   href={`https://www.youtube.com/watch?v=${video.id}`}
@@ -55,7 +53,7 @@ export const Notes = ({
 }) => {
   return (
     <>
-      <img src="/icons/notes.svg" className="h-[2rem]" />
+      <Image alt="" src="/icons/notes.svg" className="h-[2rem]" />
       <a
         href={notes.link}
         className="hover:underline font-bold"
@@ -75,7 +73,7 @@ export const Report = ({
 }) => {
   return (
     <>
-      <img src="/icons/report.svg" className="h-[2rem]" />
+      <Image alt="" src="/icons/report.svg" className="h-[2rem]" />
       <a
         href={report.link}
         className="hover:underline font-bold"
@@ -95,7 +93,7 @@ export const Discussion = ({
 }) => {
   return (
     <>
-      <img src="/icons/chat.svg" className="h-[2rem]" />
+      <Image alt="" src="/icons/chat.svg" className="h-[2rem]" />
       <a
         href={chat.link}
         className="hover:underline font-bold"

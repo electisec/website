@@ -1,10 +1,5 @@
 import HyperText from "@/components/ui/hyper-text";
-
-const data = [
-  { number: "100+", text: "Fellows" },
-  { number: "15+", text: "Projects secured" },
-  { number: "8", text: "Cohorts" },
-];
+import Image from "next/image";
 
 export default function DueDiligence() {
   return (
@@ -30,7 +25,8 @@ export default function DueDiligence() {
             })}
           </div> */}
 
-          <img
+          <Image
+            alt=""
             src="./illustrations/code.svg"
             className="h-[12rem] mt-8 sm:ml-0 lg:hidden md:hidden"
           />
@@ -46,7 +42,11 @@ export default function DueDiligence() {
           </a>
         </div>
         <div className="col-span-1 ml-20 sm:hidden">
-          <img src="./illustrations/code.svg" className="h-[20rem] mt-8" />
+          <Image
+            alt=""
+            src="./illustrations/code.svg"
+            className="h-[20rem] mt-8"
+          />
         </div>
       </div>
     </>

@@ -1,6 +1,6 @@
-
 import { BentoCard, BentoGrid } from "@/components/ui/bento-grid";
 import HyperText from "@/components/ui/hyper-text";
+import Image from "next/image";
 
 const features = [
   {
@@ -12,7 +12,8 @@ const features = [
     className: "",
     background: (
       <>
-        <img
+        <Image
+          alt=""
           src="./illustrations/sc.svg"
           className="h-[10rem] mx-auto transition-all ease-out hover:blur-none duration-300 ease-out [mask-image:linear-gradient(to_top,transparent_20%,#000_100%)] group-hover:scale-105"
         />
@@ -28,7 +29,8 @@ const features = [
     className: "",
     background: (
       <>
-        <img
+        <Image
+          alt=""
           src="./illustrations/rust-window.svg"
           className="h-[12rem] mx-auto transition-all ease-out hover:blur-none duration-300 ease-out [mask-image:linear-gradient(to_top,transparent_20%,#000_100%)] group-hover:scale-105"
         />
@@ -44,7 +46,8 @@ const features = [
     className: "",
     background: (
       <>
-        <img
+        <Image
+          alt=""
           src="./illustrations/fist-bump.svg"
           className="h-[8rem] mx-auto transition-all ease-out hover:blur-none duration-300 ease-out [mask-image:linear-gradient(to_top,transparent_20%,#000_100%)] group-hover:scale-105"
         />

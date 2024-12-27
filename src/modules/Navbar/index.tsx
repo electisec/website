@@ -1,3 +1,5 @@
+import Image from "next/image";
+
 import { CloseCircleOutlined, MenuOutlined } from "@ant-design/icons";
 import Link from "next/link";
 import { useEffect, useRef } from "react";
@@ -20,7 +22,7 @@ export function Navbar({ menuOpen, setMenuOpen }: Props) {
     <div className="w-full flex h-18 items-center justify-between top-0 p-6">
       <div className="flex flex-row gap-4 text-emeraldlight items-center text-xl lg:ml-36">
         <Link href={"/"}>
-          <img src="/logo.svg" className="h-10" />
+          <Image alt="" src="/logo.svg" className="h-10" />
         </Link>
       </div>
       <button

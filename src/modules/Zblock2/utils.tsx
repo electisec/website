@@ -1,4 +1,5 @@
 import { SiGoogleslides } from "react-icons/si";
+import Image from "next/image";
 
 export const VideoSection = ({
   videoData,
@@ -16,7 +17,7 @@ export const VideoSection = ({
         <div key={video.id} className="p-4 duration-700">
           <div className="flex flex-row justify-between">
             <div className="flex flex-row items-center gap-4">
-              <img src="/icons/youtube.svg" className="h-[1rem]" />
+              <Image alt="" src="/icons/youtube.svg" className="h-[1rem]" />
               <h3 className="hover:underline font-bold">
                 <a
                   href={`https://www.youtube.com/watch?v=${video.id}`}
@@ -52,7 +53,7 @@ export const Notes = ({
 }) => {
   return (
     <div className="flex flex-row gap-4 items-center">
-      <img src="/icons/notes.svg" className="h-[2rem]" />
+      <Image alt="" src="/icons/notes.svg" className="h-[2rem]" />
       <a
         href={notes.link}
         className="hover:underline font-bold"
@@ -68,7 +69,7 @@ export const Notes = ({
 export const Quiz = ({ quiz }: { quiz: { title: string; link: string } }) => {
   return (
     <div className="flex flex-row gap-4 items-center">
-      <img src="/icons/exercise.svg" className="h-[2rem]" />
+      <Image alt="" src="/icons/exercise.svg" className="h-[2rem]" />
       <a
         href={quiz.link}
         className="hover:underline font-bold"
@@ -88,7 +89,7 @@ export const Report = ({
 }) => {
   return (
     <>
-      <img src="/icons/report.svg" className="h-[2rem]" />
+      <Image alt="" src="/icons/report.svg" className="h-[2rem]" />
       <a
         href={report.link}
         className="hover:underline font-bold"
@@ -108,7 +109,7 @@ export const Discussion = ({
 }) => {
   return (
     <>
-      <img src="/icons/chat.svg" className="h-[2rem]" />
+      <Image alt="" src="/icons/chat.svg" className="h-[2rem]" />
       <a
         href={chat.link}
         className="hover:underline font-bold"
@@ -121,10 +122,14 @@ export const Discussion = ({
   );
 };
 
-export const Trophy = ({ trophy }: { trophy: { title: string; link: string } }) => {
+export const Trophy = ({
+  trophy,
+}: {
+  trophy: { title: string; link: string };
+}) => {
   return (
     <div className="flex flex-row gap-4 items-center">
-      <img src="/icons/trophy.svg" className="h-[1.7rem]" />
+      <Image alt="" src="/icons/trophy.svg" className="h-[1.7rem]" />
       <a
         href={trophy.link}
         className="hover:underline font-bold"

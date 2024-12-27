@@ -1,5 +1,6 @@
 import HyperText from "@/components/ui/hyper-text";
 import Link from "next/link";
+import Image from "next/image";
 
 export default function Residents() {
   return (
@@ -10,7 +11,8 @@ export default function Residents() {
             className="lg:text-5xl text-3xl font-bold sm:text-center"
             text="ZK & Smart Contract Expertise"
           />
-          <img
+          <Image
+            alt=""
             src="./illustrations/code.svg"
             className="h-[8rem] mt-8 md:hidden lg:hidden"
           />
@@ -31,7 +33,8 @@ export default function Residents() {
             </button>
           </Link>
         </div>
-        <img
+        <Image
+          alt=""
           src="./illustrations/hands out of laptop.svg"
           className="h-[15rem] col-span-1 mt-8 sm:hidden"
         />
