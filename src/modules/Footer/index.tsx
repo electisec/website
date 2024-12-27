@@ -1,50 +1,8 @@
-function Icon({
-  src,
-  alt,
-  href,
-  width,
-}: {
-  src: string;
-  alt: string;
-  href: string;
-  width: string;
-}) {
-  return (
-    <a href={href} target="_blank">
-      <img
-        src={src}
-        width={width}
-        alt={alt}
-        className="opacity-50 hover:opacity-90 duration-700"
-      />
-    </a>
-  );
-}
 
 export default function Footer() {
   return (
     <div className="h-full flex flex-col bg-gray-100 justify-center p-16 items-center relative">
       <img src="/logo.svg" className="h-[5rem]" />
-      {/* <div className="text-md text-zinc-600 flex flex-row flex-wrap justify-center gap-6 my-10 z-20">
-        <Icon
-          src="twitter.png"
-          alt="Twitter"
-          href="https://twitter.com/electisec"
-          width="20"
-        />
-        <Icon
-          src="github.png"
-          alt="Github"
-          href="https://github.com/electisec"
-          width="25"
-        />
-        <Icon
-          src="youtube.png"
-          alt="Youtube"
-          href="https://www.youtube.com/@electisec"
-          width="25"
-        />
-      </div> */}
       <DockDemo />
       <p className="text-sm text-zinc-500 mt-10 text-center">
         Copyright © 2025 Electisec. All rights reserved.
@@ -56,7 +14,6 @@ export default function Footer() {
 import React from "react";
 import {
   CalendarIcon,
-  HomeIcon,
   MailIcon,
   PencilIcon,
   BookCopyIcon,
@@ -75,7 +32,7 @@ import { Dock, DockIcon } from "../../components/ui/dock";
 
 export type IconProps = React.HTMLAttributes<SVGElement>;
 
-const Icons = {
+export const Icons = {
   calendar: (props: IconProps) => <CalendarIcon {...props} />,
   email: (props: IconProps) => <MailIcon {...props} />,
   linkedin: (props: IconProps) => (

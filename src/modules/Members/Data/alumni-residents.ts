@@ -24,4 +24,9 @@ export const alumni_residents = [
     avatar:
       "https://pbs.twimg.com/profile_images/1527308824629374976/gybQtVtR_400x400.jpg",
   },
+  {
+    name: "igorline",
+    twitter: "https://github.com/igorline",
+    avatar: "https://avatars.githubusercontent.com/u/1465430",
+  },
 ];

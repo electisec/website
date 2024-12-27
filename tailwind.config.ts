@@ -75,10 +75,7 @@ export default {
       },
       backgroundImage: {
         gradientOne:
-          "linear-gradient(0deg, rgba(46, 0, 63, 0.28) 0%, rgba(76, 0, 83, 0.43) 100%)",
-        gradientTwo:
-          "linear-gradient(360deg, rgba(0, 0, 0, 0.28) 0%, rgba(40, 40, 40, 0.43) 100%)",
-        gradientThree: "linear-gradient(180deg, #49008B 0%, #17003E 100%)",
+          "linear-gradient(0deg, rgba(42, 219, 131, 0.77) 0%, rgb(179, 237, 172) 50%)",
       },
       borderRadius: {
         lg: "var(--radius)",
