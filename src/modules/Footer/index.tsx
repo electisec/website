@@ -1,9 +1,9 @@
-import Image from "next/image";
+/* eslint-disable @next/next/no-img-element */
 
 export default function Footer() {
   return (
     <div className="h-full flex flex-col bg-gray-100 justify-center p-16 items-center relative">
-      <Image alt="" src="/logo.svg" className="h-[5rem]" />
+      <img alt="" src="/logo.svg" className="h-[5rem]"/>
       <DockDemo />
       <p className="text-sm text-zinc-500 mt-10 text-center">
         Copyright © 2025 Electisec. All rights reserved.

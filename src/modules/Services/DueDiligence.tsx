@@ -25,7 +25,7 @@ export default function DueDiligence() {
             })}
           </div> */}
 
-          <Image
+          <img
             alt=""
             src="./illustrations/code.svg"
             className="h-[12rem] mt-8 sm:ml-0 lg:hidden md:hidden"
@@ -42,7 +42,7 @@ export default function DueDiligence() {
           </a>
         </div>
         <div className="col-span-1 ml-20 sm:hidden">
-          <Image
+          <img
             alt=""
             src="./illustrations/code.svg"
             className="h-[20rem] mt-8"

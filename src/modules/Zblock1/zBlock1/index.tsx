@@ -21,7 +21,7 @@ function ZBlock1Modules() {
     <>
       <div className="grid lg:grid-cols-5 gap-8">
         <div className="lg:col-span-2 mt-28">
-          <Image
+          <img
             alt=""
             src="/zblock/pse-personae-yac.svg"
             className="h-[24rem] "
@@ -119,11 +119,7 @@ function ZBlock1Modules() {
                   className="flex flex-row gap-4 items-center"
                   key={exercise.link}
                 >
-                  <Image
-                    alt=""
-                    src="/icons/exercise.svg"
-                    className="h-[2rem]"
-                  />
+                  <img alt="" src="/icons/exercise.svg" className="h-[2rem]" />
                   <a
                     href={exercise.link}
                     className="hover:underline font-bold"
@@ -191,11 +187,7 @@ function ZBlock1Modules() {
                   className="flex flex-row gap-4 items-center"
                   key={exercise.link}
                 >
-                  <Image
-                    alt=""
-                    src="/icons/exercise.svg"
-                    className="h-[2rem]"
-                  />
+                  <img alt="" src="/icons/exercise.svg" className="h-[2rem]" />
                   <a
                     href={exercise.link}
                     className="hover:underline font-bold"

@@ -45,7 +45,7 @@ function HeroSection() {
           </button>
         </Link>
       </div>
-      <Image
+      <img
         alt=""
         src="/illustrations/hero.svg"
         className="h-[26rem] sm:hidden"

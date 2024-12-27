@@ -1,3 +1,4 @@
+/* eslint-disable @next/next/no-img-element */
 import { useEffect, useRef } from "react";
 import HyperText from "@/components/ui/hyper-text";
 import {
@@ -6,7 +7,6 @@ import {
   TooltipProvider,
   TooltipTrigger,
 } from "@/components/ui/tooltip";
-import Image from "next/image";
 
 const clients = [
   { name: "Exit10", logo: "exit10.png", website: "https://exit10.com/" },
@@ -185,7 +185,7 @@ function EllipticalOrbitDemo() {
     <div className="relative flex h-[75vh] flex-col items-center justify-center overflow-hidden rounded-lg bg-white">
       {/* Center Logo */}
       {/* <div className="absolute left-1/2 top-1/2 transform -translate-x-1/2 -translate-y-1/2 z-10">
-        <Image alt=""  
+        <img alt=""  
           src="/favicon.ico" 
           alt="Company Logo" 
           className="h-8 object-contain"  // Larger size for center logo
@@ -239,8 +239,8 @@ function EllipticalOrbitDemo() {
                       rel="noopener noreferrer"
                       className="block w-12 h-12"
                     >
-                      <Image
-                        src={`./clients/${client.logo}`}
+                      <img
+                        src={`/clients/${client.logo}`}
                         alt={client.name}
                         className="w-10 h-10 object-contain hover:scale-110 transition-transform"
                       />

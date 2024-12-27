@@ -7,7 +7,7 @@ export default function Fellows() {
     <>
       <div className="grid grid-cols-2 sm:flex sm:flex-col gap-4 my-32 md:my-16 sm:my-16 sm:mx-6 md:mx-6 text-justify">
         <div className="col-span-1 sm:hidden">
-          <Image
+          <img
             alt=""
             src="./illustrations/hands on shield.svg"
             className="h-[24rem] md:h-[20rem] mt-8"
@@ -18,7 +18,7 @@ export default function Fellows() {
             className="lg:text-5xl text-3xl font-bold sm:text-center"
             text="Boosted Audits"
           />
-          <Image
+          <img
             alt=""
             src="./illustrations/hands on shield.svg"
             className="h-[24rem] sm:h-[16rem] mt-8 lg:hidden md:hidden"

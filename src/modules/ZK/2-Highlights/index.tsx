@@ -57,7 +57,7 @@ export default function Highlights() {
               className="cols-span-1 bg-white flex flex-row p-6 gap-4 rounded-lg items-center font-semibold"
               key={w.title}
             >
-              <Image
+              <img
                 alt=""
                 src={w.avatar || ""}
                 className="rounded-full h-[3rem]"
@@ -78,7 +78,7 @@ export default function Highlights() {
               className="cols-span-1 bg-white flex flex-row p-6 gap-4 rounded-lg items-center font-semibold"
               key={w.title}
             >
-              <Image
+              <img
                 alt=""
                 src={w.avatar || ""}
                 className="rounded-full h-[3rem]"

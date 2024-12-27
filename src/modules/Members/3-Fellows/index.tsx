@@ -94,7 +94,7 @@ export function Template({
         {fellows.map((person) => (
           <li key={person.name}>
             <div className="flex flex-row sm:flex-col items-center gap-x-6">
-              <Image
+              <img
                 className={
                   "rounded-full items-center" +
                   ` ${

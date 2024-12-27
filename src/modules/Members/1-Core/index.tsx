@@ -21,7 +21,7 @@ export function Template({
         {members.map((person) => (
           <li key={person.name}>
             <div className="flex flex-row sm:flex-col items-center gap-x-6">
-              <Image
+              <img
                 className="h-11 w-11 sm:h-9 sm:w-9 sm:mb-2 rounded-full items-center"
                 src={person.avatar ? person.avatar : "members/resident.png"}
                 alt={person.name}

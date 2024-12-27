@@ -160,7 +160,7 @@ function ZK() {
             contact at: zk AT electisec DOT dev
           </p>
 
-          {/* <Image alt=""  src="/rust-window.svg" className="py-4 h-[32rem]" /> */}
+          {/* <img alt=""  src="/rust-window.svg" className="py-4 h-[32rem]" /> */}
         </div>
       </div>
     </div>

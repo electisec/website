@@ -13,7 +13,7 @@ export default function Team() {
       <div className="grid grid-cols-4 sm:grid-cols-2 gap-10 my-10">
         {zk_residents.map((member) => (
           <div className="flex flex-col items-center" key={member.name}>
-            <Image
+            <img
               src={member.avatar}
               alt={member.name}
               className="h-[3rem] rounded-full"
