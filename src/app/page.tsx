@@ -9,7 +9,7 @@ import Feedback from "@/modules/Home/6-Feedback";
 import Services from "@/modules/Home/3-Services";
 import Fellowships from "@/modules/Home/4-Fellowships";
 import Research from "@/modules/Home/5-Research";
-
+import { AuditStats } from "@/modules/Home/7-Stats";
 
 export default function Home() {
   const [menuOpen, setMenuOpen] = useState(false);
@@ -23,10 +23,12 @@ export default function Home() {
 
       <HeroSection />
       <Partners />
+      <AuditStats />
       <Services />
       <Fellowships />
       <Research />
       <Feedback />
+
       <Footer />
     </div>
   );
