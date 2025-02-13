@@ -119,7 +119,7 @@ export const m1notes = [
 
 export const m1report = {
   title: "Summa Va Audit Report",
-  link: "https://github.com/zBlock-2/audit-report/blob/main/versionA.md",
+  link: "https://github.com/electisec/summa-audit-report/blob/main/versionA.md",
 };
 
 export const m2video = [
@@ -194,7 +194,7 @@ export const m2notes = [
 
 export const m2report = {
   title: "Summa Vb Audit Report",
-  link: "https://github.com/zBlock-2/audit-report/blob/main/versionB.md",
+  link: "https://github.com/electisec/summa-audit-report/blob/main/versionB.md",
 };
 
 export const m2bounties = {
@@ -217,7 +217,7 @@ export const yacteam = [
   },
   {
     name: "Invader",
-    github: "",
+    github: "https://github.com/invader-tak",
   },
   {
     name: "nullity",

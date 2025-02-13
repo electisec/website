@@ -40,7 +40,7 @@ const features = [
   {
     name: "Consulting",
     description:
-      "We help you do your due diligence on blockchain projects and protocols: architecture, design, code, algorithms, and approach.",
+      "Get due diligence on blockchain projects and protocols: architecture, design, code, algorithms, and approach.",
     href: "/services",
     cta: "Learn more",
     className: "",
@@ -58,10 +58,10 @@ const features = [
 
 export default function Services() {
   return (
-    <div className="h-full flex flex-col my-16 md:my-16 sm:my-16 sm:mx-6 md:mx-6 lg:mx-48 ">
+    <div className="h-full flex flex-col my-16 sm:mx-6 md:mx-6 lg:mx-[20vw] ">
       <HyperText
-        className="lg:text-5xl text-3xl font-bold mb-16 sm:text-center"
-        text="Auditing Services"
+        className="lg:text-4xl text-3xl font-bold mb-8 sm:text-center"
+        text="Services"
       />
       <BentoGrid className="grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
         {features.map((feature, idx) => (

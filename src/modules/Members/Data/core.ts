@@ -1,6 +1,6 @@
 export const core = [
   {
-    name: "Ali Atiia",
+    name: "alizk",
     twitter: "https://twitter.com/0xAlizk",
     avatar:
       "https://pbs.twimg.com/profile_images/1563134165796765696/zP9KsnYY_400x400.jpg",
@@ -21,7 +21,7 @@ export const core = [
     name: "invader",
     twitter: "",
     avatar:
-      "",
+      "https://avatars.githubusercontent.com/u/95246053?v=4",
   },
   {
     name: "nullity",

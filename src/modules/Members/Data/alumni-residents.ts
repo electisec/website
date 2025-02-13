@@ -1,5 +1,28 @@
 export const alumni_residents = [
   {
+    name: "engn33r",
+    twitter: "https://twitter.com/bl4ckb1rd71",
+    avatar:
+      "https://pbs.twimg.com/profile_images/1292574472155930627/wOOf37Rc_400x400.jpg",
+  },
+  {
+    name: "Nibbler Express",
+    twitter: "https://github.com/NibblerExpress",
+    avatar: "https://avatars.githubusercontent.com/NibblerExpress",
+  },
+  {
+    name: "popular",
+    twitter: "https://twitter.com/popular_12345/",
+    avatar:
+      "https://pbs.twimg.com/profile_images/1623800367283834880/HcE9g6uy_400x400.jpg",
+  },
+  {
+    name: "_eperezok",
+    twitter: "https://twitter.com/_eperezok",
+    avatar:
+      "https://pbs.twimg.com/profile_images/1581139804334571520/Lg7b73ix_400x400.jpg",
+  },
+  {
     name: "stermi",
     twitter: "https://twitter.com/StErMi",
     avatar:

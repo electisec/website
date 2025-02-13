@@ -19,10 +19,7 @@ import {
   ZBlock1,
   ZBlock2,
 } from "../../modules/Members/3-Fellows";
-
-export function generateStaticParams() {
-  return [{ slug: 'members' }]
-}
+import { About } from "@/modules/Home/About";
 
 export default function MembersPage() {
   const [menuOpen, setMenuOpen] = useState(false);
@@ -33,10 +30,11 @@ export default function MembersPage() {
       ) : (
         <Navbar menuOpen={menuOpen} setMenuOpen={setMenuOpen} />
       )}
-      <div className="lg:mx-40 mx-6 h-full relative">
-        <Core />
+      <div className="lg:mx-[20vw] mx-6 h-full relative">
+        <About />
         <SmartContractResident />
         <ZKResident />
+        <Core />
         <ResidentAlumni />
         <h1 className="text-4xl mb-8 sm:text-center">Fellows</h1>
         <ZBlock2 />

@@ -14,13 +14,13 @@ function ZK() {
               Previous ZK Cohorts
             </p>
             <Link href="/zBlock1">
-              <p className="text-md font-semibold leading-8 text-darkgreen">
-                zBlock1 (May 2023)
+              <p className="text-md font-semibold leading-8 text-darkgreen hover:underline duration-700">
+                zBlock1 (May 2023) ↗
               </p>
             </Link>
             <Link href="/zBlock2">
-              <p className="text-md font-semibold leading-8 text-darkgreen">
-                zBlock2 (Jan - May 2024)
+              <p className="text-md font-semibold leading-8 text-darkgreen hover:underline duration-700">
+                zBlock2 (Jan - May 2024) ↗
               </p>
             </Link>
 
@@ -59,7 +59,7 @@ function ZK() {
                   [2]
                 </a>
                 <a
-                  href="https://github.com/zBlock-2/audit-report/"
+                  href="https://github.com/electisec/summa-audit-report/"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="text-green-600 font-bold hover:underline duration-700"

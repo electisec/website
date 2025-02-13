@@ -1,7 +1,6 @@
 import { cn } from "@/lib/utils";
 import Marquee from "../../../components/ui/marquee";
 import HyperText from "@/components/ui/hyper-text";
-import Image from "next/image";
 
 const reviews = [
   {
@@ -27,7 +26,7 @@ const reviews = [
   {
     name: "Strike",
     logo: "strike.svg",
-    body: "Great audit partners and overall experience from scoping to audits. yAudits is currently securing Stryke's mainnet contracts as well as partners building on Stryke's underlying tech.",
+    body: "Great audit partners and overall experience from scoping to audits. yAudits is currently securing Strike's mainnet contracts as well as partners building on Strike's underlying tech.",
   },
   {
     name: "vfat",
@@ -39,9 +38,9 @@ const reviews = [
 export default function Feedback() {
   return (
     <section className="bg-white m-6">
-      <div className="lg:mx-40">
+      <div className="lg:mx-[20vw]">
         <HyperText
-          className="lg:text-5xl text-3xl font-bold mb-16 sm:text-center"
+          className="lg:text-4xl text-3xl font-bold mb-4 sm:text-center"
           text="Feedback"
         />
         <MarqueeDemo />

@@ -19,7 +19,7 @@ export default {
       },
       lg: {
         min: "1150px",
-        max: "2000px",
+        max: "3440px",
       },
     },
     extend: {

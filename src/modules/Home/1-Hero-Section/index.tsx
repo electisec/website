@@ -12,13 +12,13 @@ export const GradientWord = styled.span`
 
 function HeroSection() {
   return (
-    <div className="h-full relative sm:my-16 lg:ml-40">
+    <div className="h-full relative sm:my-16 lg:ml-[20vw] lg:mr-36">
       <Lottie animationData={logo} className="md:hidden lg:hidden" />
-      <div className="grid grid-cols-5 md:mx-6 sm:flex sm:flex-col sm:mx-6 sm:text-center">
+      <div className="grid grid-cols-4 md:mx-6 sm:flex sm:flex-col sm:mx-6 sm:text-center">
         <div className="col-span-2 flex flex-col lg:py-4 lg:my-24 md:my-32">
-          <h1 className="lg:leading-normal lg:text-7xl md:text-4xl sm:text-4xl font-bold">
-            <GradientWord>ZK</GradientWord> & <br />
-            <GradientWord>Smart Contract</GradientWord> Security
+          <h1 className="lg:leading-normal lg:text-6xl md:text-4xl sm:text-4xl font-bold">
+            <GradientWord>ZK</GradientWord> &
+            <GradientWord> Smart Contract</GradientWord> <br /> Security
           </h1>
           <h2 className="text-left sm:text-center my-4 text-zinc-500">
             Audits - Research - Training - Consulting
@@ -29,7 +29,7 @@ function HeroSection() {
             </button>
           </Link>
         </div>
-        <div className="col-span-3 my-20 sm:hidden">
+        <div className="col-span-2 my-20 sm:hidden">
           <Lottie animationData={logo} />
         </div>
       </div>

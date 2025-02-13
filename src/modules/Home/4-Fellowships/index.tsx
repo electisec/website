@@ -4,10 +4,9 @@ import Image from "next/image";
 
 const features = [
   {
-    name: "Smart Contract Fellowship",
-    description:
-      "4-6 week program to audit pre-production or in-production codebases alongside our residents, guest auditors, and mentors",
-    href: "/fellowships",
+    name: "Smart Contract Fellowships",
+    description: "4-6 weeks fully auditing 1-2 codebases, it goes deep",
+    href: "/fellowships#smart-contract",
     cta: "Apply",
     className: "",
     background: (
@@ -21,10 +20,9 @@ const features = [
     ),
   },
   {
-    name: "ZK Fellowship",
-    description:
-      "Duration depends on the codebase. Includes retreat sessions with leading experts in the field, office hours with devs and/or our residents.",
-    href: "/fellowships",
+    name: "ZK Fellowships",
+    description: "2-3 months, you will be challenged",
+    href: "/fellowships#zero-knowledge",
     cta: "Apply",
     className: "",
     background: (
@@ -40,8 +38,8 @@ const features = [
   {
     name: "Guest Auditor Program",
     description:
-      "Seasoned experts deliver exhaustive architectural and code reviews",
-    href: "/fellowships",
+      "field experts leading audits and mentoring fellows alongside our residents",
+    href: "/fellowships#guest-auditor",
     cta: "Apply",
     className: "",
     background: (
@@ -58,11 +56,17 @@ const features = [
 
 export default function Fellowships() {
   return (
-    <div className="h-full flex flex-col my-16 md:my-16 sm:my-16 sm:mx-6 md:mx-6 lg:mx-48 ">
+    <div className="h-full flex flex-col my-8 sm:mx-6 md:mx-6 lg:mx-[20vw]">
       <HyperText
-        className="lg:text-5xl text-3xl font-bold mb-16 sm:text-center"
+        className="lg:text-4xl text-3xl font-bold mb-4 sm:text-center"
         text="Fellowship Programs"
       />
+      <p className="mb-16 text-zinc-500 sm:text-justify">
+        Pioneering programs giving fellows the opportunity to audit alongside
+        our resident auditors, with participation from guest auditors, codebase
+        authors, and leading experts. The fellowships are trial-by-fire, there
+        is no hand-holding.
+      </p>
       <BentoGrid className="grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
         {features.map((feature, idx) => (
           <BentoCard key={idx} {...feature} />

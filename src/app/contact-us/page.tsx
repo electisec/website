@@ -5,10 +5,6 @@ import { Navbar, MobileNavbar } from "@/modules/Navbar";
 import ContactUs from "@/modules/Contact";
 import Footer from "@/modules/Footer";
 
-export function generateStaticParams() {
-  return [{ slug: "contact-us" }];
-}
-
 export default function ContactPage() {
   const [menuOpen, setMenuOpen] = useState(false);
   return (

@@ -5,23 +5,18 @@ import Image from "next/image";
 export default function Fellows() {
   return (
     <>
-      <div className="grid grid-cols-2 sm:flex sm:flex-col gap-4 my-32 md:my-16 sm:my-16 sm:mx-6 md:mx-6 text-justify">
-        <div className="col-span-1 sm:hidden">
+      <div className="lg:grid md:grid sm:flex grid-cols-2 gap-16 sm:flex-col my-16 justify-between">
+        <div className="lg:cols-span-1 md:cols-span-1 ">
           <img
             alt=""
             src="./illustrations/hands on shield.svg"
-            className="h-[24rem] md:h-[20rem] mt-8"
+            className="lg:h-[20rem] md:h-[16rem] justify-self-center"
           />
         </div>
-        <div className="col-span-1 sm:flex sm:flex-col sm:align-center">
+        <div className="lg:cols-span-1 md:cols-span-1 flex flex-col">
           <HyperText
-            className="lg:text-5xl text-3xl font-bold sm:text-center"
+            className="lg:text-4xl text-3xl font-bold"
             text="Boosted Audits"
-          />
-          <img
-            alt=""
-            src="./illustrations/hands on shield.svg"
-            className="h-[24rem] sm:h-[16rem] mt-8 lg:hidden md:hidden"
           />
           <p className="text-zinc-500 mb-8">
             <br />
@@ -29,7 +24,7 @@ export default function Fellows() {
             during our highly competitive fellowships
           </p>
           <Link href={"/contact-us"}>
-            <button className="px-8 py-3 rounded-xl sm:w-full text-md sm:text-sm text-darkgreen text-bold bg-emeraldlight bg-opacity-25 hover:bg-opacity-5 hover:text-emeraldlight duration-700">
+            <button className="px-8 py-3 sm:w-full rounded-xl text-md text-darkgreen text-bold bg-emeraldlight bg-opacity-25 hover:bg-opacity-5 hover:text-emeraldlight duration-700">
               Start your Audit
             </button>
           </Link>

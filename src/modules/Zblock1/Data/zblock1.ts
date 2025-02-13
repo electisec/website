@@ -155,3 +155,113 @@ export const m3report = {
   title: "Spartan-ECDSA Audit Report",
   link: "https://github.com/zBlock-1/spartan-ecdsa-audit-report",
 };
+
+export const electiteam = [
+  {
+    name: "Ali",
+    github: "https://github.com/0xalizk",
+  },
+];
+
+export const fellows = [
+  {
+    name: "0xnagu",
+    github: "https://github.com/thogiti",
+    isResident: true,
+  },
+  {
+    name: "Igor Line",
+    github: "https://github.com/igorline",
+    isResident: true,
+  },
+  {
+    name: "nullity",
+    github: "https://github.com/nullity00",
+    isResident: true,
+  },
+  {
+    name: "Oba",
+    github: "https://github.com/obatirou",
+    isResident: true,
+  },
+  {
+    name: "parsley",
+    github: "https://github.com/bbresearcher",
+    isResident: false,
+  },
+  {
+    name: "Bahurum",
+    github: "https://github.com/bahurum",
+    isResident: false,
+  },
+  {
+    name: "lwltea",
+    github: "https://github.com/lwltea",
+    isResident: false,
+  },
+  {
+    name: "Chen Wen Kang",
+    github: "https://github.com/cwkang1998",
+    isResident: false,
+  },
+  {
+    name: "Curiousapple",
+    github: "https://github.com/abhishekvispute",
+    isResident: false,
+  },
+  {
+    name: "Vincent Owen",
+    github: "https://github.com/makluganteng",
+    isResident: false,
+  },
+  {
+    name: "Rajesh",
+    github: "https://github.com/RajeshRk18",
+    isResident: false,
+  },
+  {
+    name: "Pratyush R Tiwari",
+    github: "https://github.com/PratyushRT",
+    isResident: false,
+  },
+  {
+    name: "Antonio Viggiano",
+    github: "https://github.com/aviggiano",
+    isResident: false,
+  },
+  {
+    name: "Mathew MC",
+    github: "https://github.com/whoismatthewmc1",
+    isResident: false,
+  },
+];
+
+export const pseteam = [
+  {
+    name: "Rasul",
+    github: "https://x.com/curryrasul",
+  },
+  {
+    name: "Tyler",
+    github: "https://x.com/AtHeartEngineer",
+  },
+  {
+    name: "Daniel",
+    github: "https://x.com/dan_tehrani",
+  },
+];
+
+export const guest = [
+  {
+    name: "Ying Tong",
+    github: "https://x.com/therealyingtong",
+  },
+  {
+    name: "Lev Soukhanov",
+    github: "https://x.com/levs57",
+  },
+  {
+    name: "Pratyush R Tiwari",
+    github: "https://github.com/PratyushRT",
+  },
+];

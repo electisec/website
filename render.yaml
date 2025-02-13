@@ -1,9 +1,0 @@
-services:
-  - type: web
-    name: electisec-website
-    buildCommand: next build
-    staticPublishPath: ./out
-    pullRequestPreviewsEnabled: true
-    envVars:
-      - key: NODE_VERSION
-        value: 20.9.0

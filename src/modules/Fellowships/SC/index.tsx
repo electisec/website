@@ -43,23 +43,6 @@ function SmartContracts() {
               </li>
             </ul>
           </div>
-          <p>
-            Before applying, please make sure you have read and understood the{" "}
-            <button
-              onClick={() => {
-                window.scrollTo({ top: 0, behavior: "smooth" });
-              }}
-              className="text-green-600 font-bold hover:underline duration-700"
-            >
-              general structure and guidelines of our programs
-            </button>
-            .
-          </p>
-          <a href="https://tally.so/r/nG9o6e" target="_blank">
-            <button className="w-1/2 px-8 py-3 rounded-xl text-md text-darkgreen text-bold bg-emeraldlight bg-opacity-25 hover:bg-opacity-5 hover:text-emeraldlight duration-700">
-              Apply
-            </button>
-          </a>
         </div>
         <div className="col-span-1 m-4">
           <div className="grid grid-cols-2 gap-2">
@@ -85,11 +68,23 @@ function SmartContracts() {
             <span className="text-green-600 font-bold">stake some ETH</span> to
             ensure engagement and participation from all fellows.
           </p>
-          <img
-            alt=""
-            src="./illustrations/contract-window.svg"
-            className="py-4 h-[32rem]"
-          />
+          <p>
+            Before applying, please make sure you have read and understood the{" "}
+            <button
+              onClick={() => {
+                window.scrollTo({ top: 0, behavior: "smooth" });
+              }}
+              className="text-green-600 font-bold hover:underline duration-700 mb-4"
+            >
+              general structure and guidelines of our programs
+            </button>
+            .
+          </p>
+          <a href="https://tally.so/r/nG9o6e" target="_blank">
+            <button className="w-1/2 px-8 py-3 rounded-xl text-md text-darkgreen text-bold bg-emeraldlight bg-opacity-25 hover:bg-opacity-5 hover:text-emeraldlight duration-700">
+              Apply
+            </button>
+          </a>
         </div>
       </div>
     </div>

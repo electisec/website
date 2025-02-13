@@ -3,14 +3,14 @@ import Image from "next/image";
 
 export default function Team() {
   return (
-    <div className="lg:mx-32 lg:my-20 p-12">
-      <h1 className="lg:text-5xl text-3xl font-bold mb-4">Team</h1>
+    <div className="lg:mx-[20vw] lg:my-20">
+      <h1 className="lg:text-4xl text-3xl font-bold mb-4">Team</h1>
       <p>
         Electisec&apos;s ZK team consists of ZK Circuit breakers, MPC
         Specialists, FHE experts, TEE geeks, seasoned Rustaceans and
         Cryptography connoisseurs.
       </p>
-      <div className="grid grid-cols-4 sm:grid-cols-2 gap-10 my-10">
+      <div className="grid grid-cols-8 sm:grid-cols-2 gap-10 my-10">
         {zk_residents.map((member) => (
           <div className="flex flex-col items-center" key={member.name}>
             <img

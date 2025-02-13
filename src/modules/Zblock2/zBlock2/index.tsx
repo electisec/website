@@ -31,10 +31,10 @@ import Image from "next/image";
 function ZBlock2Modules() {
   return (
     <>
-      <div className="lg:mr-32">
+      <div className="mt-24">
         <div className="grid lg:grid-cols-5 gap-8">
           <div className="lg:col-span-2 mt-28">
-            <img alt="" src="/zblock/cross.svg" className="h-[24rem] " />
+            <img alt="" src="/zblock/pse-summa-yac.svg" className="h-[24rem] " />
           </div>
           <div className="lg:col-span-3">
             <h1 className="md:leading-normal sm:leading-normal lg:leading-tight lg:text-5xl md:text-3xl sm:text-3xl font-bold lg:mb-10">
@@ -93,15 +93,15 @@ function ZBlock2Modules() {
           </div>
         </div>
         <h1
-          className="text-4xl  font-bold text-center mt-40 mb-20"
+          className="text-4xl  font-bold text-center mt-20 mb-20"
           id="module-1"
         >
           Participants
         </h1>
         <div className="grid lg:grid-cols-5 gap-8">
-          <div className="lg:col-span-1 flex flex-col p-4 px-12 rounded-xl bg-[#E8FFF8]">
-            <img alt="" src="/logo.svg" className="h-16 mb-2" />
-            <ul className="list-disc text-zinc-700">
+          <div className="lg:col-span-1 flex flex-col py-6 rounded-xl bg-[#E8FFF8]">
+            <img alt="" src="/logo.svg" className="h-8 mb-6" />
+            <ul className="list-disc text-zinc-700 px-12">
               {yacteam.map((member) => {
                 return (
                   <li key={member.name}>
@@ -161,7 +161,7 @@ function ZBlock2Modules() {
             <p className="text-center p-4 text-zinc-700"> * Top Fellows</p>
           </div>
           <div className="lg:col-span-1 flex flex-col p-6 px-12 rounded-xl bg-[#E8FFF8]">
-            <img alt="" src="/zblock/summa.svg" className="h-10 mb-6" />
+            <img alt="" src="/zblock/pse-summa.svg" className="h-10 mb-6" />
             <ul className="list-disc text-zinc-700">
               {summateam.map((member) => {
                 return (
@@ -203,10 +203,10 @@ function ZBlock2Modules() {
         </div>
         <div className="flex flex-col gap-4 justify-center text-zinc-800 text-center mt-12">
           <h4 className="text-xl font-semibold">Supported by </h4>
-          <img alt="" src="/zblock//ef.svg" className="h-16 inline-block" />
+          <img alt="" src="/zblock/ef.svg" className="h-16 inline-block" />
         </div>
 
-        <h1 className="text-4xl font-bold text-center mt-40" id="module-1">
+        <h1 className="text-4xl font-bold text-center mt-20" id="module-1">
           Module 1
         </h1>
         <div className="grid grid-cols-2 sm:grid-cols-1 gap-12 mt-12">
@@ -250,10 +250,10 @@ function ZBlock2Modules() {
           </div>
         </div>
 
-        <h1 className="text-4xl font-bold text-center mt-40" id="module-2">
+        <h1 className="text-4xl font-bold text-center mt-20" id="module-2">
           Module 2
         </h1>
-        <div className="grid grid-cols-2 sm:grid-cols-1 gap-12 mt-12">
+        <div className="grid grid-cols-2 sm:grid-cols-1 gap-12 mt-12 mb-8">
           <div className="col-span-1">
             <h1 className="text-2xl font-bold">Sessions</h1>
             <VideoSection videoData={m2video} />

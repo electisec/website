@@ -4,7 +4,7 @@ import Image from "next/image";
 
 function HeroSection() {
   return (
-    <div className="h-full relative sm:my-8 lg:mx-40 lg:my-32 flex flex-row sm:text-center justify-between">
+    <div className="h-full relative sm:my-8 lg:mx-[20vw] lg:mt-24 flex flex-row sm:text-center justify-between">
       <div className="my-8">
         <h1 className="lg:leading-normal lg:text-5xl md:text-3xl sm:text-3xl font-bold">
           <Typewriter
@@ -37,7 +37,7 @@ function HeroSection() {
           />
         </h1>
         <h2 className="sm:text-center my-4 text-zinc-500">
-          Don’t let a soundness bug rekt your protocol
+          Auditing the ZK Stack
         </h2>
         <Link href={"/contact-us"}>
           <button className="px-16 py-3 rounded-xl text-md text-darkgreen text-bold bg-emeraldlight bg-opacity-25 hover:bg-opacity-5 hover:text-emeraldlight duration-700">

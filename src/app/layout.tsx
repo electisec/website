@@ -1,11 +1,27 @@
 import type { Metadata } from "next";
 import "./globals.css";
-import { Space_Grotesk } from 'next/font/google'
+import { Space_Grotesk } from "next/font/google";
+import GoogleAnalytics from "@/app/gtag";
 
 const spaceGrotesk = Space_Grotesk({
-  subsets: ['latin'],
-  display: 'swap',
-})
+  subsets: ["latin"],
+  display: "swap",
+});
+
+export default function RootLayout({
+  children,
+}: Readonly<{
+  children: React.ReactNode;
+}>) {
+  return (
+    <html lang="en" className={spaceGrotesk.className}>
+      <head>
+        <GoogleAnalytics />
+      </head>
+      <body className={""}>{children}</body>
+    </html>
+  );
+}
 
 export const metadata: Metadata = {
   title: "Electisec (previously yAcademy & yAudit)",
@@ -17,32 +33,28 @@ export const metadata: Metadata = {
   robots: "follow, index",
   openGraph: {
     type: "website",
-    url: "https://electisec.dev",
+    url: "https://electisec.tech",
     title: "Electisec (previously yAcademy & yAudit)",
-    description: "ZK & Smart Contract Security",
+    description:
+      "Electisec is focused on smart contracts and zero-knowledge security: auditing, research, and increasingly tooling. We launched late 2020 to help make DeFi more secure and have since then secured contracts holding billions in TVL.",
     siteName: "Electisec",
     images: [
       {
-        url: "https://electisec.dev/logo.svg",
+        url: "https://electisec.tech/twitter.png",
+        width: 1200,
+        height: 630,
       },
+      // {
+      //   url: "https://electisec.tech/icon.png",
+      //   width: 400,
+      //   height: 400,
+      // },
     ],
   },
   twitter: {
     card: "summary_large_image",
     site: "@electisec",
     creator: "@electisec",
-    images: "https://electisec.dev/logo.svg",
+    images: "https://electisec.tech/twitter.png",
   },
 };
-
-export default function RootLayout({
-  children,
-}: Readonly<{
-  children: React.ReactNode;
-}>) {
-  return (
-    <html lang="en"  className={spaceGrotesk.className}>
-      <body className={`bg-red-500`}>{children}</body>
-    </html>
-  );
-}

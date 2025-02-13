@@ -34,8 +34,8 @@ export const block5 = [
   { name: "HHK", url: "https://github.com/HHK-ETH", promotedToResident: true },
   { name: "Jat", url: "https://github.com/jat9292", promotedToResident: false },
   {
-    name: "ljmanini",
-    url: "https://github.com/lmanini",
+    name: "Drastic Watermelon",
+    url: "https://github.com/DrasticWatermelon",
     promotedToResident: true,
   },
   {

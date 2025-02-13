@@ -13,13 +13,14 @@ import {
   m3report,
   m3guestLectures,
 } from "../Data/zblock1";
+import { electiteam, fellows, pseteam, guest } from "../Data/zblock1";
 import { Discussion, VideoSection, Report, Notes } from "../utils";
 import Image from "next/image";
 
 function ZBlock1Modules() {
   return (
     <>
-      <div className="grid lg:grid-cols-5 gap-8">
+      <div className="grid lg:grid-cols-5 gap-8 mt-24">
         <div className="lg:col-span-2 mt-28">
           <img
             alt=""
@@ -85,8 +86,116 @@ function ZBlock1Modules() {
           </p>
         </div>
       </div>
-
-      <h1 className="text-4xl font-bold text-center mt-40" id="module-1">
+      <h1
+        className="text-4xl  font-bold text-center mt-40 mb-20"
+        id="module-1"
+      >
+        Participants
+      </h1>
+      <div className="grid lg:grid-cols-5 gap-8">
+        <div className="lg:col-span-1 flex flex-col py-6 rounded-xl bg-[#E8FFF8]">
+          <img alt="" src="/logo.svg" className="h-8 mb-6" />
+          <ul className="list-disc text-zinc-700 px-12">
+            {electiteam.map((member) => {
+              return (
+                <li key={member.name}>
+                  <a
+                    href={member.github}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className=" hover:underline duration-700"
+                  >
+                    {member.name}
+                  </a>
+                </li>
+              );
+            })}
+          </ul>
+        </div>
+        <div className="lg:col-span-2 flex flex-col p-4 px-12 rounded-xl bg-[#E8FFF8]">
+          <h4 className="text-xl py-4 text-center font-semibold mb-4">
+            Fellows
+          </h4>
+          <div className="flex flex-row sm:flex-col justify-between">
+            <ul className="list-disc text-zinc-700">
+              {fellows.slice(0, 7).map((member) => {
+                return (
+                  <li key={member.name}>
+                    <a
+                      href={member.github}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="hover:underline duration-700"
+                    >
+                      {member.name}
+                      {member.isResident ? "*" : ""}
+                    </a>
+                  </li>
+                );
+              })}
+            </ul>
+            <ul className="list-disc text-zinc-700">
+              {fellows.slice(7, 14).map((member) => {
+                return (
+                  <li key={member.name}>
+                    <a
+                      href={member.github}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="hover:underline duration-700"
+                    >
+                      {member.name}
+                      {member.isResident ? "*" : ""}
+                    </a>
+                  </li>
+                );
+              })}
+            </ul>
+          </div>
+          <p className="text-center p-4 text-zinc-700"> * Top Fellows</p>
+        </div>
+        <div className="lg:col-span-1 flex flex-col p-6 rounded-xl bg-[#E8FFF8]">
+          <img alt="" src="/zblock/pse-0xparc.svg" className="h-14 mx-4 mb-6" />
+          <ul className="list-disc text-zinc-700 px-8">
+            {pseteam.map((member) => {
+              return (
+                <li key={member.name}>
+                  <a
+                    href={member.github}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className=" hover:underline duration-700"
+                  >
+                    {member.name}
+                  </a>
+                </li>
+              );
+            })}
+          </ul>
+        </div>
+        <div className="lg:col-span-1 flex flex-col p-4 px-8 rounded-xl bg-[#E8FFF8]">
+          <h4 className="text-xl py-4 text-center font-semibold">
+            Guest Speakers
+          </h4>
+          <ul className="list-disc text-zinc-700">
+            {guest.map((member) => {
+              return (
+                <li key={member.name}>
+                  <a
+                    href={member.github}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className=" hover:underline duration-700"
+                  >
+                    {member.name}
+                  </a>
+                </li>
+              );
+            })}
+          </ul>
+        </div>
+      </div>
+      <h1 className="text-4xl font-bold text-center mt-20" id="module-1">
         Module 1
       </h1>
       <div className="grid grid-cols-2 sm:grid-cols-1 gap-12 mt-12">
@@ -135,7 +244,7 @@ function ZBlock1Modules() {
         </div>
       </div>
 
-      <h1 className="text-4xl font-bold text-center mt-40" id="module-2">
+      <h1 className="text-4xl font-bold text-center mt-20" id="module-2">
         Module 2
       </h1>
       <div className="grid grid-cols-2 sm:grid-cols-1 gap-12 mt-12">
@@ -160,7 +269,7 @@ function ZBlock1Modules() {
         </div>
       </div>
 
-      <h1 className="text-4xl font-bold text-center mt-40" id="module-3">
+      <h1 className="text-4xl font-bold text-center mt-20" id="module-3">
         Module 3
       </h1>
       <div className="grid grid-cols-2 sm:grid-cols-1 gap-12 mt-12">

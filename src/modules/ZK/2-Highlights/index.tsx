@@ -49,8 +49,8 @@ export default function Highlights() {
 
   return (
     <div className="flex flex-col">
-      <div className="flex flex-col gap-2 lg:my-24 p-12 lg:px-44 bg-green-100">
-        <h2 className="lg:text-5xl text-3xl font-bold">Recent Work</h2>
+      <div className="flex flex-col gap-2 lg:my-12 p-12 lg:px-64 bg-green-100">
+        <h2 className="lg:text-4xl text-3xl font-bold">Recent Work</h2>
         <div className="grid grid-cols-3 sm:grid-cols-1 gap-2 mt-10 ">
           {work.slice(0, 3).map((w) => (
             <div
@@ -94,8 +94,8 @@ export default function Highlights() {
           ))}
         </div>
       </div>
-      <div className="flex flex-col gap-2 lg:px-44 sm:my-24 p-12">
-        <h2 className="lg:text-5xl text-3xl font-bold mb-10 ">Audits</h2>
+      <div className="flex flex-col gap-2 lg:px-64 sm:my-24 p-12">
+        <h2 className="lg:text-4xl text-3xl font-bold mb-10 ">Audits</h2>
         <div className="grid grid-cols-4 sm:grid-cols-1 gap-2 ">
           {reports.slice(0, 4).map((w) => (
             <div

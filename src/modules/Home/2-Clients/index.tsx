@@ -1,7 +1,7 @@
 /* eslint-disable @next/next/no-img-element */
 "use client";
 
-import { useEffect, useRef } from "react";
+import { useEffect, useRef, useState } from "react";
 import HyperText from "@/components/ui/hyper-text";
 import {
   Tooltip,
@@ -148,9 +148,9 @@ const EllipticalOrbit: React.FC<EllipticalOrbitProps> = ({
 
 export default function ClientSection() {
   return (
-    <section className="bg-white m-6">
-      <div className="lg:mx-40">
-        <HyperText className="lg:text-5xl text-3xl font-bold" text="Clients" />
+    <section className="bg-white m-2">
+      <div className="lg:mx-[20vw]">
+        <HyperText className="lg:text-4xl text-3xl font-bold" text="Clients" />
         <EllipticalOrbitDemo />
       </div>
     </section>
@@ -158,42 +158,117 @@ export default function ClientSection() {
 }
 
 function EllipticalOrbitDemo() {
-  // Optimized orbit configurations with all logos included
-  const orbits = [
+  // Initialize with default large screen values
+  const defaultOrbits = [
     {
       radiusX: 450,
       radiusY: 180,
-      items: clients.slice(0, 10), // More logos in outer orbit
+      items: clients.slice(0, 10),
       duration: 45,
       startAngle: 30,
     },
     {
       radiusX: 350,
       radiusY: 130,
-      items: clients.slice(10, 18), // Middle orbit
+      items: clients.slice(10, 18),
       duration: 60,
       startAngle: 0,
     },
     {
       radiusX: 200,
       radiusY: 70,
-      items: clients.slice(18), // Rest of the logos in inner orbit
+      items: clients.slice(18),
       duration: 70,
       startAngle: -30,
     },
   ];
 
+  // Move getOrbits inside useEffect to safely access window
+  const getOrbits = (width: number) => {
+    // For smaller screens
+    if (width < 640) {
+      return [
+        {
+          radiusX: 150,
+          radiusY: 60,
+          items: clients.slice(0, 10),
+          duration: 45,
+          startAngle: 30,
+        },
+        {
+          radiusX: 120,
+          radiusY: 45,
+          items: clients.slice(10, 18),
+          duration: 60,
+          startAngle: 0,
+        },
+        {
+          radiusX: 80,
+          radiusY: 30,
+          items: clients.slice(18),
+          duration: 70,
+          startAngle: -30,
+        },
+      ];
+    }
+    // For medium screens
+    if (width < 1024) {
+      return [
+        {
+          radiusX: 300,
+          radiusY: 120,
+          items: clients.slice(0, 10),
+          duration: 45,
+          startAngle: 30,
+        },
+        {
+          radiusX: 230,
+          radiusY: 90,
+          items: clients.slice(10, 18),
+          duration: 60,
+          startAngle: 0,
+        },
+        {
+          radiusX: 150,
+          radiusY: 50,
+          items: clients.slice(18),
+          duration: 70,
+          startAngle: -30,
+        },
+      ];
+    }
+    // For large screens (default)
+    return defaultOrbits;
+  };
+
+  const [orbits, setOrbits] = useState(defaultOrbits);
+  const [isMounted, setIsMounted] = useState(false);
+
+  useEffect(() => {
+    setIsMounted(true);
+
+    // Initial setup using window.innerWidth
+    setOrbits(getOrbits(window.innerWidth));
+
+    const handleResize = () => {
+      setOrbits(getOrbits(window.innerWidth));
+    };
+
+    window.addEventListener("resize", handleResize);
+    return () => window.removeEventListener("resize", handleResize);
+  }, []);
+
+  // During SSR or before mount, return a placeholder or default layout
+  if (!isMounted) {
+    return (
+      <div className="relative flex lg:h-[50vh] md:h-[40vh] sm:h-[25vh] flex-col items-center justify-center overflow-hidden rounded-lg bg-white">
+        {/* Optional loading state or static content */}
+      </div>
+    );
+  }
+
   return (
-    <div className="relative flex h-[75vh] flex-col items-center justify-center overflow-hidden rounded-lg bg-white">
-      {/* Center Logo */}
-      {/* <div className="absolute left-1/2 top-1/2 transform -translate-x-1/2 -translate-y-1/2 z-10">
-        <img alt=""  
-          src="/favicon.ico" 
-          alt="Company Logo" 
-          className="h-8 object-contain"  // Larger size for center logo
-        />
-      </div> */}
-      {/* SVG Orbit Paths */}
+    <div className="relative flex lg:h-[50vh] md:h-[40vh] sm:h-[25vh] flex-col items-center justify-center overflow-hidden rounded-lg bg-white">
       <svg
         className="absolute top-0 left-0 w-full h-full"
         style={{
@@ -239,12 +314,12 @@ function EllipticalOrbitDemo() {
                       aria-label={client.name}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="block w-12 h-12"
+                      className="block w-8 h-8 sm:w-10 sm:h-10 lg:w-12 lg:h-12"
                     >
                       <img
                         src={`/clients/${client.logo}`}
                         alt={client.name}
-                        className="w-10 h-10 object-contain hover:scale-110 transition-transform"
+                        className="sm:w-4 sm:h-4 md:w-10 md:h-10 object-contain hover:scale-110 transition-transform"
                       />
                     </a>
                   </TooltipTrigger>

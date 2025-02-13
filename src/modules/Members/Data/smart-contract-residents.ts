@@ -1,11 +1,9 @@
 export const sc_residents = [
   {
-    name: "engn33r",
-    twitter: "https://twitter.com/bl4ckb1rd71",
-    avatar:
-      "https://pbs.twimg.com/profile_images/1292574472155930627/wOOf37Rc_400x400.jpg",
+    name: "Invader",
+    twitter: "",
+    avatar: "https://avatars.githubusercontent.com/u/95246053?v=4",
   },
-  { name: "Nibbler Express", twitter: "https://github.com/NibblerExpress", avatar: "https://avatars.githubusercontent.com/NibblerExpress" },
   {
     name: "sjkelleyjr",
     twitter: "https://twitter.com/sjkelleyjr",
@@ -48,25 +46,13 @@ export const sc_residents = [
       "https://pbs.twimg.com/profile_images/1823720862916206592/bbWgqgyj_400x400.jpg",
   },
   {
-    name: "popular",
-    twitter: "https://twitter.com/popular_12345/",
-    avatar:
-      "https://pbs.twimg.com/profile_images/1623800367283834880/HcE9g6uy_400x400.jpg",
-  },
-  {
-    name: "_eperezok",
-    twitter: "https://twitter.com/_eperezok",
-    avatar:
-      "https://pbs.twimg.com/profile_images/1581139804334571520/Lg7b73ix_400x400.jpg",
-  },
-  {
     name: "fedebianu",
     twitter: "https://twitter.com/fedebianu",
     avatar:
       "https://pbs.twimg.com/profile_images/1668541537242824704/P0HUE5q8_400x400.jpg",
   },
   {
-    name: "DrasticWatermelon",
+    name: "Drastic Watermelon",
     twitter: "https://github.com/DrasticWatermelon",
     avatar: "https://avatars.githubusercontent.com/DrasticWatermelon",
   },
