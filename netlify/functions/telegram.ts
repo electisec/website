@@ -30,6 +30,9 @@ export const handler: Handler = async (event, context) => {
   }
 
   const telegram = new Telegram(process.env.TELEGRAM_BOT as string);
+  console.log(process.env.TELEGRAM_BOT);
+  console.log(process.env.TELEGRAM_CHAT);
+  
   
   try {
     await telegram.sendMessage(
@@ -53,7 +56,7 @@ Additional information: ${body.message}
     console.error('Telegram error:', error);
     return {
       statusCode: 500,
-      body: JSON.stringify({ success: false })
+      body: JSON.stringify({ success: false, error })
     };
   }
 };
