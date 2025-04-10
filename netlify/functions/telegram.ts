@@ -30,8 +30,8 @@ export const handler: Handler = async (event, context) => {
   }
 
   const telegram = new Telegram(process.env.TELEGRAM_BOT as string);
-  console.log(process.env.TELEGRAM_BOT);
-  console.log(process.env.TELEGRAM_CHAT);
+  // console.log(process.env.TELEGRAM_BOT);
+  // console.log(process.env.TELEGRAM_CHAT);
   
   
   try {
