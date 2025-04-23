@@ -1,7 +1,7 @@
 export const m1video = [
   {
     id: "EUI2L1RhtGI",
-    title: "yAcademy Opening Session",
+    title: "Electisec Opening Session",
     description: "",
     link: "https://drive.google.com/drive/folders/1-wmMXStg__5IPzs1MDWN1uxOa36aFkRQ?usp=drive_link",
   },

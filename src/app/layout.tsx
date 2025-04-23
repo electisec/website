@@ -24,7 +24,7 @@ export default function RootLayout({
 }
 
 export const metadata: Metadata = {
-  title: "Electisec (previously yAcademy & yAudit)",
+  title: "Electisec",
   description: "ZK & Smart Contract Security",
   keywords:
     "Electisec, Zero Knowledge, Smart Contract Security, Blockchain Security, Ethereum, Cryptography",
@@ -34,7 +34,7 @@ export const metadata: Metadata = {
   openGraph: {
     type: "website",
     url: "https://electisec.tech",
-    title: "Electisec (previously yAcademy & yAudit)",
+    title: "Electisec",
     description:
       "Electisec is focused on smart contracts and zero-knowledge security: auditing, research, and increasingly tooling. We launched late 2020 to help make DeFi more secure and have since then secured contracts holding billions in TVL.",
     siteName: "Electisec",
