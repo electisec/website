@@ -21,17 +21,17 @@ const reviews = [
   {
     name: "Curve Finance",
     logo: "curve.svg",
-    body: "yAudit looked at our core infra in a very timely manner, made availabilities based on the urgency of our needs and helped deliver a very good audit of a codebase even though they were not the first external reviewers.",
+    body: "Electisec looked at our core infra in a very timely manner, made availabilities based on the urgency of our needs and helped deliver a very good audit of a codebase even though they were not the first external reviewers.",
   },
   {
     name: "Strike",
     logo: "strike.svg",
-    body: "Great audit partners and overall experience from scoping to audits. yAudits is currently securing Strike's mainnet contracts as well as partners building on Strike's underlying tech.",
+    body: "Great audit partners and overall experience from scoping to audits. Electisecs is currently securing Strike's mainnet contracts as well as partners building on Strike's underlying tech.",
   },
   {
     name: "vfat",
     logo: "vfat.svg",
-    body: "yAudit have been a pleasure to work with, digging deep into the codebase and discovering edge cases. Will be staying with them!",
+    body: "Electisec have been a pleasure to work with, digging deep into the codebase and discovering edge cases. Will be staying with them!",
   },
 ];
 

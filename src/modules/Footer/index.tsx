@@ -121,7 +121,7 @@ const DATA = {
       },
       email: {
         name: "Send Email",
-        url: "mailto:hello@yacademy.dev",
+        url: "mailto:hello@electisec.tech",
         icon: Icons.email,
       },
     },
