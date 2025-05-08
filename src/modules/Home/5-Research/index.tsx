@@ -17,7 +17,7 @@ let notifications = [
   {
     name: "Security notes on ERC4337 and smart wallets",
     description: "An analysis of the security aspects of Account Abstraction",
-    link: "https://blog.electisec.tech/blogs/2024-09-09-security-notes-erc4337",
+    link: "https://blog.electisec.com/blogs/2024-09-09-security-notes-erc4337",
     avatars: [
       {
         imageUrl:
@@ -29,7 +29,7 @@ let notifications = [
   {
     name: "When L2s Fall",
     description: "Newsflash - single points of failure can fail",
-    link: "https://blog.electisec.tech/blogs/2024-08-19-when-L2s-fall",
+    link: "https://blog.electisec.com/blogs/2024-08-19-when-L2s-fall",
     avatars: [
       {
         imageUrl:
@@ -41,7 +41,7 @@ let notifications = [
   {
     name: "Are Inverse TWAP Prices Inaccurate",
     description: "Price Data is Hard - Part 1",
-    link: "https://blog.electisec.tech/blogs/2024-05-24-are-inverse-TWAP-prices-inaccurate",
+    link: "https://blog.electisec.com/blogs/2024-05-24-are-inverse-TWAP-prices-inaccurate",
     avatars: [
       {
         imageUrl:
@@ -53,7 +53,7 @@ let notifications = [
   {
     name: "Proxies Research",
     description: "Proxies Deep Dive for auditors",
-    link: "https://blog.electisec.tech/proxies/",
+    link: "https://blog.electisec.com/proxies/",
     avatars: [
       {
         imageUrl:
@@ -132,7 +132,7 @@ export default function Research() {
           We dig, that&apos;s what we do - always.
           <br />
         </p>
-        <a target="_blank" href="https://blog.electisec.tech/">
+        <a target="_blank" href="https://blog.electisec.com/">
           <button className="px-8 py-3 sm:w-full rounded-xl text-md text-darkgreen text-bold bg-emeraldlight bg-opacity-25 hover:bg-opacity-5 hover:text-emeraldlight duration-700">
             Technical Blog Posts
           </button>

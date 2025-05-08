@@ -33,19 +33,19 @@ export const metadata: Metadata = {
   robots: "follow, index",
   openGraph: {
     type: "website",
-    url: "https://electisec.tech",
+    url: "https://electisec.com",
     title: "Electisec",
     description:
       "Electisec is focused on smart contracts and zero-knowledge security: auditing, research, and increasingly tooling. We launched late 2020 to help make DeFi more secure and have since then secured contracts holding billions in TVL.",
     siteName: "Electisec",
     images: [
       {
-        url: "https://electisec.tech/twitter.png",
+        url: "https://electisec.com/twitter.png",
         width: 1200,
         height: 630,
       },
       // {
-      //   url: "https://electisec.tech/icon.png",
+      //   url: "https://electisec.com/icon.png",
       //   width: 400,
       //   height: 400,
       // },
@@ -55,6 +55,6 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     site: "@electisec",
     creator: "@electisec",
-    images: "https://electisec.tech/twitter.png",
+    images: "https://electisec.com/twitter.png",
   },
 };

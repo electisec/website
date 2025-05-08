@@ -32,10 +32,10 @@ export function Navbar({ menuOpen, setMenuOpen }: Props) {
         <MenuOutlined />
       </button>
       <div className="flex flex-row items-center gap-1 sm:hidden md:hidden lg:mr-[20vw]">
-        <a href="https://reports.electisec.tech/">
+        <a href="https://reports.electisec.com/">
           <Button text={"Reports"} />
         </a>
-        <a href="https://blog.electisec.tech/">
+        <a href="https://blog.electisec.com/">
           <Button text={"Blog"} />
         </a>
         <Link href={"/fellowships"}>
@@ -93,12 +93,12 @@ export function MobileNavbar({ setMenuOpen }: MobileProps) {
           <CloseCircleOutlined style={{ fontSize: "2rem" }} />
         </button>
 
-        <a href="https://reports.electisec.tech/">
+        <a href="https://reports.electisec.com/">
           <button className="p-6 rounded-xl w-full text-xl text-zinc-400 hover:text-emeraldlight hover:bg-darkgreen hover:bg-opacity-5 duration-700">
             Reports
           </button>
         </a>
-        <a href="https://blog.electisec.tech/">
+        <a href="https://blog.electisec.com/">
           <button className="p-6 rounded-xl w-full text-xl text-zinc-400 hover:text-emeraldlight hover:bg-darkgreen hover:bg-opacity-5 duration-700">
             Blog
           </button>
