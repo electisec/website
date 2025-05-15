@@ -15,13 +15,57 @@ interface Item {
 
 let notifications = [
   {
+    name: "From 0 to Bi(ge)nius: field extensions",
+    description: "𝔽₂ and Beyond: A Gentle Guide to Field Extensions",
+    link: "https://blog.electisec.com/binius-1-extension-fields",
+    avatars: [
+      {
+        imageUrl:
+          "https://avatars.githubusercontent.com/teddav",
+        profileUrl: "https://github.com/teddav",
+      }]
+  },
+  {
+    name: "Reed-Solomon Codes: The Math Behind Error Correction and Zero-Knowledge Proofs",
+    description: "From QR codes to ZK, discover how Reed-Solomon codes correct errors and secure digital communication",
+    link: "https://blog.electisec.com/reed-solomon",
+    avatars: [
+      {
+        imageUrl:
+          "https://avatars.githubusercontent.com/teddav",
+        profileUrl: "https://github.com/teddav",
+      }]
+  },
+  {
+    name: "FRI: Folding Polynomials and Catching Cheaters",
+    description: "Folding and Merkle trees, understand the magic behind STARKs",
+    link: "https://blog.electisec.com/fri",
+    avatars: [
+      {
+        imageUrl:
+          "https://avatars.githubusercontent.com/teddav",
+        profileUrl: "https://github.com/teddav",
+      }]
+  },
+    {
+    name: "Sum-Check: The Backbone of ZK Proofs",
+    description: "Compressing Computation One Bit at a Time",
+    link: "https://blog.electisec.com/sumcheck",
+    avatars: [
+      {
+        imageUrl:
+          "https://avatars.githubusercontent.com/teddav",
+        profileUrl: "https://github.com/teddav",
+      }]
+  },
+  {
     name: "Security notes on ERC4337 and smart wallets",
     description: "An analysis of the security aspects of Account Abstraction",
     link: "https://blog.electisec.com/blogs/2024-09-09-security-notes-erc4337",
     avatars: [
       {
         imageUrl:
-          "https://pbs.twimg.com/profile_images/1823720862916206592/bbWgqgyj_400x400.jpg",
+          "https://avatars.githubusercontent.com/romeroadrian",
         profileUrl: "https://twitter.com/adrianromero",
       },
     ],
@@ -33,7 +77,7 @@ let notifications = [
     avatars: [
       {
         imageUrl:
-          "https://pbs.twimg.com/profile_images/1292574472155930627/wOOf37Rc_400x400.jpg",
+          "https://avatars.githubusercontent.com/engn33r",
         profileUrl: "https://twitter.com/bl4ckb1rd71",
       },
     ],
@@ -45,25 +89,8 @@ let notifications = [
     avatars: [
       {
         imageUrl:
-          "https://pbs.twimg.com/profile_images/1292574472155930627/wOOf37Rc_400x400.jpg",
+          "https://avatars.githubusercontent.com/engn33r",
         profileUrl: "https://twitter.com/bl4ckb1rd71",
-      },
-    ],
-  },
-  {
-    name: "Proxies Research",
-    description: "Proxies Deep Dive for auditors",
-    link: "https://blog.electisec.com/proxies/",
-    avatars: [
-      {
-        imageUrl:
-          "https://pbs.twimg.com/profile_images/1292574472155930627/wOOf37Rc_400x400.jpg",
-        profileUrl: "https://twitter.com/bl4ckb1rd71",
-      },
-      {
-        imageUrl:
-          "https://pbs.twimg.com/profile_images/1581745674260869120/aBYE6lat_400x400.jpg",
-        profileUrl: "https://twitter.com/devtooligan",
       },
     ],
   },
