@@ -104,7 +104,7 @@ export function Template({
                   }`
                 }
                 src={
-                  person.avatar || person.url.includes("github")
+                  person.avatar || person.url?.includes("github")
                     ? person.avatar ||
                       "https://avatars.githubusercontent.com/" +
                         person.url.split("github.com")[1]
@@ -121,10 +121,10 @@ export function Template({
                         ? `font-semibold text-gray-900`
                         : `text-gray-600`
                     }` +
-                    `${person.url.length > 0 ? ` hover:underline` : ` `}`
+                    `${person.url?.length > 0 ? ` hover:underline` : ` `}`
                   }
                 >
-                  {person.url.length > 0 ? (
+                  {person.url?.length > 0 ? (
                     <a href={person.url} target="_blank">
                       {person.name}
                       {person.promotedToResident ? "*" : ""}

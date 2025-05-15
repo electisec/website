@@ -8,7 +8,7 @@ export const sc_residents = [
     name: "sjkelleyjr",
     twitter: "https://twitter.com/sjkelleyjr",
     avatar:
-      "https://pbs.twimg.com/profile_images/1735338872446521345/t7n25B5g_400x400.jpg",
+      "https://avatars.githubusercontent.com/sjkelleyjr",
   },
   {
     name: "devtooligan",

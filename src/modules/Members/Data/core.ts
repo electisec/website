@@ -25,7 +25,7 @@ export const core = [
   },
   {
     name: "nullity",
-    twitter: "https://github.com/nullity00",
+    twitter: "https://twitter.com/nullity00",
     avatar:
       "https://avatars.githubusercontent.com/nullity00",
   },
