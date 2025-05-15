@@ -40,16 +40,13 @@ export const block2 = [
     name: "sjkelleyjr",
     url: "https://twitter.com/sjkelleyjr",
     promotedToResident: true,
-    avatar:
-      "https://pbs.twimg.com/profile_images/1735338872446521345/t7n25B5g_400x400.jpg",
+
   },
   { name: "smoothbot", url: "", promotedToResident: false, avatar: "" },
   {
     name: "stermi",
-    url: "https://twitter.com/StErMi",
+    url: "https://github.com/StErMi",
     promotedToResident: false,
-    avatar:
-      "https://pbs.twimg.com/profile_images/1516347654502072325/sSUEYvD7_400x400.jpg",
   },
   {
     name: "zokunei",

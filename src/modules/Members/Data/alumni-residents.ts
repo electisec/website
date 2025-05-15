@@ -1,9 +1,8 @@
-export const alumni_residents = [
+export const alumni_residents = [ 
   {
     name: "engn33r",
     twitter: "https://twitter.com/bl4ckb1rd71",
-    avatar:
-      "https://pbs.twimg.com/profile_images/1292574472155930627/wOOf37Rc_400x400.jpg",
+    avatar: "https://avatars.githubusercontent.com/engn33r",
   },
   {
     name: "Nibbler Express",
@@ -13,43 +12,41 @@ export const alumni_residents = [
   {
     name: "popular",
     twitter: "https://twitter.com/popular_12345/",
-    avatar:
-      "https://pbs.twimg.com/profile_images/1623800367283834880/HcE9g6uy_400x400.jpg",
+    avatar: "https://avatars.githubusercontent.com/elder-plinius",
   },
   {
     name: "_eperezok",
     twitter: "https://twitter.com/_eperezok",
-    avatar:
-      "https://pbs.twimg.com/profile_images/1581139804334571520/Lg7b73ix_400x400.jpg",
+    avatar: "https://avatars.githubusercontent.com/EperezOk",
   },
   {
     name: "stermi",
     twitter: "https://twitter.com/StErMi",
-    avatar:
-      "https://pbs.twimg.com/profile_images/1516347654502072325/sSUEYvD7_400x400.jpg",
+    avatar: "https://avatars.githubusercontent.com/StErMi",
   },
-  { name: "peep", twitter: "https://twitter.com/XianganH", avatar: "" },
+  {
+    name: "peep",
+    twitter: "https://twitter.com/XianganH",
+    avatar: "",
+  },
   {
     name: "B Samuels",
     twitter: "https://twitter.com/thebensams",
-    avatar:
-      "https://pbs.twimg.com/profile_images/1459309364989161476/FegLs1wo_400x400.jpg",
+    avatar: "https://avatars.githubusercontent.com/bsamuels453",
   },
   {
     name: "Usmann",
     twitter: "https://twitter.com/usmannk",
-    avatar:
-      "https://pbs.twimg.com/profile_images/1787541055241691136/k-xGTdmD_400x400.jpg",
+    avatar: "https://avatars.githubusercontent.com/usmannk",
   },
   {
     name: "blockdev",
     twitter: "https://twitter.com/blockdeveth",
-    avatar:
-      "https://pbs.twimg.com/profile_images/1527308824629374976/gybQtVtR_400x400.jpg",
+    avatar: "https://avatars.githubusercontent.com/0xbok",
   },
   {
     name: "igorline",
     twitter: "https://github.com/igorline",
-    avatar: "https://avatars.githubusercontent.com/u/1465430",
+    avatar: "https://avatars.githubusercontent.com/igorline",
   },
 ];
