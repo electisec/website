@@ -8,10 +8,12 @@ export const block5 = [
   {
     name: "0xc0ffEE",
     promotedToResident: false,
+    url: ""
   },
   {
     name: "0xl3xx",
     promotedToResident: false,
+    url: ""
   },
   {
     name: "0xRajkumar",
@@ -64,6 +66,7 @@ export const block5 = [
   {
     name: "f_f",
     promotedToResident: false,
+    url: ""
   },
   {
     name: "HHK",
@@ -103,6 +106,7 @@ export const block5 = [
   {
     name: "themystery",
     promotedToResident: false,
+    url: ""
   },
   {
     name: "Toshii",
