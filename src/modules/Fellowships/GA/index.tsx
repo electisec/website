@@ -43,7 +43,7 @@ function GuestAuditor() {
           </div>
           <p>
             If you think you are a good fit for the program (yay!), please
-            contact us at hello AT electisec DOT dev
+            contact us at hello AT electisec DOT com
           </p>
           {/* <Link href={"/fellowships"}>
             <button className="w-1/2 px-8 py-3 rounded-xl text-md text-darkgreen text-bold bg-emeraldlight bg-opacity-25 hover:bg-opacity-5 hover:text-emeraldlight duration-700">

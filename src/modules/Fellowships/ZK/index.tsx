@@ -157,7 +157,7 @@ function ZK() {
             <br />
             <br />
             If you have questions you want to ask before applying, you may
-            contact at: zk AT electisec DOT dev
+            contact at: zk AT electisec DOT com
           </p>
 
           {/* <img alt=""  src="/rust-window.svg" className="py-4 h-[32rem]" /> */}
