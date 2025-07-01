@@ -33,7 +33,7 @@ const workItems = [
     impact: "Protocol standardization",
     difficulty: "Research",
     category: "Standards",
-    author: "Nobita",
+    author: "Flying Nobita",
     authorAvatar: "https://avatars.githubusercontent.com/nobita",
     date: "Oct 2024",
     tags: ["EF Research", "Standards", "Verification", "Ethereum"],
@@ -206,7 +206,7 @@ function Highlights() {
         <div className="flex items-center justify-between mb-12">
           <div>
             <h2 className="text-4xl lg:text-5xl font-bold text-gray-900 mb-4">
-              Checkout our best work
+              The best work
             </h2>
             <p className="text-xl text-gray-600">
               Cutting-edge research and security discoveries that shape the ZK ecosystem
@@ -319,7 +319,7 @@ function Highlights() {
 
               {/* Actions */}
               <div className="flex gap-2">
-                <button className="flex-1 flex items-center justify-center gap-2 px-3 py-2 bg-green-500 text-white text-sm font-medium rounded-lg hover:bg-green-600 transition-colors">
+                <button className="flex-1 flex items-center justify-center gap-2 px-3 py-2 text-darkgreen text-bold bg-emeraldlight bg-opacity-25 hover:bg-opacity-5 hover:text-emeraldlight duration-700">
                   View Details
                   <ExternalLink className="w-3 h-3" />
                 </button>
@@ -329,13 +329,6 @@ function Highlights() {
               </div>
             </div>
           ))}
-        </div>
-
-        {/* Bottom CTA */}
-        <div className="text-center mt-12">
-          <button className="px-8 py-3 border-2 border-green-500 text-green-600 font-semibold rounded-xl hover:bg-green-50 transition-colors">
-            View All Research & Projects
-          </button>
         </div>
       </div>
     </div>

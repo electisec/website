@@ -40,7 +40,7 @@ function EnhancedTypewriter() {
   const [wordIndex, setWordIndex] = useState<number>(0);
   
   useEffect(() => {
-    const speed = isDeleting ? 50 : 150;
+    const speed = isDeleting ? 50 : 50;
     const word = words[wordIndex];
     
     const timer = setTimeout(() => {
@@ -84,15 +84,15 @@ function AuthorityMetrics() {
     <div className="grid grid-cols-3 gap-4 mb-8">
       <div className="bg-green-50 p-4 rounded-xl text-center border border-green-100">
         <div className="text-2xl font-bold text-green-600">${tvlCount.toFixed(1)}B+</div>
-        <div className="text-sm text-gray-600">TVL Secured</div>
+        <div className="text-sm text-gray-600">High</div>
       </div>
       <div className="bg-green-50 p-4 rounded-xl text-center border border-green-100">
         <div className="text-2xl font-bold text-green-600">{bugsCount}+</div>
-        <div className="text-sm text-gray-600">Bugs Found</div>
+        <div className="text-sm text-gray-600">Medium</div>
       </div>
       <div className="bg-green-50 p-4 rounded-xl text-center border border-green-100">
         <div className="text-2xl font-bold text-green-600">{alumniCount}+</div>
-        <div className="text-sm text-gray-600">Alumni</div>
+        <div className="text-sm text-gray-600">Infollow</div>
       </div>
     </div>
   );
@@ -104,15 +104,15 @@ function CredentialBadges() {
     <div className="flex flex-wrap gap-3 mb-6 justify-center">
       <div className="flex items-center gap-2 bg-gradient-to-r from-green-100 to-emerald-100 text-green-700 px-4 py-2 rounded-full text-sm font-semibold border border-green-200">
         <Trophy className="w-4 h-4" />
-        Ethereum Foundation Grant
+        Ethereum Foundation Grantee
       </div>
       <div className="flex items-center gap-2 bg-gradient-to-r from-green-100 to-emerald-100 text-green-700 px-4 py-2 rounded-full text-sm font-semibold border border-green-200">
         <Shield className="w-4 h-4" />
-        200+ Fellowship Alumni
+        Boosted Audits
       </div>
       <div className="flex items-center gap-2 bg-gradient-to-r from-green-100 to-emerald-100 text-green-700 px-4 py-2 rounded-full text-sm font-semibold border border-green-200">
         <Users className="w-4 h-4" />
-        8 Cohorts Completed
+        2 ZK Fellowships Completed
       </div>
     </div>
   );
@@ -122,10 +122,9 @@ function CredentialBadges() {
 function AchievementTicker() {
   const achievements: string[] = [
     "🔥 Critical Halo2 vulnerability discovered",
-    "🏆 EF Research Grant awarded", 
-    "⚡ 50+ bugs found in Q4 2024",
-    "🚀 zkVM audit completed for major L2",
-    "📊 $100M+ TVL secured this month"
+    "🏆 Noir Grantee to build noir web proofs SDK",
+    "⚡ Spartan ECDSA Audit completed",
+    "🚀 Binius Blog out now!",
   ];
   
   const [currentAchievement, setCurrentAchievement] = useState<number>(0);
@@ -140,7 +139,7 @@ function AchievementTicker() {
   
   return (
     <div className="bg-white/80 backdrop-blur-sm border border-green-200 rounded-lg p-3 mb-6">
-      <div className="flex items-center gap-2">
+      <div className="flex items-center justify-center gap-2">
         <div className="flex">
           <Star className="w-4 h-4 text-yellow-500 animate-pulse" />
           <Star className="w-4 h-4 text-yellow-500 animate-pulse" style={{animationDelay: '0.2s'}} />
@@ -156,11 +155,11 @@ function AchievementTicker() {
 
 export default function HeroSection() {
   return (
-    <div className="h-full relative sm:my-8 lg:mx-[20vw] lg:mt-24 lg:mb-24">
+    <div className="h-full relative sm:my-8 md:p-10 lg:mx-[20vw] lg:mt-24 lg:mb-24">
       {/* Top Credential Badges - Full Width */}
       <CredentialBadges />
       
-      <div className="flex flex-col lg:flex-row sm:text-center justify-between gap-12">
+      <div className="flex sm:flex-col flex-row sm:text-center justify-between gap-12">
         {/* Left Content */}
         <div className="my-8 flex-1">
           {/* Main Heading with Enhanced Typewriter */}
@@ -169,32 +168,30 @@ export default function HeroSection() {
           {/* Enhanced Subtitle */}
           <div className="my-6">
             <h2 className="text-xl sm:mx-4 text-gray-600 mb-4">
-              The ZK Security Authority That Secured $2.1B+ in TVL
+              Security - Development - Research - Tooling
             </h2>
           </div>
           
           {/* Enhanced CTA Buttons */}
           <div className="flex flex-row sm:flex-col gap-4 items-center justify-start sm:justify-center mb-8">
             <Link href="/contact-us">
-              <button className="px-8 py-4 rounded-xl text-white font-bold bg-gradient-to-r from-green-500 to-emerald-500 hover:from-green-600 hover:to-emerald-600 transition-all duration-300 shadow-lg hover:shadow-xl transform hover:scale-105">
+              <button className="px-8 py-4 rounded-xl text-md text-darkgreen text-bold bg-emeraldlight bg-opacity-25 hover:bg-opacity-5 hover:text-emeraldlight duration-700 shadow-lg hover:shadow-xl transform hover:scale-105">
                 Get a Boosted Audit
               </button>
             </Link>
             <Link href="/research">
               <button className="px-8 py-4 rounded-xl text-green-600 font-bold border-2 border-green-500 hover:bg-green-50 transition-all duration-300">
-                View Our Research
+                View Research
               </button>
             </Link>
           </div>
           
           {/* Trust Indicators */}
           <div className="pt-6 border-t border-gray-200">
-            <p className="text-sm text-gray-500 mb-3">Trusted by leading protocols:</p>
+            <p className="text-sm text-gray-500 mb-3">Trusted by:</p>
             <div className="flex flex-wrap gap-4 items-center justify-start sm:justify-center opacity-60">
-              <div className="bg-gray-100 px-3 py-1 rounded text-xs font-medium">RLN Protocol</div>
-              <div className="bg-gray-100 px-3 py-1 rounded text-xs font-medium">Summa</div>
-              <div className="bg-gray-100 px-3 py-1 rounded text-xs font-medium">ECASA</div>
-              <div className="bg-gray-100 px-3 py-1 rounded text-xs font-medium">Sigma</div>
+              <div className="bg-green-100 px-3 py-1 rounded text-sm font-medium">PSE Team</div>
+              <div className="bg-green-100 px-3 py-1 rounded text-sm font-medium">Personae Labs</div>
             </div>
           </div>
         </div>
@@ -211,7 +208,7 @@ export default function HeroSection() {
           </div>
           
           {/* Achievement Ticker - Moved to Right */}
-          <div className="w-full max-w-sm">
+          <div className="w-full max-w-md">
             <AchievementTicker />
           </div>
           
@@ -220,13 +217,6 @@ export default function HeroSection() {
             <AuthorityMetrics />
           </div>
         </div>
-      </div>
-      
-      {/* Bottom Stats Summary */}
-      <div className="mt-12 text-center sm:hidden">
-        <p className="text-lg text-gray-500">
-          Ethereum Foundation Grant Recipients • 8 Fellowship Cohorts • 500+ Critical Bugs Found
-        </p>
       </div>
     </div>
   );

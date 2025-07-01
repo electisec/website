@@ -6,7 +6,7 @@ const teamMembers = [
   {
     id: 1,
     name: "teddav",
-    role: "ZK Circuit Specialist",
+    role: "Halo2, Noirn, ZKVM, MCP",
     tagline: "The Circuit Whisperer",
     avatar: "https://avatars.githubusercontent.com/teddav",
     specializations: ["Halo2", "Circuit Analysis", "Soundness Proofs", "Formal Verification"],
@@ -35,7 +35,7 @@ const teamMembers = [
   {
     id: 2,
     name: "Oba",
-    role: "MPC Expert",
+    role: "Post-Quantum Crypto, MPC, LLD",
     tagline: "Privacy Protocol Pioneer",
     avatar: "https://avatars.githubusercontent.com/oba",
     specializations: ["Multi-Party Computation", "SEAL Protocol", "Privacy Protocols", "Cryptographic Design"],
@@ -63,8 +63,8 @@ const teamMembers = [
   },
   {
     id: 3,
-    name: "gp2m", 
-    role: "Cryptography Researcher",
+    name: "qpzm", 
+    role: "Compilers, Noir, ZKTLS",
     tagline: "The Math Magician",
     avatar: "https://avatars.githubusercontent.com/gp2m",
     specializations: ["zk-SNARKs", "Formal Verification", "Protocol Design", "Mathematical Proofs"],
@@ -93,7 +93,7 @@ const teamMembers = [
   {
     id: 4,
     name: "nullity",
-    role: "ZK-VM Auditor",
+    role: "Formal Verification, cryptography, gnark, circom",
     tagline: "Virtual Machine Virtuoso", 
     avatar: "https://avatars.githubusercontent.com/nullity",
     specializations: ["Binius", "zkVM Security", "Compiler Analysis", "Virtual Machine Design"],
@@ -121,8 +121,8 @@ const teamMembers = [
   },
   {
     id: 5,
-    name: "Nobita",
-    role: "Standards Researcher",
+    name: "Flying Nobita",
+    role: "GKR, Halo2",
     tagline: "Protocol Standardization Sage",
     avatar: "https://avatars.githubusercontent.com/nobita",
     specializations: ["EF Research", "Protocol Standards", "Verification Systems", "Ethereum Integration"],
@@ -172,22 +172,6 @@ function DreamTeamSection() {
     }
   };
 
-  const getExpertiseColor = (expertise: string) => {
-    switch (expertise) {
-      case 'Expert': return 'bg-red-100 text-red-700 border-red-200';
-      case 'Research': return 'bg-purple-100 text-purple-700 border-purple-200';
-      default: return 'bg-blue-100 text-blue-700 border-blue-200';
-    }
-  };
-
-  const getExpertiseIcon = (expertise: string) => {
-    switch (expertise) {
-      case 'Expert': return <Shield className="w-4 h-4" />;
-      case 'Research': return <Brain className="w-4 h-4" />;
-      default: return <Code className="w-4 h-4" />;
-    }
-  };
-
   return (
     <div className="py-16 bg-white">
       <div className="max-w-7xl mx-auto px-6">
@@ -234,12 +218,9 @@ function DreamTeamSection() {
                     </div>
                     
                     <div className="flex-1">
-                      <div className="flex items-center gap-2 mb-1">
+                      <div className="mb-1">
                         <h3 className="text-lg font-bold text-gray-900">{member.name}</h3>
-                        <span className={`px-2 py-1 text-xs font-medium rounded border flex items-center gap-1 ${getExpertiseColor(member.expertise)}`}>
-                          {getExpertiseIcon(member.expertise)}
-                          {member.expertise}
-                        </span>
+
                       </div>
                       <p className="text-sm text-gray-600 mb-1">{member.role}</p>
                       <p className="text-xs text-green-600 font-medium italic">{member.tagline}</p>
@@ -248,22 +229,6 @@ function DreamTeamSection() {
                     <ChevronRight className={`w-5 h-5 text-green-500 transition-transform ${
                       selectedMember === index ? 'rotate-90' : ''
                     }`} />
-                  </div>
-
-                  {/* Quick Stats */}
-                  <div className="mt-3 grid grid-cols-3 gap-2 text-xs">
-                    <div className="text-center bg-white/80 rounded p-1">
-                      <div className="font-bold text-green-600">{member.bugsFound}</div>
-                      <div className="text-gray-600">Bugs</div>
-                    </div>
-                    <div className="text-center bg-white/80 rounded p-1">
-                      <div className="font-bold text-green-600">{member.projectsLed}</div>
-                      <div className="text-gray-600">Projects</div>
-                    </div>
-                    <div className="text-center bg-white/80 rounded p-1">
-                      <div className="font-bold text-green-600">{member.yearsExperience}y</div>
-                      <div className="text-gray-600">Experience</div>
-                    </div>
                   </div>
                 </div>
               ))}
@@ -313,22 +278,6 @@ function DreamTeamSection() {
                     </div>
                   </div>
 
-                  {/* Stats Grid */}
-                  <div className="grid sm:grid-cols-1 grid-cols-3 gap-4 mb-8">
-                    <div className="bg-white rounded-xl p-4 text-center border border-green-200">
-                      <div className="text-2xl font-bold text-green-600 mb-1">{teamMembers[selectedMember].bugsFound}</div>
-                      <div className="text-sm text-gray-600">Critical Bugs Found</div>
-                    </div>
-                    <div className="bg-white rounded-xl p-4 text-center border border-green-200">
-                      <div className="text-2xl font-bold text-green-600 mb-1">{teamMembers[selectedMember].projectsLed}</div>
-                      <div className="text-sm text-gray-600">Projects Led</div>
-                    </div>
-                    <div className="bg-white rounded-xl p-4 text-center border border-green-200">
-                      <div className="text-2xl font-bold text-green-600 mb-1">{teamMembers[selectedMember].yearsExperience}</div>
-                      <div className="text-sm text-gray-600">Years Experience</div>
-                    </div>
-                  </div>
-
                   {/* Detailed Work */}
                   <div className="mb-8">
                     <h4 className="text-xl font-bold text-gray-900 mb-3">Detailed Work:</h4>
@@ -371,7 +320,7 @@ function DreamTeamSection() {
                   {/* Recent Contributions */}
                   <div>
                     <h4 className="text-xl font-bold text-gray-900 mb-3">Recent Contributions:</h4>
-                    <div className="grid md:grid-cols-2 gap-3">
+                    <div className="grid lg:grid-cols-3 gap-3">
                       {teamMembers[selectedMember].recentContributions.map((contribution, idx) => (
                         <div key={idx} className="flex items-center gap-2 bg-white rounded-lg p-3 border border-green-200">
                           <Zap className="w-4 h-4 text-green-500" />
@@ -395,7 +344,7 @@ function DreamTeamSection() {
             Get your protocol audited by the dream team that's secured $2.1B+ TVL
           </p>
           <div className="flex flex-row sm:flex-col gap-4 justify-center">
-            <button className="px-8 py-3 bg-green-500 text-white font-semibold rounded-xl hover:bg-green-600 transition-colors">
+            <button className="px-8 py-3 font-semibold rounded-xl text-darkgreen bg-emeraldlight bg-opacity-25 hover:bg-opacity-5 hover:text-emeraldlight duration-700">
               Schedule Team Consultation
             </button>
             <button className="px-8 py-3 border-2 border-green-500 text-green-600 font-semibold rounded-xl hover:bg-green-50 transition-colors">
