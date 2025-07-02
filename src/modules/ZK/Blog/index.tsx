@@ -143,11 +143,11 @@ function FeaturedResearchHighlight() {
         />
         {/* Featured Badge Overlay */}
         <div className="absolute top-4 left-4 flex items-center gap-2">
-          <span className="bg-white/90 text-green-700 px-3 py-1 rounded-full text-sm font-semibold backdrop-blur-sm">
-            ⭐ Featured Research
-          </span>
+          {/* <span className="bg-white/90 text-green-700 px-3 py-1 rounded-full text-sm font-semibold backdrop-blur-sm">
+             Featured Research
+          </span> */}
           <span className="bg-green-500 text-white px-3 py-1 rounded-full text-sm font-medium">
-            Latest
+            ⭐ Latest
           </span>
         </div>
       </div>
@@ -156,17 +156,17 @@ function FeaturedResearchHighlight() {
       <div className="p-8 text-center">
         {/* Main Content */}
         <h1 className="text-xl lg:text-3xl font-bold text-gray-900 mb-4 leading-tight">
-          MPC{' '}
+          MPC Research on  {' '}
           <span className="bg-gradient-to-r from-green-600 to-emerald-600 bg-clip-text text-transparent">
-            Research
+            Vole, Quicksilver
           </span>
         </h1>
 
         {/* CTA Section */}
         <div className="grid grid-cols-1 w-full">
           <button className="flex items-center justify-center gap-2 px-6 py-3 rounded-xl text-md text-darkgreen text-bold bg-emeraldlight bg-opacity-25 hover:bg-opacity-5 hover:text-emeraldlight duration-700">
-            View Research
-            <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
+            Coming Soon
+            {/* <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" /> */}
           </button>
         </div>
       </div>

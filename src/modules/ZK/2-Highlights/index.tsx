@@ -1,141 +1,142 @@
 import React, { useRef, useEffect, useState } from 'react';
 import { ChevronLeft, ChevronRight, ExternalLink, Github, Calendar, Users, Award, Shield } from 'lucide-react';
+import AvatarCircles from "@/components/ui/avatar-circles";
 
-// Work items data
 const workItems = [
   {
     id: 1,
-    title: "Halo2 Critical Vulnerability Discovery",
-    subtitle: "20 LoC Proof of Concept",
-    description: "Discovered a critical soundness error in Halo2's constraint system that could have compromised protocol security.",
-    impact: "Protocol-level soundness error",
+    title: "Tornado Cash in Halo2",
+    subtitle: "Rust + ZK Circuit Implementation",
+    description: "Reimplemented Tornado Cash in Halo2 as a deep dive into Rust and ZK circuit design. Included Summa Solvency code walkthroughs and MST code improvements.",
     difficulty: "Expert",
-    category: "Security Research",
-    author: "teddav",
-    authorAvatar: "https://avatars.githubusercontent.com/teddav",
-    date: "Nov 2024",
-    tags: ["Critical", "ZK Circuits", "Halo2", "Soundness"],
-    metrics: {
-      severity: "Critical",
-      protocols: "15+",
-      recognition: "Industry-wide"
-    },
+    authors: [
+      {
+        name: "teddav",
+        avatar: "https://avatars.githubusercontent.com/teddav"
+      }
+    ],
+    tags: ["Halo2", "Rust", "Circuits"],
     links: {
-      github: "https://github.com/example",
-      blog: "https://blog.electisec.com/halo2-vulnerability"
+      github: "https://github.com/summa-dev/summa-solvency/pull/269",
+      blog: "https://dev.to/teddav/tornado-cash-with-halo2-62b"
     }
   },
   {
     id: 2,
-    title: "Verifier Validator Registry Proposal",
-    subtitle: "Ethereum Foundation Research",
-    description: "Comprehensive proposal for standardizing ZK verifier validation across the Ethereum ecosystem.",
-    impact: "Protocol standardization",
-    difficulty: "Research",
-    category: "Standards",
-    author: "Flying Nobita",
-    authorAvatar: "https://avatars.githubusercontent.com/nobita",
-    date: "Oct 2024",
-    tags: ["EF Research", "Standards", "Verification", "Ethereum"],
-    metrics: {
-      severity: "High",
-      protocols: "All Ethereum",
-      recognition: "EF Grant"
-    },
+    title: "PSE-Halo2 Bug Discovery",
+    subtitle: "Critical Soundness Fix",
+    description: "Identified and reported a critical bug in PSE-Halo2 library, leading to an official fix and community acknowledgment.",
+    difficulty: "Expert",
+    authors: [
+      {
+        name: "teddav",
+        avatar: "https://avatars.githubusercontent.com/teddav"
+      }
+    ],
+    tags: ["Halo2", "Bug Discovery", "Security"],
     links: {
-      github: "https://github.com/ethereum/EIPs",
-      blog: "https://blog.electisec.com/verifier-registry"
+      github: "https://github.com/privacy-scaling-explorations/halo2/pull/347",
+      blog: "https://github.com/privacy-scaling-explorations/halo2/issues/335"
     }
   },
   {
     id: 3,
-    title: "Underconstrained Circuit Detection",
-    subtitle: "Automated Security Analysis",
-    description: "Advanced tooling for detecting underconstrained vulnerabilities in ZK circuits with 90% accuracy.",
-    impact: "Automated vulnerability detection",
-    difficulty: "Expert",
-    category: "Security Tooling",
-    author: "nullity",
-    authorAvatar: "https://avatars.githubusercontent.com/nullity",
-    date: "Sep 2024",
-    tags: ["Automation", "Circuit Analysis", "Security", "Tooling"],
-    metrics: {
-      severity: "High",
-      protocols: "25+",
-      recognition: "Open Source"
-    },
+    title: "Summa Tooling Enhancements",
+    subtitle: "Patch for Analysis Tools",
+    description: "Developed patches for halo2-analyzer and Polyexen-demo, enabling smoother onboarding and analysis for fellowship participants.",
+    difficulty: "Advanced",
+    authors: [
+      {
+        name: "zeroqn",
+        avatar: "https://avatars.githubusercontent.com/zeroqn"
+      }
+    ],
+    tags: ["Tooling", "Halo2", "Summa"],
     links: {
-      github: "https://github.com/electisec/circuit-analyzer",
-      blog: "https://blog.electisec.com/circuit-detection"
+      github: "https://github.com/zeroqn/summa-analysis",
+      blog: "https://nullity00.notion.site/Halo2-Tools-ef0166c5807f43109b672c0c5954a6b0"
     }
   },
   {
     id: 4,
-    title: "zkVM Security Framework",
-    subtitle: "Comprehensive Audit Methodology",
-    description: "First-of-its-kind security framework for auditing zero-knowledge virtual machines.",
-    impact: "Industry standard methodology",
-    difficulty: "Expert",
-    category: "Methodology",
-    author: "gp2m",
-    authorAvatar: "https://avatars.githubusercontent.com/gp2m",
-    date: "Aug 2024",
-    tags: ["zkVM", "Audit Framework", "Methodology", "Security"],
-    metrics: {
-      severity: "High",
-      protocols: "8+",
-      recognition: "Industry Standard"
-    },
+    title: "Merkle Sum Tree Attack Analysis",
+    subtitle: "Deep Dive Articles",
+    description: "Pia and 0xpanicError analyzed vulnerabilities in Merkle Sum Trees, producing detailed gists and blog posts that advanced community knowledge.",
+    difficulty: "Research",
+    authors: [
+      {
+        name: "Pia",
+        avatar: "https://avatars.githubusercontent.com/rkdud007"
+      },
+      {
+        name: "0xpanicError",
+        avatar: "https://avatars.githubusercontent.com/0xpanicError"
+      }
+    ],
+    tags: ["MST", "Security", "Ethereum"],
     links: {
-      github: "https://github.com/electisec/zkvm-framework",
-      blog: "https://blog.electisec.com/zkvm-security"
+      github: "https://gist.github.com/rkdud007/5c10c8edcf583ef0e5550a09e9301962",
+      blog: "https://0xpanicerror.substack.com/p/merkle-sum-tree-a-vulnerability-analysis"
     }
   },
   {
     id: 5,
-    title: "MPC Protocol Optimization",
-    subtitle: "40% Performance Improvement",
-    description: "Novel optimizations to multi-party computation protocols reducing computation time significantly.",
-    impact: "Performance breakthrough",
-    difficulty: "Research",
-    category: "Performance",
-    author: "Oba",
-    authorAvatar: "https://avatars.githubusercontent.com/oba",
-    date: "Jul 2024",
-    tags: ["MPC", "Optimization", "Performance", "Research"],
-    metrics: {
-      severity: "Medium",
-      protocols: "12+",
-      recognition: "Research Paper"
-    },
+    title: "Mastering KZG by Hand",
+    subtitle: "Educational Article",
+    description: "An in-depth article explaining KZG commitments and polynomial math by hand, enabling deeper understanding of core ZK primitives.",
+    difficulty: "Advanced",
+    authors: [
+      {
+        name: "0xnagu",
+        avatar: "https://avatars.githubusercontent.com/thogiti"
+      }
+    ],
+    tags: ["KZG", "Formal Methods", "Education"],
     links: {
-      github: "https://github.com/electisec/mpc-optimization",
-      blog: "https://blog.electisec.com/mpc-optimization"
+      github: "",
+      blog: "https://thogiti.github.io/2024/03/22/Mastering-KZG-by-hands.html"
+    }
+  }, 
+  {
+    id: 6,
+    title: "Verifier Validator Registry Proposal",
+    subtitle: "Standardizing Verifier Validation",
+    description: "Proposal and proof of concept for a unified verifier-validator registry to improve standardization and security across ZK ecosystems.",
+    difficulty: "Research",
+    authors: [
+      {
+        name: "Flying Nobita",
+        avatar: "https://avatars.githubusercontent.com/flyingnobita"
+      }
+    ],
+    tags: ["Verification", "Standards", "Ethereum"],
+    links: {
+      github: "https://github.com/flyingnobita/vvr-poc",
+      blog: "https://hackmd.io/@FlyingNobita/verifier-validator-registry-proposal-draft"
     }
   },
   {
-    id: 6,
-    title: "Formal Verification Suite",
-    subtitle: "Mathematical Proof System",
-    description: "Comprehensive formal verification tools for proving ZK circuit correctness mathematically.",
-    impact: "Mathematical guarantees",
-    difficulty: "Expert",
-    category: "Formal Methods",
-    author: "teddav",
-    authorAvatar: "https://avatars.githubusercontent.com/teddav",
-    date: "Jun 2024",
-    tags: ["Formal Verification", "Mathematics", "Proofs", "Correctness"],
-    metrics: {
-      severity: "High",
-      protocols: "20+",
-      recognition: "Academic"
-    },
-    links: {
-      github: "https://github.com/electisec/formal-verification",
-      blog: "https://blog.electisec.com/formal-verification"
+  id: 7,
+  title: "Halo2 Starter: Lightning-Fast PoC Framework",
+  subtitle: "20 LoC Security PoC",
+  description: "Developed a minimal, ready-to-use Halo2 starter template empowering researchers to write security proof-of-concepts in just 20 lines. Streamlines reproducibility and accelerates bug discovery in ZK circuits.",
+  difficulty: "Expert",
+  authors: [
+    {
+      name: "teddav",
+      avatar: "https://avatars.githubusercontent.com/teddav"
     }
+  ],
+  tags: ["Halo2", "Security", "PoC"],
+  links: {
+    github: "https://github.com/teddav/halo2-starter",
+    blog: "https://github.com/privacy-scaling-explorations/halo2/pull/352"
   }
+}
+
 ];
+
+
 
 function Highlights() {
   const scrollRef = useRef<HTMLDivElement>(null);
@@ -180,23 +181,6 @@ function Highlights() {
 
   const handleMouseLeave = () => {
     setIsHovered(false);
-  };
-
-  const getDifficultyColor = (difficulty: string) => {
-    switch (difficulty) {
-      case 'Expert': return 'bg-red-100 text-red-700 border-red-200';
-      case 'Research': return 'bg-purple-100 text-purple-700 border-purple-200';
-      case 'Advanced': return 'bg-orange-100 text-orange-700 border-orange-200';
-      default: return 'bg-blue-100 text-blue-700 border-blue-200';
-    }
-  };
-
-  const getSeverityIcon = (severity: string) => {
-    switch (severity) {
-      case 'Critical': return <Shield className="w-4 h-4 text-red-500" />;
-      case 'High': return <Award className="w-4 h-4 text-orange-500" />;
-      default: return <Users className="w-4 h-4 text-blue-500" />;
-    }
   };
 
   return (
@@ -246,86 +230,61 @@ function Highlights() {
               className="min-w-[380px] max-w-[380px] sm:min-w-[340px] sm:max-w-[340px] bg-white border border-gray-200 rounded-2xl p-6 hover:shadow-lg transition-all duration-300 hover:-translate-y-1 group"
             >
               {/* Header */}
-              <div className="flex items-start justify-between mb-4">
-                <div className="flex items-center gap-3">
-                  <img 
-                    src={item.authorAvatar} 
-                    alt={item.author}
-                    className="w-10 h-10 rounded-full border border-gray-200"
-                  />
-                  <div>
-                    <div className="font-medium text-gray-900">{item.author}</div>
-                    <div className="text-sm text-gray-500 flex items-center gap-1">
-                      <Calendar className="w-3 h-3" />
-                      {item.date}
-                    </div>
-                  </div>
+                <div className="flex items-center gap-3 mb-4">
+                <AvatarCircles 
+                  avatarUrls={item.authors.map(author => ({ 
+                  imageUrl: author.avatar,
+                  profileUrl: `https://github.com/${author.name}`
+                  }))}
+                />
+                <div className="text-md text-gray-600 font-medium">
+                  {item.authors.map(author => author.name).join(' & ')}
                 </div>
-                
-                <div className="flex items-center gap-2">
-                  {getSeverityIcon(item.metrics.severity)}
-                  <span className={`px-2 py-1 text-xs font-medium rounded-full border ${getDifficultyColor(item.difficulty)}`}>
-                    {item.difficulty}
-                  </span>
                 </div>
-              </div>
 
               {/* Content */}
               <div className="mb-4">
-                <h3 className="text-lg font-bold text-gray-900 mb-2 line-clamp-2">
-                  {item.title}
-                </h3>
-                <p className="text-sm font-medium text-green-600 mb-3">
-                  {item.subtitle}
-                </p>
-                <p className="text-gray-600 text-sm leading-relaxed line-clamp-3">
-                  {item.description}
-                </p>
-              </div>
-
-              {/* Impact & Metrics */}
-              <div className="mb-4">
-                <div className="text-sm font-medium text-gray-900 mb-2">Impact:</div>
-                <div className="text-sm text-green-600 font-medium mb-3">{item.impact}</div>
-                
-                <div className="grid grid-cols-2 gap-3 text-xs">
-                  <div className="bg-gray-50 rounded-lg p-2">
-                    <div className="font-medium text-gray-700">Protocols</div>
-                    <div className="text-gray-600">{item.metrics.protocols}</div>
-                  </div>
-                  <div className="bg-gray-50 rounded-lg p-2">
-                    <div className="font-medium text-gray-700">Recognition</div>
-                    <div className="text-gray-600">{item.metrics.recognition}</div>
-                  </div>
-                </div>
+              <h3 className="text-lg font-bold text-gray-900 mb-2 line-clamp-2">
+                {item.title}
+              </h3>
+              <p className="text-sm font-medium text-green-600 mb-3">
+                {item.subtitle}
+              </p>
+              <p className="text-gray-600 text-sm leading-relaxed line-clamp-3">
+                {item.description}
+              </p>
               </div>
 
               {/* Tags */}
               <div className="flex flex-wrap gap-1 mb-4">
-                {item.tags.slice(0, 3).map((tag, index) => (
-                  <span 
-                    key={index}
-                    className="px-2 py-1 bg-gray-100 text-gray-700 text-xs rounded"
-                  >
-                    {tag}
-                  </span>
-                ))}
-                {item.tags.length > 3 && (
-                  <span className="px-2 py-1 bg-gray-100 text-gray-600 text-xs rounded">
-                    +{item.tags.length - 3}
-                  </span>
-                )}
+              {item.tags.slice(0, 3).map((tag, index) => (
+                <span 
+                key={index}
+                className="px-2 py-1 bg-gray-100 text-gray-700 text-xs rounded"
+                >
+                {tag}
+                </span>
+              ))}
+              {item.tags.length > 3 && (
+                <span className="px-2 py-1 bg-gray-100 text-gray-600 text-xs rounded">
+                +{item.tags.length - 3}
+                </span>
+              )}
               </div>
 
               {/* Actions */}
               <div className="flex gap-2">
-                <button className="flex-1 flex items-center justify-center gap-2 px-3 py-2 text-darkgreen text-bold bg-emeraldlight bg-opacity-25 hover:bg-opacity-5 hover:text-emeraldlight duration-700">
-                  View Details
-                  <ExternalLink className="w-3 h-3" />
-                </button>
-                <button className="flex items-center justify-center p-2 border border-gray-300 text-gray-600 rounded-lg hover:bg-gray-50 transition-colors">
-                  <Github className="w-4 h-4" />
-                </button>
+              <button
+                onClick={() => window.open(item.links.blog, '_blank')}
+                className="flex-1 flex items-center justify-center gap-2 px-3 py-2 text-darkgreen text-bold bg-emeraldlight bg-opacity-25 hover:bg-opacity-5 hover:text-emeraldlight duration-700">
+                View Details
+                <ExternalLink className="w-3 h-3" />
+              </button>
+              <button 
+                onClick={() => window.open(item.links.github, '_blank')}
+                className="flex items-center justify-center p-2 border border-gray-300 text-gray-600 rounded-lg hover:bg-gray-50 transition-colors">
+                <Github className="w-4 h-4" />
+              </button>
               </div>
             </div>
           ))}

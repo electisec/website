@@ -1,12 +1,11 @@
 import React, { useState, useEffect } from 'react';
 import { Github, ExternalLink, Star, Award, Code, Shield, Zap, Brain, Target, Users, ChevronRight } from 'lucide-react';
 
-// Team members data with detailed work
 const teamMembers = [
   {
     id: 1,
     name: "teddav",
-    role: "Halo2, Noirn, ZKVM, MCP",
+    role: "Halo2, Noir, ZKVM, MCP",
     tagline: "The Circuit Whisperer",
     avatar: "https://avatars.githubusercontent.com/teddav",
     specializations: ["Halo2", "Circuit Analysis", "Soundness Proofs", "Formal Verification"],
@@ -14,26 +13,55 @@ const teamMembers = [
     bugsFound: 127,
     projectsLed: 23,
     yearsExperience: 4,
-    detailedWork: "Discovered critical vulnerability in Halo2's constraint system with just 20 lines of code. Led the formal verification of zkWasm instructions and pioneered underconstrained circuit detection methodologies. Expert in mathematical proofs of circuit correctness with 50+ critical bugs found across major ZK protocols.",
+    detailedWork: "Discovered critical vulnerability in Halo2's constraint system with just 20 lines of code. Led formal verification of zkWasm instructions, pioneered underconstrained circuit detection methodologies, and developed halo2-starter for minimal security PoCs. Authored Binius blog series and contributed advanced cryptographic tooling in sagemath.",
     achievements: [
       "Discovered Halo2 critical soundness error",
-      "Led formal verification of zkWasm",
-      "Authored 15+ ZK security research papers", 
-      "Speaker at 8 major ZK conferences"
+      "Top fellow in Electi’s 2nd ZK Security fellowship",
+      "Authored 15+ ZK security research papers",
+      "Finished first in Epoch 0 Secureum"
     ],
-    currentWork: "Leading research on automated circuit verification and developing next-generation ZK security tools.",
+    currentWork: "Leading automated circuit verification research and advancing next-gen ZK security tooling.",
     social: {
       github: "https://github.com/teddav",
       x: "https://x.com/teddav"
     },
     recentContributions: [
-      "Binius field extensions research",
-      "Reed-Solomon codes implementation",
-      "FRI protocol analysis"
+      "halo2-starter and Mock Prover API extensions",
+      "Binius blog series (fields, RS, FRI, sumcheck, GKR)",
+      "Noir zk-tenant & co-match projects"
     ]
   },
   {
     id: 2,
+    name: "qpzm",
+    role: "Compilers, Noir, ZKTLS",
+    tagline: "The Math Magician",
+    avatar: "https://avatars.githubusercontent.com/gp2m",
+    specializations: ["zk-SNARKs", "Formal Verification", "Protocol Design", "Mathematical Proofs"],
+    expertise: "Expert",
+    bugsFound: 156,
+    projectsLed: 31,
+    yearsExperience: 6,
+    detailedWork: "Placed top 10 in 8 audit contests and secured top findings in Electi’s zk fellowship audits. Strong in Noir development, EVM RWA integrations, and low-level hardware/compilers (Y86-64 project). Focused on formal verification frameworks, automated proofs, and protocol correctness in ZK systems.",
+    achievements: [
+      "Top 10 in Sherlock audit contests",
+      "Formal verification of zkVMs",
+      "PhD-level research and 20+ publications",
+      "Ethereum Foundation grant recipient"
+    ],
+    currentWork: "Building automated formal verification pipelines and next-gen compilers for ZK ecosystems.",
+    social: {
+      github: "https://github.com/qpzm",
+      x: "https://x.com/gp2m"
+    },
+    recentContributions: [
+      "Noir semaphore.nr and WebProof SDK",
+      "Genie zk-TLS on-ramp systems",
+      "Aztec UltraHonk verifier research"
+    ]
+  },
+  {
+    id: 3,
     name: "Oba",
     role: "Post-Quantum Crypto, MPC, LLD",
     tagline: "Privacy Protocol Pioneer",
@@ -43,80 +71,51 @@ const teamMembers = [
     bugsFound: 89,
     projectsLed: 18,
     yearsExperience: 5,
-    detailedWork: "Leading researcher in MPC protocols with focus on privacy-preserving computation. Audited 15+ privacy-preserving systems and discovered novel attack vectors in multi-party computation schemes. Specializes in information leakage prevention and secure protocol design.",
+    detailedWork: "Core contributor to Kakarot zkEVM and cairo-m, focused on elliptic curve cryptography, privacy protocols, and advanced EVM architectures. Led real-time data pipeline security and authored in-depth cryptographic analyses including RFC6979 vulnerability breakdowns. Electi resident and mentor on ZK security audits.",
     achievements: [
-      "40% performance improvement in MPC protocols",
-      "Designed privacy-preserving audit framework",
-      "Published 12 research papers on MPC security",
-      "Led security reviews for 3 major privacy coins"
+      "Core dev on Kakarot zkEVM & cairo-m",
+      "Electi ZK Security resident and mentor",
+      "Authored RFC6979 vulnerability analyses",
+      "Led design of Mass-core-tetris AA wallet system"
     ],
-    currentWork: "Developing next-generation MPC protocols with enhanced privacy guarantees and improved performance.",
+    currentWork: "Developing hybrid zkVM architectures and building privacy-preserving tooling across Cairo and EVM ecosystems.",
     social: {
-      github: "https://github.com/oba",
-      x: "https://x.com/oba"
+      github: "https://github.com/obatirou",
+      x: "https://x.com/obatirou"
     },
     recentContributions: [
-      "MPC protocol optimization research",
-      "SEAL protocol security analysis",
-      "Privacy-preserving computation frameworks"
-    ]
-  },
-  {
-    id: 3,
-    name: "qpzm", 
-    role: "Compilers, Noir, ZKTLS",
-    tagline: "The Math Magician",
-    avatar: "https://avatars.githubusercontent.com/gp2m",
-    specializations: ["zk-SNARKs", "Formal Verification", "Protocol Design", "Mathematical Proofs"],
-    expertise: "Expert",
-    bugsFound: 156,
-    projectsLed: 31,
-    yearsExperience: 6,
-    detailedWork: "PhD in Applied Cryptography specializing in formal verification of ZK protocols. Developed mathematical frameworks for proving circuit correctness and led the verification of multiple zkVM implementations. Expert in cryptographic protocol design with 20+ research publications.",
-    achievements: [
-      "PhD in Applied Cryptography",
-      "20+ peer-reviewed research publications",
-      "Formal verification of 5 major zkVM systems",
-      "Ethereum Foundation research grant recipient"
-    ],
-    currentWork: "Advancing formal verification methodologies for complex ZK systems and developing automated proof generation tools.",
-    social: {
-      github: "https://github.com/gp2m",
-      x: "https://x.com/gp2m"
-    },
-    recentContributions: [
-      "zkVM formal verification frameworks",
-      "Automated proof generation tools",
-      "Cryptographic protocol security models"
+      "Kakarot EVM on Starknet",
+      "HyVM fork in Huff",
+      "SEAL911 vulnerability research and blogs"
     ]
   },
   {
     id: 4,
     name: "nullity",
-    role: "Formal Verification, cryptography, gnark, circom",
-    tagline: "Virtual Machine Virtuoso", 
+    role: "Formal Verification, Cryptography, gnark, circom",
+    tagline: "Virtual Machine Virtuoso",
     avatar: "https://avatars.githubusercontent.com/nullity",
     specializations: ["Binius", "zkVM Security", "Compiler Analysis", "Virtual Machine Design"],
     expertise: "Expert",
     bugsFound: 94,
     projectsLed: 19,
     yearsExperience: 4,
-    detailedWork: "Expert in virtual machine security for ZK systems with deep focus on zkVM implementations. Led comprehensive audits of 3 major zkVM systems and discovered 25+ critical vulnerabilities in virtual machine designs. Specializes in compiler security and execution environment analysis.",
+    detailedWork: "Expert in zkVM security and compiler analysis, led audits of multiple major zkVM systems. Specialized in virtual machine security models, protocol-level circuit correctness, and underconstrained circuit testing frameworks. Pioneering contributions to Binius protocol research and zkVM standards.",
     achievements: [
-      "Led audits of 3 major zkVM implementations",
+      "Led audits of 3 major zkVMs",
       "Discovered 25+ critical VM vulnerabilities",
       "Developed zkVM security testing frameworks",
-      "Contributed to Binius protocol research"
+      "Contributed to Binius protocol design"
     ],
-    currentWork: "Researching novel proof systems like Binius and developing security standards for next-generation zkVMs.",
+    currentWork: "Advancing zkVM security standards and researching new proof systems like Binius for scalable ZK applications.",
     social: {
-      github: "https://github.com/nullity", 
+      github: "https://github.com/nullity",
       x: "https://x.com/nullity"
     },
     recentContributions: [
-      "Binius protocol implementation",
-      "zkVM compiler security analysis",
-      "Virtual machine testing frameworks"
+      "Binius protocol contributions",
+      "zkVM compiler audits",
+      "New testing frameworks for VM security"
     ]
   },
   {
@@ -130,46 +129,53 @@ const teamMembers = [
     bugsFound: 67,
     projectsLed: 14,
     yearsExperience: 3,
-    detailedWork: "Ethereum Foundation grant recipient focusing on ZK protocol standardization and verification system design. Led the development of verifier validator registry proposals and contributed to Ethereum's ZK scaling roadmap. Expert in protocol integration and standards development.",
+    detailedWork: "Ethereum Foundation grant recipient specializing in ZK protocol standardization. Led Verifier Validator Registry proposals, contributed to Ethereum scaling roadmap, and developed frameworks for verifier integration. Deep expertise in GKR and Halo2 bridging research with protocol standards.",
     achievements: [
       "Ethereum Foundation grant recipient",
       "Led Verifier Validator Registry proposal",
-      "Contributed to EIP standardization process",
-      "Designed ZK verification standards"
+      "Contributed to EIP standardization",
+      "Designed Ethereum ZK verification standards"
     ],
-    currentWork: "Developing standardized frameworks for ZK verifier validation across the Ethereum ecosystem.",
+    currentWork: "Driving standardized verification frameworks for Ethereum and cross-chain ZK systems.",
     social: {
       github: "https://github.com/nobita",
       x: "https://x.com/nobita"
     },
     recentContributions: [
-      "Verifier validator registry design",
-      "Ethereum ZK standards development",
-      "Protocol integration frameworks"
+      "Verifier Validator Registry draft and design",
+      "Ethereum ZK standards",
+      "Protocol integration proposals"
     ]
   }
 ];
 
+
 function DreamTeamSection() {
   const [selectedMember, setSelectedMember] = useState<number>(0);
   const [isHovered, setIsHovered] = useState<boolean>(false);
+  const [isUserClicked, setIsUserClicked] = useState<boolean>(false);
 
   // Auto-cycle through team members
   useEffect(() => {
-    if (!isHovered) {
+    if (!isHovered && !isUserClicked) {
       const interval = setInterval(() => {
         setSelectedMember(prev => (prev + 1) % teamMembers.length);
       }, 5000); // Change every 5 seconds
 
       return () => clearInterval(interval);
     }
-  }, [isHovered]);
+  }, [isHovered, isUserClicked]);
 
   const handleMemberHover = (index: number, hovering: boolean) => {
     setIsHovered(hovering);
     if (hovering) {
       setSelectedMember(index);
     }
+  };
+
+  const handleMemberClick = (index: number) => {
+    setSelectedMember(index);
+    setIsUserClicked(true);
   };
 
   return (
@@ -182,9 +188,6 @@ function DreamTeamSection() {
           </h2>
           <p className="text-xl text-gray-600 mb-4 max-w-3xl mx-auto">
             ZK Circuit breakers, MPC Specialists, FHE experts, TEE geeks, seasoned Rustaceans and Cryptography connoisseurs
-          </p>
-          <p className="text-lg text-green-600 font-medium">
-            The minds behind 500+ critical bug discoveries and $2.1B+ TVL secured
           </p>
         </div>
 
@@ -203,7 +206,7 @@ function DreamTeamSection() {
                   }`}
                   onMouseEnter={() => handleMemberHover(index, true)}
                   onMouseLeave={() => handleMemberHover(index, false)}
-                  onClick={() => setSelectedMember(index)}
+                  onClick={() => handleMemberClick(index)}
                 >
                   <div className="flex items-center gap-4">
                     <div className="relative">
@@ -338,17 +341,14 @@ function DreamTeamSection() {
         {/* Bottom CTA */}
         <div className="text-center mt-16">
           <h3 className="text-2xl font-bold text-gray-900 mb-4">
-            Want to work with these experts?
+            Want to work with ZK experts?
           </h3>
-          <p className="text-lg text-gray-600 mb-6">
-            Get your protocol audited by the dream team that's secured $2.1B+ TVL
-          </p>
           <div className="flex flex-row sm:flex-col gap-4 justify-center">
-            <button className="px-8 py-3 font-semibold rounded-xl text-darkgreen bg-emeraldlight bg-opacity-25 hover:bg-opacity-5 hover:text-emeraldlight duration-700">
+            <button 
+              className="px-8 py-3 font-semibold rounded-xl text-darkgreen bg-emeraldlight bg-opacity-25 hover:bg-opacity-5 hover:text-emeraldlight duration-700"
+              onClick={() => window.location.href = '/contact-us'}
+            >
               Schedule Team Consultation
-            </button>
-            <button className="px-8 py-3 border-2 border-green-500 text-green-600 font-semibold rounded-xl hover:bg-green-50 transition-colors">
-              Read Full Team Bios
             </button>
           </div>
         </div>

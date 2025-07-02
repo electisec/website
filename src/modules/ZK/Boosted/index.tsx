@@ -13,6 +13,7 @@ const boostedAudits = [
     methodology: "Formal Verification + Fellowship Review",
     specialFeatures: ["Underconstrained Circuit Detection", "Formal Mathematical Proofs", "Differential Testing"],
     category: "Privacy Protocol",
+    reportLink: "https://reports.electisec.com/06-2023-RLN"
   },
   {
     id: 2,
@@ -22,7 +23,8 @@ const boostedAudits = [
     severity: "circom",
     methodology: "Multi-Expert Fellowship + Advanced Tooling",
     specialFeatures: ["8+ Expert Review", "Custom Vulnerability Detection", "Property-Based Testing"],
-    category: "Signature Scheme"
+    category: "Signature Scheme",
+    reportLink: "https://reports.electisec.com/06-2023-Spartan-ECDSA"
   },
   {
     id: 3,
@@ -32,7 +34,8 @@ const boostedAudits = [
     severity: "Halo2",
     methodology: "Collaborative Verification + Code Analysis",
     specialFeatures: ["Design Bug Detection", "End-to-End Security", "Zkvm Integration Testing"],
-    category: "Financial Protocol"
+    category: "Financial Protocol",
+    reportLink: "https://reports.electisec.com/05-2024-Summa-Va"
   },
   {
     id: 4,
@@ -43,6 +46,7 @@ const boostedAudits = [
     methodology: "Fellowship-Powered Analysis",
     specialFeatures: ["Privacy Property Verification", "Anonymity Set Analysis", "Soundness Proofs"],
     category: "Governance",
+    reportLink: "https://reports.electisec.com/05-2024-Summa-Vb"
   }
 ];
 
@@ -161,15 +165,18 @@ function BoostedAuditsSection() {
           </p>
           
           {/* What are Boosted Audits CTA */}
-          <div className="inline-flex items-center gap-2 bg-green-100 text-green-700 px-6 py-3 rounded-full text-lg font-medium hover:bg-green-200 transition-colors cursor-pointer group">
+          <button 
+            onClick={() => window.location.href = '/services'}
+            className="inline-flex items-center gap-2 bg-green-100 text-green-700 px-6 py-3 rounded-full text-lg font-medium hover:bg-green-200 transition-colors cursor-pointer group"
+          >
             <Shield className="w-5 h-5" />
             <span>What are boosted audits?</span>
             <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
-          </div>
+          </button>
         </div>
 
         {/* Featured Audits Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-16">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-4">
           {boostedAudits.map((audit, index) => (
             <div 
               key={audit.id} 
@@ -197,48 +204,20 @@ function BoostedAuditsSection() {
                   </span>
                 </div>
               </div>
-              <div className="grid grid-cols-1 w-full">
-                <button className="flex items-center justify-center gap-2 px-6 py-3 rounded-xl text-md text-darkgreen text-bold bg-emeraldlight bg-opacity-25 hover:bg-opacity-5 hover:text-emeraldlight duration-700">
-                  View Research
+                <div className="grid grid-cols-1 w-full">
+                <button 
+                  onClick={() => window.open(audit.reportLink, '_blank')}
+                  className="flex items-center justify-center gap-2 px-6 py-3 rounded-xl text-md text-darkgreen text-bold bg-emeraldlight bg-opacity-25 hover:bg-opacity-5 hover:text-emeraldlight duration-700"
+                >
+                  View Report
                   <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
                 </button>
-              </div>
+                </div>
             </div>
           ))}
         </div>
 
-        {/* Detailed Audit View */}
-        {selectedAudit !== null && (
-          <div className="bg-white rounded-2xl p-8 mb-16 border border-green-200 shadow-lg">
-            <div className="grid lg:grid-cols-1 justify-items-center gap-8">
 
-              <div>
-                <h3 className="text-2xl font-bold text-center text-gray-900 mb-4">
-                  {boostedAudits[selectedAudit].name} - Detailed Analysis
-                </h3>
-                <p className="text-gray-600 text-center mb-6">{boostedAudits[selectedAudit].title}</p>
-
-                <div className="space-y-4">
-                  <div>
-                    <h4 className="font-semibold text-center text-gray-900 mb-2">Methodology:</h4>
-                    <p className="text-green-600 text-center font-medium">{boostedAudits[selectedAudit].methodology}</p>
-                  </div>
-
-                  <div>
-                    <h4 className="font-semibold text-center text-gray-900 mb-2">Special Features:</h4>
-                    <div className="flex flex-wrap gap-2">
-                      {boostedAudits[selectedAudit].specialFeatures.map((feature, idx) => (
-                        <span key={idx} className="px-3 py-1 bg-green-100 text-green-700 text-sm rounded-full">
-                          {feature}
-                        </span>
-                      ))}
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        )}
       </div>
     </div>
   );
