@@ -49,4 +49,20 @@ export const alumni_residents = [
     twitter: "https://github.com/igorline",
     avatar: "https://avatars.githubusercontent.com/igorline",
   },
+    {
+    name: "Nagu",
+    twitter: "https://github.com/thogiti",
+    avatar: "https://avatars.githubusercontent.com/u/3957491",
+  },
+
+  {
+    name: "parsley",
+    twitter: "https://github.com/bbresearcher",
+    avatar: "https://avatars.githubusercontent.com/u/114293365",
+  },
+    {
+    name: "zeroqn",
+    twitter: "https://github.com/zeroqn",
+    avatar: "https://avatars.githubusercontent.com/u/23418132",
+  },
 ];

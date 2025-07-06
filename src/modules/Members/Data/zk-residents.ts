@@ -10,11 +10,6 @@ export const zk_residents = [
     avatar: "https://avatars.githubusercontent.com/u/18223805",
   },
   {
-    name: "zeroqn",
-    twitter: "https://github.com/zeroqn",
-    avatar: "https://avatars.githubusercontent.com/u/23418132",
-  },
-  {
     name: "Oba",
     twitter: "https://github.com/obatirou",
     avatar: "https://avatars.githubusercontent.com/u/92337658",
@@ -29,16 +24,5 @@ export const zk_residents = [
     twitter: "https://flyingnobita.com/",
     avatar:
       "https://res.cloudinary.com/flyingnobita/image/upload/f_auto/v1584456568/flying_nobita_logo_iykkqj.webp",
-  },
-  {
-    name: "Nagu",
-    twitter: "https://github.com/thogiti",
-    avatar: "https://avatars.githubusercontent.com/u/3957491",
-  },
-
-  {
-    name: "parsley",
-    twitter: "https://github.com/bbresearcher",
-    avatar: "https://avatars.githubusercontent.com/u/114293365",
   },
 ];
