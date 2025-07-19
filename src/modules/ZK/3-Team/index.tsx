@@ -182,78 +182,116 @@ const teamMembers = [
       }
     ]
   },
-  // {
-  //   id: 4,
-  //   name: "nullity",
-  //   tagline: "Nullifies every threat",
-  //   avatar: "https://avatars.githubusercontent.com/nullity00",
-  //   specializations: ["Binius", "zkVM Security", "Compiler Analysis", "Virtual Machine Design"],
-  //   background: "Specialized in zkVM security and formal verification with extensive compiler analysis experience",
-  //   tech: "gnark, circom, formal verification tools, zkVM architectures",
-  //   achievements: [
-  //     "Specialized in zkVM security audits",
-  //     "Binius protocol contributions",
-  //     "Formal verification expertise",
-  //     "Virtual machine design optimization"
-  //   ],
-  //   social: {
-  //     github: "https://github.com/nullity00",
-  //     x: "https://x.com/nullity00"
-  //   },
-  //   keyProjects: [
-  //     {
-  //       name: "Binius Protocol Work",
-  //       description: "Pioneering contributions to Binius protocol research and implementation",
-  //       link: ""
-  //     },
-  //     {
-  //       name: "zkVM Security Research", 
-  //       description: "Comprehensive security analysis of zero-knowledge virtual machines",
-  //       link: ""
-  //     },
-  //     {
-  //       name: "Formal Verification Tools",
-  //       description: "Advanced tools and frameworks for formal verification of cryptographic protocols",
-  //       link: ""
-  //     }
-  //   ]
-  // },
-  // {
-  //   id: 5,
-  //   name: "Flying Nobita",
-  //   tagline: "THE Researcher",
-  //   avatar: "https://avatars.githubusercontent.com/flyingnobita",
-  //   specializations: ["EF Research", "Protocol Standards", "Verification Systems", "Ethereum Integration"],
-  //   background: "Ethereum Foundation research focus with expertise in protocol standardization and verification frameworks",
-  //   tech: "GKR, Halo2, Ethereum protocols, verification systems",
-  //   achievements: [
-  //     "Ethereum Foundation research contributor",
-  //     "Protocol standardization leadership",
-  //     "Verification system design",
-  //     "GKR and Halo2 expertise"
-  //   ],
-  //   social: {
-  //     github: "https://github.com/flyingnobita",
-  //     x: "https://x.com/flyingnobita"
-  //   },
-  //   keyProjects: [
-  //     {
-  //       name: "EF Research Projects",
-  //       description: "Leading research initiatives at Ethereum Foundation focusing on ZK protocols",
-  //       link: ""
-  //     },
-  //     {
-  //       name: "Protocol Standards",
-  //       description: "Standardization work for zero-knowledge proof systems and verification protocols",
-  //       link: ""
-  //     },
-  //     {
-  //       name: "Verification Frameworks",
-  //       description: "Advanced frameworks for protocol verification and standardization",
-  //       link: ""
-  //     }
-  //   ]
-  // }
+  {
+    id: 4,
+    name: "Flying Nobita",
+    tagline: "THE Researcher",
+    avatar: "https://avatars.githubusercontent.com/flyingnobita",
+    specializations: ["applied cryptography", "GKR", "SP1", "Halo2", "BLS signatures", "AI", "RISC0"],
+    background: "Traditional finance quant and engineer turned crypto technologist (ex-hedge fund CTO, CFA, FRM)",
+    tech: "Rust, Python, WASM",
+    achievements: [
+      "Aleo Hackathon Winner & Ignition Grantee (Onchain VRF with Leo)",
+      "Completed Berkeley ZKP MOOC (Legendary Tier)",
+      "Axiom Open Source Program - implementing BLS signatures on BN254 and BLS12-381 in Halo2",
+      "Dual Winner (Arbitrum & Optimism awards) at ETHGlobal Scaling Ethereum Hackathon",
+      "1st Place & Best UX Award at Techstars Global Startup Weekend (AI track)"
+    ],
+    social: {
+      github: "https://github.com/flyingnobita",
+      x: "https://x.com/FlyingNobita"
+    },
+    blogs: [
+      {
+        name: "A Gentle Introduction to ProgCrypto",
+        description: "Introduction to programmable cryptography concepts",
+        link: "https://flyingnobita.com/posts/2025/03/12/progcrypto-garbled-circuit"
+      },
+      {
+        name: "Plonkathon (0xPARC) Exercises",
+        description: "Hands-on exercises for learning PLONK from 0xPARC's Plonkathon",
+        link: "https://flyingnobita.com/posts/2025/03/12/plonkathon"
+      }
+    ],
+    keyProjects: [
+      {
+        name: "Verifier Validation Registry",
+        description: "Proposal to allows users to quickly check the validity of zero-knowledge proof (ZKP) verifiers",
+        link: ""
+      },
+      {
+        name: "Onchain VRF",
+        description: "Onchain Verifiable Random Function using Leo",
+        link: ""
+      },
+      {
+        name: "halo2-lib",
+        description: "Add BLS signature verification for BN254",
+        link: "https://github.com/flyingnobita/halo2-lib"
+      },
+      {
+        name: "halo2curves",
+        description: "Implement curve BLS12-381",
+        link: "https://github.com/flyingnobita/halo2curves"
+      },
+      {
+        name: "zkvote",
+        description: "Anonymous voting using Semaphore + Polygon ID",
+        link: "https://github.com/flyingnobita/zkvote"
+      },
+      {
+        name: "halo2-wasm-demo",
+        description: "Compile Halo2 circuits into WebAssembly for React apps",
+        link: "https://github.com/flyingnobita/halo2-wasm-demo"
+      },
+      {
+        name: "nft-zk",
+        description: "Mint AI-generated Kanji NFTs with zero-knowledge proofs",
+        link: "https://github.com/flyingnobita/nft-zk"
+      }
+    ]
+  },
+  {
+    id: 5,
+    name: "nullity",
+    tagline: "Threat nullifier",
+    avatar: "https://avatars.githubusercontent.com/nullity00",
+    specializations: ["zero-knowledge proofs", "Circom", "Noir", "Halo2", "Bellman", "Plonky2", "Ethereum"],
+    background: "Math graduate and former MERN-stack developer focused on ZK research (yAcademy)",
+    tech: "Circom, Noir, Rust, JavaScript, Python",
+    achievements: [
+      "Authored zk-security-reviews (229★) for ZK protocol audits",
+      "Contributed to security review of Summa protocol (yAcademy ZK Audit)",
+      "Implemented batch ECDSA verification circuits (Circom)"
+    ],
+    social: {
+      github: "https://github.com/nullity00",
+      x: "https://x.com/nullity00"
+    },
+    blogs: [],
+    keyProjects: [
+      {
+        name: "zk-security-reviews",
+        description: "Collection of security reviews of ZK protocols",
+        link: "https://github.com/nullity00/zk-security-reviews"
+      },
+      {
+        name: "summa-audit-report",
+        description: "Security review of Summa solvency protocol",
+        link: "https://github.com/electisec/summa-audit-report"
+      },
+      {
+        name: "batch-ecdsa-secp256r1",
+        description: "Batch ECDSA signature verification (P-256) circuits",
+        link: "https://github.com/nullity00/batch-ecdsa-secp256r1"
+      },
+      {
+        name: "circom-circuits",
+        description: "Bitwise operations library in Circom",
+        link: "https://github.com/nullity00/circom-circuits"
+      }
+    ]
+  }
 ];
 
 function DreamTeamSection() {
@@ -319,9 +357,6 @@ function DreamTeamSection() {
                       alt={member.name}
                       className="w-10 h-10 sm:w-12 sm:h-12 rounded-full border-2 border-gray-200"
                     />
-                    <div className="absolute -bottom-1 -right-1 w-4 h-4 sm:w-5 sm:h-5 bg-green-500 rounded-full border-2 border-white flex items-center justify-center">
-                      <Star className="w-1.5 h-1.5 sm:w-2 sm:h-2 text-white" />
-                    </div>
                   </div>
                   
                   <div className="text-center">

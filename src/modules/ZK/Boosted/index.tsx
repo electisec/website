@@ -13,7 +13,7 @@ const boostedAudits = [
     methodology: "Formal Verification + Fellowship Review",
     specialFeatures: ["Underconstrained Circuit Detection", "Formal Mathematical Proofs", "Differential Testing"],
     category: "Privacy Protocol",
-    reportLink: "https://reports.electisec.com/06-2023-RLN"
+    reportLink: "https://reports.electisec.com/2023-06-RLN"
   },
   {
     id: 2,
@@ -24,7 +24,7 @@ const boostedAudits = [
     methodology: "Multi-Expert Fellowship + Advanced Tooling",
     specialFeatures: ["8+ Expert Review", "Custom Vulnerability Detection", "Property-Based Testing"],
     category: "Signature Scheme",
-    reportLink: "https://reports.electisec.com/06-2023-Spartan-ECDSA"
+    reportLink: "https://reports.electisec.com/2023-06-Spartan-ECDSA"
   },
   {
     id: 3,
@@ -35,7 +35,7 @@ const boostedAudits = [
     methodology: "Collaborative Verification + Code Analysis",
     specialFeatures: ["Design Bug Detection", "End-to-End Security", "Zkvm Integration Testing"],
     category: "Financial Protocol",
-    reportLink: "https://reports.electisec.com/05-2024-Summa-Va"
+    reportLink: "https://reports.electisec.com/2024-05-Summa-Va"
   },
   {
     id: 4,
@@ -46,7 +46,7 @@ const boostedAudits = [
     methodology: "Fellowship-Powered Analysis",
     specialFeatures: ["Privacy Property Verification", "Anonymity Set Analysis", "Soundness Proofs"],
     category: "Governance",
-    reportLink: "https://reports.electisec.com/05-2024-Summa-Vb"
+    reportLink: "https://reports.electisec.com/2024-05-Summa-Vb"
   }
 ];
 
