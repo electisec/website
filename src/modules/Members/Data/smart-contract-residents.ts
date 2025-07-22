@@ -56,4 +56,9 @@ export const sc_residents = [
     twitter: "https://github.com/DrasticWatermelon",
     avatar: "https://avatars.githubusercontent.com/DrasticWatermelon",
   },
+  {
+    name: "ret2basic.eth",
+    twitter: "https://x.com/ret2basic",
+    avatar: "https://avatars.githubusercontent.com/u/59381775",
+  },
 ];
