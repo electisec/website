@@ -32,7 +32,7 @@ export const block7 = [
   {
     name: "Pukar Acharya",
     url: "https://github.com/iampukar",
-    promotedToResident: false,
+    promotedToResident: true,
     avatar: "https://avatars.githubusercontent.com/u/23106655",
   },
   {
