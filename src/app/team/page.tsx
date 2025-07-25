@@ -16,6 +16,7 @@ import {
   Block4,
   Block5,
   Block6,
+  Block7,
   ZBlock1,
   ZBlock2,
 } from "../../modules/Members/3-Fellows";
@@ -39,6 +40,7 @@ export default function MembersPage() {
         <h1 className="text-4xl mb-8 sm:text-center">Fellows</h1>
         <ZBlock2 />
         <ZBlock1 />
+        <Block7 />
         <Block6 />
         <Block5 />
         <Block4 />

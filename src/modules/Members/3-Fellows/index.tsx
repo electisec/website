@@ -6,6 +6,7 @@ import { block3 } from "../Data/block3";
 import { block4 } from "../Data/block4";
 import { block5 } from "../Data/block5";
 import { block6 } from "../Data/block6";
+import { block7 } from "../Data/block7";
 import Image from "next/image";
 
 export function ZBlock1() {
@@ -65,6 +66,14 @@ export function Block6() {
   return (
     <>
       <Template title={"Block 6 - March 2024"} fellows={block6} />
+    </>
+  );
+}
+
+export function Block7() {
+  return (
+    <>
+      <Template title={"Block 7 - June 2025"} fellows={block7} />
     </>
   );
 }
