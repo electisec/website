@@ -83,6 +83,7 @@ const clients = [
     website: "https://nouns.wtf/",
   },
   { name: "Yearn", logo: "yearn.svg", website: "https://yearn.fi/" },
+  { name: "Centrifuge", logo: "centrifuge.png", website: "https://centrifuge.io/" },
 ];
 
 interface EllipticalOrbitProps {
