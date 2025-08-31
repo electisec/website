@@ -24,9 +24,9 @@ export const sc_residents = [
   },
   {
     name: "panda",
-    twitter: "https://twitter.com/pandadfi",
+    twitter: "https://github.com/pandadefi",
     avatar:
-      "https://pbs.twimg.com/profile_images/1719635873363378176/UrKnU32K_400x400.jpg",
+      "https://avatars.githubusercontent.com/u/87183122?v=4",
   },
   {
     name: "spalen",
