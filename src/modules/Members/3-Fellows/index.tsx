@@ -90,9 +90,25 @@ export function Template({
     promotedToResident: boolean;
   }[];
 }) {
+  const slug = title.toLowerCase().replace(/\s+/g, '-').replace(/[^\w\-]/g, '');
+  
+  const handleLinkClick = () => {
+    const url = new URL(window.location.href);
+    url.hash = slug;
+    window.history.pushState({}, '', url.toString());
+  };
+  
   return (
-    <div className="my-24">
-      <h2 className="text-xl font-bold mb-4 sm:text-center">{title}</h2>
+    <div className="my-24" id={slug}>
+      <h2 className="text-xl font-bold mb-4 sm:text-center group relative cursor-pointer" onClick={handleLinkClick}>
+        {title}
+        <span className="inline-block ml-2 opacity-0 group-hover:opacity-100 transition-opacity">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
+            <path d="m14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
+          </svg>
+        </span>
+      </h2>
       <h3 className={"sm:text-xs italic text-gray-900 hover:underline mb-12"}>
         * promoted to Resident
       </h3>

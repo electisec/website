@@ -31,7 +31,7 @@ export const About = () => {
           </ul>
           <br />
           <p>
-            We launched late 2020 to help make DeFi more secure and have since
+            We launched late 2021 to help make DeFi more secure and have since
             then secured contracts holding billions in TVL. <br /> <br />
           </p>
           <p>

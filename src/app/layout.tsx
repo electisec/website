@@ -31,12 +31,19 @@ export const metadata: Metadata = {
   referrer: "origin",
   creator: "Electisec Team",
   robots: "follow, index",
+  icons: {
+    icon: [
+      { url: "/favicon.ico", sizes: "any" },
+      { url: "/icon.png", sizes: "32x32", type: "image/png" },
+    ],
+    apple: "/icon.png",
+  },
   openGraph: {
     type: "website",
     url: "https://electisec.com",
     title: "Electisec",
     description:
-      "Electisec is focused on smart contracts and zero-knowledge security: auditing, research, and increasingly tooling. We launched late 2020 to help make DeFi more secure and have since then secured contracts holding billions in TVL.",
+      "Electisec is focused on smart contracts and zero-knowledge security: auditing, research, and increasingly tooling. We launched to help make DeFi more secure and have since then secured contracts holding billions in TVL.",
     siteName: "Electisec",
     images: [
       {
@@ -44,11 +51,11 @@ export const metadata: Metadata = {
         width: 1200,
         height: 630,
       },
-      // {
-      //   url: "https://electisec.com/icon.png",
-      //   width: 400,
-      //   height: 400,
-      // },
+      {
+        url: "https://electisec.com/icon.png",
+        width: 400,
+        height: 400,
+      },
     ],
   },
   twitter: {

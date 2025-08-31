@@ -20,7 +20,7 @@ import Image from "next/image";
 function ZBlock1Modules() {
   return (
     <>
-      <div className="grid lg:grid-cols-5 gap-8 mt-24">
+      <div className="grid lg:grid-cols-5 gap-8 lg:mt-24">
         <div className="lg:col-span-2 mt-28">
           <img
             alt=""

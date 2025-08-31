@@ -38,6 +38,9 @@ export function Navbar({ menuOpen, setMenuOpen }: Props) {
         <a href="https://blog.electisec.com/">
           <Button text={"Blog"} />
         </a>
+        <a href="https://research.electisec.com/">
+          <Button text={"Research"} />
+        </a>
         <Link href={"/fellowships"}>
           <Button text={"Fellowships"} />
         </Link>
@@ -101,6 +104,11 @@ export function MobileNavbar({ setMenuOpen }: MobileProps) {
         <a href="https://blog.electisec.com/">
           <button className="p-6 rounded-xl w-full text-xl text-zinc-400 hover:text-emeraldlight hover:bg-darkgreen hover:bg-opacity-5 duration-700">
             Blog
+          </button>
+        </a>
+        <a href="https://research.electisec.com/">
+          <button className="p-6 rounded-xl w-full text-xl text-zinc-400 hover:text-emeraldlight hover:bg-darkgreen hover:bg-opacity-5 duration-700">
+            Research
           </button>
         </a>
 
