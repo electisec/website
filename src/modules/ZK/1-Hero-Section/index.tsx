@@ -179,11 +179,11 @@ export default function HeroSection() {
                 Get a Boosted Audit
               </button>
             </Link>
-            <Link href="/research">
+            <a href="https://research.electisec.com" target="_blank">
               <button className="px-8 py-4 rounded-xl text-green-600 font-bold border-2 border-green-500 hover:bg-green-50 transition-all duration-300">
                 View Research
               </button>
-            </Link>
+            </a>
           </div>
           
           {/* Trust Indicators */}

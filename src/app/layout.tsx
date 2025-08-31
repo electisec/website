@@ -31,6 +31,13 @@ export const metadata: Metadata = {
   referrer: "origin",
   creator: "Electisec Team",
   robots: "follow, index",
+  icons: {
+    icon: [
+      { url: "/favicon.ico", sizes: "any" },
+      { url: "/icon.png", sizes: "32x32", type: "image/png" },
+    ],
+    apple: "/icon.png",
+  },
   openGraph: {
     type: "website",
     url: "https://electisec.com",
@@ -44,11 +51,11 @@ export const metadata: Metadata = {
         width: 1200,
         height: 630,
       },
-      // {
-      //   url: "https://electisec.com/icon.png",
-      //   width: 400,
-      //   height: 400,
-      // },
+      {
+        url: "https://electisec.com/icon.png",
+        width: 400,
+        height: 400,
+      },
     ],
   },
   twitter: {
