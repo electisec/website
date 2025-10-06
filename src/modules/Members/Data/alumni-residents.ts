@@ -1,4 +1,4 @@
-export const alumni_residents = [ 
+export const alumni_residents = [
   {
     name: "engn33r",
     twitter: "https://twitter.com/bl4ckb1rd71",
@@ -25,6 +25,12 @@ export const alumni_residents = [
     avatar: "https://avatars.githubusercontent.com/StErMi",
   },
   {
+    name: "prady",
+    twitter: "https://twitter.com/prady_v",
+    avatar:
+      "https://pbs.twimg.com/profile_images/1546911344783671296/AxTmFFoW_400x400.jpg",
+  },
+  {
     name: "peep",
     twitter: "https://twitter.com/XianganH",
     avatar: "",
@@ -43,6 +49,12 @@ export const alumni_residents = [
     name: "blockdev",
     twitter: "https://twitter.com/blockdeveth",
     avatar: "https://avatars.githubusercontent.com/0xbok",
+  },
+  {
+    name: "sjkelleyjr",
+    twitter: "https://twitter.com/sjkelleyjr",
+    avatar:
+      "https://avatars.githubusercontent.com/sjkelleyjr",
   },
   {
     name: "igorline",

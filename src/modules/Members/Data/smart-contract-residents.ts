@@ -5,22 +5,10 @@ export const sc_residents = [
     avatar: "https://avatars.githubusercontent.com/u/95246053?v=4",
   },
   {
-    name: "sjkelleyjr",
-    twitter: "https://twitter.com/sjkelleyjr",
-    avatar:
-      "https://avatars.githubusercontent.com/sjkelleyjr",
-  },
-  {
     name: "devtooligan",
     twitter: "https://twitter.com/devtooligan",
     avatar:
       "https://pbs.twimg.com/profile_images/1581745674260869120/aBYE6lat_400x400.jpg",
-  },
-  {
-    name: "prady",
-    twitter: "https://twitter.com/prady_v",
-    avatar:
-      "https://pbs.twimg.com/profile_images/1546911344783671296/AxTmFFoW_400x400.jpg",
   },
   {
     name: "panda",

@@ -39,6 +39,8 @@ export const block2 = [
   {
     name: "sjkelleyjr",
     url: "https://twitter.com/sjkelleyjr",
+    avatar:
+      "https://avatars.githubusercontent.com/sjkelleyjr",
     promotedToResident: true,
 
   },
