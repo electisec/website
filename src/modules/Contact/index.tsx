@@ -78,13 +78,13 @@ export default function ContactUs() {
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-2 gap-12">
-          <div className="bg-white p-8 rounded-lg shadow-sm">
+          <div className="bg-white p-8 hover:-translate-y-1 transition-transform duration-300">
             {response ? (
               <div
-                className={`mt-4 p-4 rounded-md ${
+                className={`mt-4 p-4 ${
                   response.includes("sorry")
                     ? "bg-red-50 text-red-700"
-                    : "bg-green-50 text-green-700"
+                    : "bg-green-50 text-deepblue"
                 }`}
               >
                 {response}
@@ -100,7 +100,7 @@ export default function ContactUs() {
                       type="text"
                       name="name"
                       required
-                      className="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-indigo-500 focus:ring-indigo-500 bg-gray-50"
+                      className="mt-1 block w-full border-gray-300 focus:border-indigo-500 focus:ring-indigo-500 bg-gray-50"
                     />
                   </div>
                   <div>
@@ -111,7 +111,7 @@ export default function ContactUs() {
                       type="text"
                       name="tguser"
                       required
-                      className="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-indigo-500 focus:ring-indigo-500 bg-gray-50"
+                      className="mt-1 block w-full border-gray-300 focus:border-indigo-500 focus:ring-indigo-500 bg-gray-50"
                     />
                   </div>
                 </div>
@@ -124,7 +124,7 @@ export default function ContactUs() {
                     type="text"
                     name="protocol"
                     required
-                    className="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-indigo-500 focus:ring-indigo-500 bg-gray-50"
+                    className="mt-1 block w-full border-gray-300 focus:border-indigo-500 focus:ring-indigo-500 bg-gray-50"
                   />
                 </div>
 
@@ -136,7 +136,7 @@ export default function ContactUs() {
                     type="url"
                     name="website"
                     required
-                    className="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-indigo-500 focus:ring-indigo-500 bg-gray-50"
+                    className="mt-1 block w-full border-gray-300 focus:border-indigo-500 focus:ring-indigo-500 bg-gray-50"
                   />
                 </div>
 
@@ -148,7 +148,7 @@ export default function ContactUs() {
                     type="date"
                     name="date"
                     min={new Date().toISOString().split("T")[0]}
-                    className="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-indigo-500 focus:ring-indigo-500 bg-gray-50"
+                    className="mt-1 block w-full border-gray-300 focus:border-indigo-500 focus:ring-indigo-500 bg-gray-50"
                   />
                 </div>
 
@@ -159,7 +159,7 @@ export default function ContactUs() {
                   <input
                     type="url"
                     name="github"
-                    className="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-indigo-500 focus:ring-indigo-500 bg-gray-50"
+                    className="mt-1 block w-full border-gray-300 focus:border-indigo-500 focus:ring-indigo-500 bg-gray-50"
                   />
                 </div>
 
@@ -170,7 +170,7 @@ export default function ContactUs() {
                   <textarea
                     name="message"
                     rows={4}
-                    className="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-indigo-500 focus:ring-indigo-500 bg-gray-50"
+                    className="mt-1 block w-full border-gray-300 focus:border-indigo-500 focus:ring-indigo-500 bg-gray-50"
                   />
                 </div>
 
@@ -178,11 +178,11 @@ export default function ContactUs() {
                   <button
                     type="submit"
                     disabled={isDisabled}
-                    className={`w-full flex justify-center py-3 px-4 border border-transparent rounded-md shadow-sm text-sm font-medium text-darkgreen 
+                    className={`w-full flex justify-center py-3 px-4 border text-sm font-medium
                     ${
                       isDisabled
-                        ? "bg-gray-400 cursor-not-allowed"
-                        : "bg-emeraldlight bg-opacity-25 hover:bg-opacity-5 hover:text-emeraldlight duration-700"
+                        ? "bg-gray-400 text-white cursor-not-allowed border-gray-400"
+                        : "text-white bg-deepblue hover:bg-white hover:text-deepblue border-deepblue duration-700"
                     }`}
                   >
                     {isBusy ? "Sending..." : "Send request"}

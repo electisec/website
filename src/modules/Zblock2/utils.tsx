@@ -12,7 +12,7 @@ export const VideoSection = ({
   }[];
 }) => {
   return (
-    <div className="flex flex-col bg-[#E8FFF8] my-6 rounded-lg ">
+    <div className="flex flex-col bg-zinc-50 border border-zinc-100 my-6 ">
       {videoData.map((video) => (
         <div key={video.id} className="p-4 duration-700">
           <div className="flex flex-row justify-between">
@@ -34,7 +34,7 @@ export const VideoSection = ({
                 href={video.link}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="flex items-center text-green-500"
+                className="flex items-center text-deepblue"
               >
                 <SiGoogleslides className="mr-1" />
               </a>

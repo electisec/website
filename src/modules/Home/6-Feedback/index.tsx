@@ -1,12 +1,11 @@
 import { cn } from "@/lib/utils";
 import Marquee from "../../../components/ui/marquee";
-import HyperText from "@/components/ui/hyper-text";
 
 const reviews = [
   {
     name: "Manifold Finance",
     logo: "manifold.svg",
-    body: "We would like to especially thank the team at @electisec for their audit which you can find here. We give them a 9/10. Logarithmic scale.",
+    body: "We would like to especially thank the team at @yAudit for their audit which you can find here. We give them a 9/10. Logarithmic scale.",
   },
   {
     name: "Temple DAO",
@@ -16,22 +15,22 @@ const reviews = [
   {
     name: "Get Protocol",
     logo: "get-protocol.svg",
-    body: "Amazing stuff, really pleased with it. Very solid work from yourself and the electisec troop.",
+    body: "Amazing stuff, really pleased with it. Very solid work from yourself and the yAudit troop.",
   },
   {
     name: "Curve Finance",
     logo: "curve.svg",
-    body: "Electisec looked at our core infra in a very timely manner, made availabilities based on the urgency of our needs and helped deliver a very good audit of a codebase even though they were not the first external reviewers.",
+    body: "yAudit looked at our core infra in a very timely manner, made availabilities based on the urgency of our needs and helped deliver a very good audit of a codebase even though they were not the first external reviewers.",
   },
   {
     name: "Strike",
     logo: "strike.svg",
-    body: "Great audit partners and overall experience from scoping to audits. Electisecs is currently securing Strike's mainnet contracts as well as partners building on Strike's underlying tech.",
+    body: "Great audit partners and overall experience from scoping to audits. yAudit is currently securing Strike's mainnet contracts as well as partners building on Strike's underlying tech.",
   },
   {
     name: "vfat",
     logo: "vfat.svg",
-    body: "Electisec have been a pleasure to work with, digging deep into the codebase and discovering edge cases. Will be staying with them!",
+    body: "yAudit have been a pleasure to work with, digging deep into the codebase and discovering edge cases. Will be staying with them!",
   },
 ];
 
@@ -39,10 +38,9 @@ export default function Feedback() {
   return (
     <section className="bg-white m-6">
       <div className="lg:mx-[20vw]">
-        <HyperText
-          className="lg:text-4xl text-3xl font-bold mb-4 sm:text-center"
-          text="Feedback"
-        />
+        <h2 className="lg:text-4xl text-3xl font-bold mb-4 sm:text-center">
+          Feedback
+        </h2>
         <MarqueeDemo />
       </div>
     </section>
@@ -63,9 +61,9 @@ const ReviewCard = ({
   return (
     <figure
       className={cn(
-        "relative w-64 cursor-pointer overflow-hidden rounded-xl border p-4",
+        "relative w-64 cursor-pointer overflow-hidden border border-zinc-200 p-4 hover:-translate-y-1 transition-transform duration-300",
         // light styles
-        "border-gray-950/[.1] bg-gray-950/[.01] hover:bg-gray-950/[.05]",
+        "bg-gray-950/[.01] hover:bg-gray-950/[.05]",
         // dark styles
         "dark:border-gray-50/[.1] dark:bg-gray-50/[.10] dark:hover:bg-gray-50/[.15]"
       )}
@@ -92,7 +90,7 @@ const ReviewCard = ({
 
 export function MarqueeDemo() {
   return (
-    <div className="relative flex w-full flex-col items-center justify-center overflow-hidden rounded-lg bg-background md:shadow-xl">
+    <div className="relative flex w-full flex-col items-center justify-center overflow-hidden bg-background hover:-translate-y-1 transition-transform duration-300">
       <Marquee pauseOnHover className="[--duration:20s]">
         {reviews.map((review) => (
           <ReviewCard key={review.name} {...review} />

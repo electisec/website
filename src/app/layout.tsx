@@ -24,35 +24,35 @@ export default function RootLayout({
 }
 
 export const metadata: Metadata = {
-  title: "Electisec",
+  title: "yAudit",
   description: "ZK & Smart Contract Security",
   keywords:
-    "Electisec, Zero Knowledge, Smart Contract Security, Blockchain Security, Ethereum, Cryptography",
+    "yAudit, Zero Knowledge, Smart Contract Security, Blockchain Security, Ethereum, Cryptography",
   referrer: "origin",
-  creator: "Electisec Team",
+  creator: "yAudit Team",
   robots: "follow, index",
   icons: {
     icon: [
-      { url: "/favicon.ico", sizes: "any" },
+      { url: "/favicon.svg", sizes: "any" },
       { url: "/icon.png", sizes: "32x32", type: "image/png" },
     ],
     apple: "/icon.png",
   },
   openGraph: {
     type: "website",
-    url: "https://electisec.com",
-    title: "Electisec",
+    url: "https://yaudit.dev",
+    title: "yAudit",
     description:
-      "Electisec is focused on smart contracts and zero-knowledge security: auditing, research, and increasingly tooling. We launched to help make DeFi more secure and have since then secured contracts holding billions in TVL.",
-    siteName: "Electisec",
+      "yAudit is focused on smart contracts and zero-knowledge security: auditing, research, and increasingly tooling. We launched to help make DeFi more secure and have since then secured contracts holding billions in TVL.",
+    siteName: "yAudit",
     images: [
       {
-        url: "https://electisec.com/twitter.png",
+        url: "https://yaudit.dev/twitter.png",
         width: 1200,
         height: 630,
       },
       {
-        url: "https://electisec.com/icon.png",
+        url: "https://yaudit.dev/icon.png",
         width: 400,
         height: 400,
       },
@@ -62,6 +62,6 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     site: "@electisec",
     creator: "@electisec",
-    images: "https://electisec.com/twitter.png",
+    images: "https://yaudit.dev/twitter.png",
   },
 };

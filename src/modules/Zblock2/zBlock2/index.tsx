@@ -54,7 +54,7 @@ function ZBlock2Modules() {
                 href="https://pse.dev"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="text-green-600 font-bold hover:underline duration-700"
+                className="text-deepblue font-bold hover:underline duration-700"
               >
                 Privacy & Scaling Explorations
               </a>{" "}
@@ -63,7 +63,7 @@ function ZBlock2Modules() {
                 href="https://summa.gitbook.io/"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="text-green-600 font-bold hover:underline duration-700"
+                className="text-deepblue font-bold hover:underline duration-700"
               >
                 Summa Protocol
               </a>{" "}
@@ -85,7 +85,7 @@ function ZBlock2Modules() {
             <p className="mt-4 font-semibold">
               See also :{" "}
               <Link href={"/zBlock1"}>
-                <button className="text-green-600 hover:underline duration-700">
+                <button className="text-deepblue hover:underline duration-700">
                   zBlock1
                 </button>
               </Link>
@@ -99,7 +99,7 @@ function ZBlock2Modules() {
           Participants
         </h1>
         <div className="grid lg:grid-cols-5 gap-8">
-          <div className="lg:col-span-1 flex flex-col py-6 rounded-xl bg-[#E8FFF8]">
+          <div className="lg:col-span-1 flex flex-col py-6 bg-zinc-50 border border-zinc-100">
             <img alt="" src="/logo.svg" className="h-8 mb-6" />
             <ul className="list-disc text-zinc-700 px-12">
               {yacteam.map((member) => {
@@ -118,7 +118,7 @@ function ZBlock2Modules() {
               })}
             </ul>
           </div>
-          <div className="lg:col-span-2 flex flex-col p-4 px-12 rounded-xl bg-[#E8FFF8]">
+          <div className="lg:col-span-2 flex flex-col p-4 px-12 bg-zinc-50 border border-zinc-100">
             <h4 className="text-xl py-4 text-center font-semibold mb-4">
               Fellows
             </h4>
@@ -160,7 +160,7 @@ function ZBlock2Modules() {
             </div>
             <p className="text-center p-4 text-zinc-700"> * Top Fellows</p>
           </div>
-          <div className="lg:col-span-1 flex flex-col p-6 px-12 rounded-xl bg-[#E8FFF8]">
+          <div className="lg:col-span-1 flex flex-col p-6 px-12 bg-zinc-50 border border-zinc-100">
             <img alt="" src="/zblock/pse-summa.svg" className="h-10 mb-6" />
             <ul className="list-disc text-zinc-700">
               {summateam.map((member) => {
@@ -179,7 +179,7 @@ function ZBlock2Modules() {
               })}
             </ul>
           </div>
-          <div className="lg:col-span-1 flex flex-col p-4 px-8 rounded-xl bg-[#E8FFF8]">
+          <div className="lg:col-span-1 flex flex-col p-4 px-8 bg-zinc-50 border border-zinc-100">
             <h4 className="text-xl py-4 text-center font-semibold">
               Guest Speakers
             </h4>
@@ -222,11 +222,11 @@ function ZBlock2Modules() {
             <h1 id="discussion1" className="text-2xl font-bold mb-4">
               Discussion
             </h1>
-            <div className="flex flex-row gap-4 p-4 items-center rounded-xl bg-[#E8FFF8]">
+            <div className="flex flex-row gap-4 p-4 items-center bg-zinc-50 border border-zinc-100">
               <Discussion chat={m1discussion} />
             </div>
             <h1 className="text-2xl font-bold my-4">Supplementary Materials</h1>
-            <div className="flex flex-col gap-6 p-4 items-left rounded-xl bg-[#E8FFF8]">
+            <div className="flex flex-col gap-6 p-4 items-left bg-zinc-50 border border-zinc-100">
               {m1notes.map((exercise) => {
                 return <Notes notes={exercise} key={exercise.link} />;
               })}
@@ -234,17 +234,17 @@ function ZBlock2Modules() {
                 return <Trophy trophy={item} key={item.link} />;
               })}
             </div>
-            {/* <div className="flex flex-col gap-6 p-4 items-left rounded-xl bg-[#E8FFF8]">
+            {/* <div className="flex flex-col gap-6 p-4 items-left bg-zinc-50 border border-zinc-100">
               
             </div> */}
             <h1 className="text-2xl font-bold my-4">Exercises</h1>
-            <div className="flex flex-col gap-6 p-4 items-left rounded-xl bg-[#E8FFF8]">
+            <div className="flex flex-col gap-6 p-4 items-left bg-zinc-50 border border-zinc-100">
               {m1exercises.map((exercise) => {
                 return <Quiz quiz={exercise} key={exercise.link} />;
               })}
             </div>
             <h1 className="text-2xl font-bold my-4">Audit Reports</h1>
-            <div className="flex flex-row gap-4 p-4 items-center rounded-xl bg-[#E8FFF8]">
+            <div className="flex flex-row gap-4 p-4 items-center bg-zinc-50 border border-zinc-100">
               <Report report={m1report} />
             </div>
           </div>
@@ -258,7 +258,7 @@ function ZBlock2Modules() {
             <h1 className="text-2xl font-bold">Sessions</h1>
             <VideoSection videoData={m2video} />
             <h1 className="text-2xl font-bold my-4">Supplementary Materials</h1>
-            <div className="flex flex-col gap-6 p-4 items-left rounded-xl bg-[#E8FFF8]">
+            <div className="flex flex-col gap-6 p-4 items-left bg-zinc-50 border border-zinc-100">
               {m2notes.map((exercise) => {
                 return <Notes notes={exercise} key={exercise.link} />;
               })}
@@ -271,12 +271,12 @@ function ZBlock2Modules() {
             <h1 id="discussion1" className="text-2xl font-bold mb-4">
               Discussion
             </h1>
-            <div className="flex flex-row gap-4 p-4 items-center rounded-xl bg-[#E8FFF8]">
+            <div className="flex flex-row gap-4 p-4 items-center bg-zinc-50 border border-zinc-100">
               <Discussion chat={m2discussion} />
             </div>
 
             <h1 className="text-2xl font-bold my-4">Audit Reports</h1>
-            <div className="flex flex-row gap-4 p-4 items-center rounded-xl bg-[#E8FFF8]">
+            <div className="flex flex-row gap-4 p-4 items-center bg-zinc-50 border border-zinc-100">
               <Report report={m2report} />
             </div>
           </div>

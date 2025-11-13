@@ -24,10 +24,8 @@ export default {
     },
     extend: {
       colors: {
-        black: "#080444",
-        purple: "#BF5AF2",
-        emeraldlight: "#3ee680",
-        darkgreen: "#15803d",
+        black: "#000000",
+        deepblue: "#0055FF",
         background: "hsl(var(--background))",
         foreground: "hsl(var(--foreground))",
         card: {

@@ -13,7 +13,7 @@ const boostedAudits = [
     methodology: "Formal Verification + Fellowship Review",
     specialFeatures: ["Underconstrained Circuit Detection", "Formal Mathematical Proofs", "Differential Testing"],
     category: "Privacy Protocol",
-    reportLink: "https://reports.electisec.com/2023-06-RLN"
+    reportLink: "https://reports.yaudit.dev/2023-06-RLN"
   },
   {
     id: 2,
@@ -24,7 +24,7 @@ const boostedAudits = [
     methodology: "Multi-Expert Fellowship + Advanced Tooling",
     specialFeatures: ["8+ Expert Review", "Custom Vulnerability Detection", "Property-Based Testing"],
     category: "Signature Scheme",
-    reportLink: "https://reports.electisec.com/2023-06-Spartan-ECDSA"
+    reportLink: "https://reports.yaudit.dev/2023-06-Spartan-ECDSA"
   },
   {
     id: 3,
@@ -35,7 +35,7 @@ const boostedAudits = [
     methodology: "Collaborative Verification + Code Analysis",
     specialFeatures: ["Design Bug Detection", "End-to-End Security", "Zkvm Integration Testing"],
     category: "Financial Protocol",
-    reportLink: "https://reports.electisec.com/2024-05-Summa-Va"
+    reportLink: "https://reports.yaudit.dev/2024-05-Summa-Va"
   },
   {
     id: 4,
@@ -46,14 +46,14 @@ const boostedAudits = [
     methodology: "Fellowship-Powered Analysis",
     specialFeatures: ["Privacy Property Verification", "Anonymity Set Analysis", "Soundness Proofs"],
     category: "Governance",
-    reportLink: "https://reports.electisec.com/2024-05-Summa-Vb"
+    reportLink: "https://reports.yaudit.dev/2024-05-Summa-Vb"
   }
 ];
 
 // What makes audits "boosted"
 const boostedFeatures = [
   {
-    icon: <Users className="w-8 h-8 text-green-500" />,
+    icon: <Users className="w-8 h-8 text-deepblue" />,
     title: "Fellowship-Powered",
     description: "8+ ZK specialists review each circuit vs typical 1-2 auditor teams",
     details: [
@@ -64,7 +64,7 @@ const boostedFeatures = [
     ]
   },
   {
-    icon: <Microscope className="w-8 h-8 text-green-500" />,
+    icon: <Microscope className="w-8 h-8 text-deepblue" />,
     title: "Advanced Formal Verification",
     description: "Mathematical proofs of circuit correctness beyond traditional testing",
     details: [
@@ -75,7 +75,7 @@ const boostedFeatures = [
     ]
   },
   {
-    icon: <Brain className="w-8 h-8 text-green-500" />,
+    icon: <Brain className="w-8 h-8 text-deepblue" />,
     title: "Custom Security Tooling",
     description: "Proprietary tools for detecting ZK-specific vulnerabilities",
     details: [
@@ -86,7 +86,7 @@ const boostedFeatures = [
     ]
   },
   {
-    icon: <Target className="w-8 h-8 text-green-500" />,
+    icon: <Target className="w-8 h-8 text-deepblue" />,
     title: "Multi-Layer Analysis", 
     description: "Beyond circuits: protocol design, integration, and operational security",
     details: [
@@ -147,12 +147,12 @@ function BoostedAuditsSection() {
       // case 'Critical': return 'bg-red-100 text-red-700 border-red-200';
       // case 'High': return 'bg-orange-100 text-orange-700 border-orange-200';
       // case 'Medium': return 'bg-yellow-100 text-yellow-700 border-yellow-200';
-      default: return 'bg-green-100 text-green-700 border-green-200';
+      default: return 'bg-deepblue bg-opacity-10 text-deepblue border-deepblue';
     }
   };
 
   return (
-    <div className="py-16 bg-gradient-to-br from-gray-50 to-green-50">
+    <div className="py-16 bg-zinc-50">
       <div className="max-w-7xl mx-auto px-6">
         {/* Section Header */}
         <div className="text-center mb-16">
@@ -165,9 +165,9 @@ function BoostedAuditsSection() {
           </p>
           
           {/* What are Boosted Audits CTA */}
-          <button 
+          <button
             onClick={() => window.location.href = '/services'}
-            className="inline-flex items-center gap-2 bg-green-100 text-green-700 px-6 py-3 rounded-full text-lg font-medium hover:bg-green-200 transition-colors cursor-pointer group"
+            className="inline-flex items-center gap-2 text-deepblue px-6 py-3 text-lg font-medium transition-colors cursor-pointer group border border-deepblue"
           >
             <Shield className="w-5 h-5" />
             <span>What are boosted audits?</span>
@@ -178,12 +178,12 @@ function BoostedAuditsSection() {
         {/* Featured Audits Grid */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-4">
           {boostedAudits.map((audit, index) => (
-            <div 
-              key={audit.id} 
-              className={`bg-white rounded-2xl p-6 border-2 transition-all duration-500 cursor-pointer hover:shadow-lg ${
-                selectedAudit === index 
-                  ? 'border-green-500 shadow-lg scale-105' 
-                  : 'border-gray-200 hover:border-green-300'
+            <div
+              key={audit.id}
+              className={`bg-white p-6 border-2 transition-all duration-500 cursor-pointer hover:-translate-y-1 ${
+                selectedAudit === index
+                  ? 'border-deepblue scale-105'
+                  : 'border-gray-200 hover:border-deepblue'
               }`}
               onClick={() => setSelectedAudit(selectedAudit === index ? null : index)}
               onMouseEnter={() => handleAuditHover(index, true)}
@@ -197,17 +197,17 @@ function BoostedAuditsSection() {
               {/* Content */}
               <p className="text-sm text-gray-600 mb-4">{audit.title}</p>
               <div className="flex items-center justify-between mb-4">
-                <p className="text-xs text-green-600 font-medium">{audit.client}</p>
+                <p className="text-xs text-deepblue font-medium">{audit.client}</p>
                 <div className="flex items-center gap-1">
-                  <span className={`px-2 py-1 text-xs font-medium rounded border ${getSeverityColor(audit.severity)}`}>
+                  <span className={`px-2 py-1 text-xs font-medium border ${getSeverityColor(audit.severity)}`}>
                     {audit.severity}
                   </span>
                 </div>
               </div>
                 <div className="grid grid-cols-1 w-full">
-                <button 
+                <button
                   onClick={() => window.open(audit.reportLink, '_blank')}
-                  className="flex items-center justify-center gap-2 px-6 py-3 rounded-xl text-md text-darkgreen text-bold bg-emeraldlight bg-opacity-25 hover:bg-opacity-5 hover:text-emeraldlight duration-700"
+                  className="flex items-center justify-center gap-2 px-6 py-3 text-md text-white text-bold bg-deepblue hover:bg-white hover:text-deepblue hover:border hover:border-deepblue duration-700"
                 >
                   View Report
                   <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />

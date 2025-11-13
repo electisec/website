@@ -22,9 +22,9 @@ const teamMembers = [
     },
     blogs: [
       {
-        name: "Binius Blog Series", 
+        name: "Binius Blog Series",
         description: "Comprehensive series on extension fields, Reed-Solomon, FRI, sumcheck, GKR",
-        link: "https://blog.electisec.com/binius-1-extension-fields"
+        link: "https://blog.yaudit.dev/binius-1-extension-fields"
       }
     ],
     keyProjects: [
@@ -178,7 +178,7 @@ const teamMembers = [
       {
         name: "SEAL911 Blog",
         description: "Deep dive into RFC6979 vulnerability across crypto libraries",
-        link: "https://blog.electisec.com/from-failing-test-to-calling-911"
+        link: "https://blog.yaudit.dev/from-failing-test-to-calling-911"
       }
     ]
   },
@@ -341,10 +341,10 @@ function DreamTeamSection() {
             {teamMembers.map((member, index) => (
               <div
                 key={member.id}
-                className={`w-32 sm:w-40 p-2 sm:p-3 rounded-xl border-2 transition-all duration-500 cursor-pointer ${
+                className={`w-32 sm:w-40 p-2 sm:p-3 border-2 transition-all duration-500 cursor-pointer hover:-translate-y-1 ${
                   selectedMember === index
-                    ? 'border-green-500 bg-green-50 shadow-lg'
-                    : 'border-gray-200 bg-white hover:border-green-300 hover:shadow-md'
+                    ? 'border-deepblue '
+                    : 'border-gray-200 bg-white hover:border-deepblue'
                 }`}
                 onMouseEnter={() => handleMemberHover(index, true)}
                 onMouseLeave={() => handleMemberHover(index, false)}
@@ -361,7 +361,7 @@ function DreamTeamSection() {
                   
                   <div className="text-center">
                     <h3 className="text-xs sm:text-sm font-bold text-gray-900 truncate w-full">{member.name}</h3>
-                    <p className="text-xs text-green-600 font-medium italic truncate w-full">{member.tagline}</p>
+                    <p className="text-xs text-deepblue font-medium italic truncate w-full">{member.tagline}</p>
                   </div>
                 </div>
               </div>
@@ -372,7 +372,7 @@ function DreamTeamSection() {
         {/* Detailed Member View - Full Width */}
         <div>
           <div
-            className="bg-gradient-to-br from-green-50 to-emerald-50 rounded-2xl p-4 sm:p-6 border border-green-200"
+            className="p-4 sm:p-6 border border-zinc-100"
             onMouseEnter={() => setIsHovered(true)}
             onMouseLeave={() => setIsHovered(false)}
           >
@@ -389,7 +389,7 @@ function DreamTeamSection() {
                     <h3 className="text-xl sm:text-2xl font-bold text-gray-900">
                       {teamMembers[selectedMember].name}
                     </h3>
-                    <p className="text-green-600 font-medium italic">{teamMembers[selectedMember].tagline}</p>
+                    <p className="text-deepblue font-medium italic">{teamMembers[selectedMember].tagline}</p>
                   </div>
                   
                   {/* Social Links */}
@@ -417,7 +417,7 @@ function DreamTeamSection() {
                         rel="noopener noreferrer"
                         className="hover:opacity-75 transition-opacity"
                       >
-                        <ExternalLink className="w-5 h-5 sm:w-4 sm:h-4 text-green-600" />
+                        <ExternalLink className="w-5 h-5 sm:w-4 sm:h-4 text-deepblue" />
                       </a>
                     )}
                     {teamMembers[selectedMember].social.sherlock && (
@@ -427,7 +427,7 @@ function DreamTeamSection() {
                         rel="noopener noreferrer"
                         className="hover:opacity-75 transition-opacity"
                       >
-                        <Shield className="w-5 h-5 sm:w-4 sm:h-4 text-green-600" />
+                        <Shield className="w-5 h-5 sm:w-4 sm:h-4 text-deepblue" />
                       </a>
                     )}
                   </div>
@@ -454,7 +454,7 @@ function DreamTeamSection() {
                         {teamMembers[selectedMember].specializations.map((spec, idx) => (
                           <span
                             key={idx}
-                            className="px-2 py-1 bg-green-100 text-green-700 rounded-full text-xs font-medium border border-green-200"
+                            className="px-2 py-1 text-deepblue text-xs font-medium border border-deepblue"
                           >
                             {spec}
                           </span>
@@ -468,7 +468,7 @@ function DreamTeamSection() {
                       <ul className="space-y-1">
                         {teamMembers[selectedMember].achievements.map((achievement, idx) => (
                           <li key={idx} className="flex items-start gap-2">
-                            <Award className="w-4 h-4 text-green-500 mt-0.5 flex-shrink-0" />
+                            <Award className="w-4 h-4 text-deepblue mt-0.5 flex-shrink-0" />
                             <span className="text-gray-700 text-sm">{achievement}</span>
                           </li>
                         ))}
@@ -481,7 +481,7 @@ function DreamTeamSection() {
                         <h4 className="text-base sm:text-lg font-bold text-gray-900 mb-2">Blogs & Articles:</h4>
                         <div className="space-y-1">
                           {teamMembers[selectedMember].blogs.map((blog, idx) => (
-                            <div key={idx} className="flex items-center justify-between p-2 rounded-lg border border-green-200 hover:bg-green-50 transition-colors">
+                            <div key={idx} className="flex items-center justify-between p-2 transition-colors">
                               <div className="flex-1 min-w-0">
                                 <h5 className="font-medium text-gray-900 text-sm truncate">{blog.name}</h5>
                                 <p className="text-gray-600 text-xs truncate">{blog.description}</p>
@@ -491,7 +491,7 @@ function DreamTeamSection() {
                                   href={blog.link}
                                   target="_blank"
                                   rel="noopener noreferrer"
-                                  className="ml-2 text-green-500 hover:text-green-600 flex-shrink-0"
+                                  className="ml-2 text-deepblue hover:text-deepblue flex-shrink-0"
                                 >
                                   <ExternalLink className="w-3 h-3" />
                                 </a>
@@ -508,7 +508,7 @@ function DreamTeamSection() {
                     <h4 className="text-base sm:text-lg font-bold text-gray-900 mb-2">Key Projects:</h4>
                     <div className="space-y-1">
                       {teamMembers[selectedMember].keyProjects?.slice(0, 10).map((project, idx) => (
-                        <div key={idx} className="flex items-center justify-between p-2 rounded-lg border border-green-200 hover:bg-green-50 transition-colors">
+                        <div key={idx} className="flex items-center justify-between p-2transition-colors">
                           <div className="flex-1 min-w-0">
                             <h5 className="font-medium text-gray-900 text-sm truncate">{project.name}</h5>
                             <p className="text-gray-600 text-xs truncate">{project.description}</p>
@@ -518,7 +518,7 @@ function DreamTeamSection() {
                               href={project.link}
                               target="_blank"
                               rel="noopener noreferrer"
-                              className="ml-2 text-green-500 hover:text-green-600 flex-shrink-0"
+                              className="ml-2 text-deepblue hover:text-deepblue flex-shrink-0"
                             >
                               <ExternalLink className="w-3 h-3" />
                             </a>
@@ -539,8 +539,8 @@ function DreamTeamSection() {
             Want to work with ZK experts?
           </h3>
           <div className="flex flex-row sm:flex-col gap-4 justify-center">
-            <button 
-              className="px-8 py-3 font-semibold rounded-xl text-darkgreen bg-emeraldlight bg-opacity-25 hover:bg-opacity-5 hover:text-emeraldlight duration-700"
+            <button
+              className="px-8 py-3 font-semibold text-white bg-deepblue hover:bg-white hover:text-deepblue hover:border hover:border-deepblue duration-700"
               onClick={() => window.location.href = '/contact-us'}
             >
               Schedule Team Consultation

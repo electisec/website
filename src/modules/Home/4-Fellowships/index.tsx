@@ -1,5 +1,4 @@
 import { BentoCard, BentoGrid } from "@/components/ui/bento-grid";
-import HyperText from "@/components/ui/hyper-text";
 import Image from "next/image";
 
 const features = [
@@ -46,8 +45,8 @@ const features = [
       <>
         <img
           alt=""
-          src="./illustrations/fist-bump.svg"
-          className="h-[8rem] mx-auto transition-all ease-out hover:blur-none duration-300 ease-out [mask-image:linear-gradient(to_top,transparent_20%,#000_100%)] group-hover:scale-105"
+          src="/ga.jpeg"
+          className="h-[12rem] mx-auto transition-all ease-out hover:blur-none duration-300 ease-out [mask-image:linear-gradient(to_top,transparent_20%,#000_100%)] group-hover:scale-105"
         />
       </>
     ),
@@ -57,10 +56,9 @@ const features = [
 export default function Fellowships() {
   return (
     <div className="h-full flex flex-col my-8 sm:mx-6 md:mx-6 lg:mx-[20vw]">
-      <HyperText
-        className="lg:text-4xl text-3xl font-bold mb-4 sm:text-center"
-        text="Fellowship Programs"
-      />
+      <h2 className="lg:text-4xl text-3xl font-bold mb-4 sm:text-center">
+        Fellowship Programs
+      </h2>
       <p className="mb-16 text-zinc-500 sm:text-justify">
         Pioneering programs giving fellows the opportunity to audit alongside
         our resident auditors, with participation from guest auditors, codebase

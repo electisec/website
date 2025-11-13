@@ -1,5 +1,4 @@
 /* eslint-disable @next/next/no-img-element */
-import HyperText from "@/components/ui/hyper-text";
 import Link from "next/link";
 
 export default function Residents() {
@@ -7,25 +6,29 @@ export default function Residents() {
     <>
       <div className="lg:grid md:grid sm:flex grid-cols-2 gap-16 sm:flex-col my-16 justify-between text-left">
         <img
-          alt=""
-          src="./illustrations/hands out of laptop.svg"
-          className="lg:cols-span-1 md:cols-span-1 justify-self-center lg:h-[14rem] md:h-[10rem]"
+          alt="ZK & Smart Contract Expertise"
+          src="/fellowship.png"
+          className="lg:cols-span-1 md:cols-span-1 justify-self-center lg:h-[24rem] md:h-[10rem] object-cover"
         />
         <div className="lg:cols-span-1 md:cols-span-1 flex flex-col">
-          <HyperText
-            className="lg:text-4xl text-3xl font-bold "
-            text="ZK & Smart Contract"
-          />
-          <HyperText
-            className="lg:text-4xl text-3xl font-bold"
-            text="Expertise"
-          />
-          <p className="text-zinc-500 mb-8">
+          <h2 className="lg:text-4xl text-3xl font-bold ">
+            ZK & Smart Contract
+          </h2>
+          <h2 className="lg:text-4xl text-3xl font-bold">
+            Expertise
+          </h2>
+          <p className="text-zinc-500 mb-4">
             <br />
-            Get your codebase audited by our top-tier resident auditors
+            Our resident auditors are seasoned security experts specializing in zero-knowledge cryptography and smart contract security. With a proven track record of securing over $2.1B in TVL and identifying 500+ critical vulnerabilities, our team brings deep technical knowledge and practical experience to every engagement.
+          </p>
+          <p className="text-zinc-500 mb-4">
+            We conduct comprehensive code reviews covering architecture analysis, cryptographic implementations, and smart contract logic. Our audits include detailed reports with severity classifications, proof-of-concept exploits, and remediation recommendations.
+          </p>
+          <p className="text-zinc-500 mb-8">
+            Whether you're building zkSNARKs, zkSTARKs, or complex DeFi protocols, our auditors provide the expertise needed to identify vulnerabilities before deployment.
           </p>
           <Link href={"/contact-us"}>
-            <button className="px-8 py-3 sm:w-full rounded-xl text-md text-darkgreen text-bold bg-emeraldlight bg-opacity-25 hover:bg-opacity-5 hover:text-emeraldlight duration-700">
+            <button className="px-8 py-3 sm:w-full text-md text-white text-bold bg-deepblue hover:bg-white hover:text-deepblue hover:border hover:border-deepblue duration-700">
               Get an Audit
             </button>
           </Link>

@@ -11,7 +11,7 @@ interface Props {
 
 function Button({ text }: { text: string }) {
   return (
-    <button className="px-6 py-3 rounded-xl text-sm text-zinc-400 hover:text-emeraldlight hover:bg-white hover:bg-opacity-5 duration-700">
+    <button className="px-6 py-3 text-sm text-zinc-400 hover:text-deepblue hover:bg-white hover:bg-opacity-5 duration-700">
       {text}
     </button>
   );
@@ -20,25 +20,25 @@ function Button({ text }: { text: string }) {
 export function Navbar({ menuOpen, setMenuOpen }: Props) {
   return (
     <div className="w-full flex h-18 items-center justify-between top-0 py-6">
-      <div className="flex flex-row gap-4 text-emeraldlight items-center text-xl lg:ml-[20vw] ml-4">
+      <div className="flex flex-row gap-4 text-deepblue items-center text-xl lg:ml-[20vw] ml-4">
         <Link href={"/"}>
           <img alt="" src="/logo.svg" className="h-10" />
         </Link>
       </div>
       <button
-        className="px-8 py-3 rounded-xl lg:hidden"
+        className="px-8 py-3 lg:hidden"
         onClick={() => setMenuOpen(!menuOpen)}
       >
         <MenuOutlined />
       </button>
       <div className="flex flex-row items-center gap-1 sm:hidden md:hidden lg:mr-[20vw]">
-        <a href="https://reports.electisec.com/">
+        <a href="https://reports.yaudit.dev/">
           <Button text={"Reports"} />
         </a>
-        <a href="https://blog.electisec.com/">
+        <a href="https://blog.yaudit.dev/">
           <Button text={"Blog"} />
         </a>
-        <a href="https://research.electisec.com/">
+        <a href="https://research.yaudit.dev/">
           <Button text={"Research"} />
         </a>
         <Link href={"/fellowships"}>
@@ -54,7 +54,7 @@ export function Navbar({ menuOpen, setMenuOpen }: Props) {
           <Button text={"zBlock2"} />
         </Link> */}
         <Link href={"/contact-us"}>
-          <button className="px-8 py-3 rounded-xl text-md text-darkgreen text-bold bg-emeraldlight bg-opacity-25 hover:bg-opacity-5 hover:text-emeraldlight duration-700">
+          <button className="px-8 py-3 text-md text-white text-bold bg-deepblue hover:bg-white hover:text-deepblue hover:border hover:border-deepblue duration-700">
             Contact
           </button>
         </Link>
@@ -91,23 +91,23 @@ export function MobileNavbar({ setMenuOpen }: MobileProps) {
           onClick={() => {
             setMenuOpen(false);
           }}
-          className="text-green-400"
+          className="text-deepblue"
         >
           <CloseCircleOutlined style={{ fontSize: "2rem" }} />
         </button>
 
-        <a href="https://reports.electisec.com/">
-          <button className="p-6 rounded-xl w-full text-xl text-zinc-400 hover:text-emeraldlight hover:bg-darkgreen hover:bg-opacity-5 duration-700">
+        <a href="https://reports.yaudit.dev/">
+          <button className="p-6 w-full text-xl text-zinc-400 hover:text-deepblue hover:bg-deepblue hover:bg-opacity-5 duration-700">
             Reports
           </button>
         </a>
-        <a href="https://blog.electisec.com/">
-          <button className="p-6 rounded-xl w-full text-xl text-zinc-400 hover:text-emeraldlight hover:bg-darkgreen hover:bg-opacity-5 duration-700">
+        <a href="https://blog.yaudit.dev/">
+          <button className="p-6 w-full text-xl text-zinc-400 hover:text-deepblue hover:bg-deepblue hover:bg-opacity-5 duration-700">
             Blog
           </button>
         </a>
-        <a href="https://research.electisec.com/">
-          <button className="p-6 rounded-xl w-full text-xl text-zinc-400 hover:text-emeraldlight hover:bg-darkgreen hover:bg-opacity-5 duration-700">
+        <a href="https://research.yaudit.dev/">
+          <button className="p-6 w-full text-xl text-zinc-400 hover:text-deepblue hover:bg-deepblue hover:bg-opacity-5 duration-700">
             Research
           </button>
         </a>
@@ -117,7 +117,7 @@ export function MobileNavbar({ setMenuOpen }: MobileProps) {
             onClick={() => {
               setMenuOpen(false);
             }}
-            className="p-6 rounded-xl w-full text-xl text-zinc-400 hover:text-emeraldlight hover:bg-darkgreen hover:bg-opacity-5 duration-700"
+            className="p-6 w-full text-xl text-zinc-400 hover:text-deepblue hover:bg-deepblue hover:bg-opacity-5 duration-700"
           >
             Fellowships
           </button>
@@ -127,7 +127,7 @@ export function MobileNavbar({ setMenuOpen }: MobileProps) {
             onClick={() => {
               setMenuOpen(false);
             }}
-            className="p-6 rounded-xl w-full text-xl text-zinc-400 hover:text-emeraldlight hover:bg-white hover:bg-opacity-5 duration-700"
+            className="p-6 w-full text-xl text-zinc-400 hover:text-deepblue hover:bg-white hover:bg-opacity-5 duration-700"
           >
             Services
           </button>
@@ -137,7 +137,7 @@ export function MobileNavbar({ setMenuOpen }: MobileProps) {
             onClick={() => {
               setMenuOpen(false);
             }}
-            className="p-6 rounded-xl w-full text-xl text-zinc-400 hover:text-emeraldlight hover:bg-white hover:bg-opacity-5 duration-700"
+            className="p-6 w-full text-xl text-zinc-400 hover:text-deepblue hover:bg-white hover:bg-opacity-5 duration-700"
           >
             Team
           </button>
@@ -148,7 +148,7 @@ export function MobileNavbar({ setMenuOpen }: MobileProps) {
             onClick={() => {
               setMenuOpen(false);
             }}
-            className="p-6 rounded-xl w-full text-xl text-emeraldlight text-bold hover:bg-darkgreen hover:bg-opacity-5 duration-700"
+            className="p-6 w-full text-xl text-white bg-deepblue hover:bg-white hover:text-deepblue hover:border hover:border-deepblue duration-700"
           >
             Contact
           </button>
