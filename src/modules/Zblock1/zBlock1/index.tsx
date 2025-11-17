@@ -46,7 +46,7 @@ function ZBlock1Modules() {
               href="https://pse.dev"
               target="_blank"
               rel="noopener noreferrer"
-              className="text-green-600 font-bold hover:underline duration-700"
+              className="text-deepblue font-bold hover:underline duration-700"
             >
               Privacy & Scaling Explorations
             </a>{" "}
@@ -55,7 +55,7 @@ function ZBlock1Modules() {
               href="https://github.com/Rate-Limiting-Nullifier"
               target="_blank"
               rel="noopener noreferrer"
-              className="text-green-600 font-bold hover:underline duration-700"
+              className="text-deepblue font-bold hover:underline duration-700"
             >
               Rate Limiting Nullifier
             </a>{" "}
@@ -79,7 +79,7 @@ function ZBlock1Modules() {
           <p className="mt-4 font-semibold">
             See also :{" "}
             <Link href={"/zBlock2"}>
-              <button className="text-green-600 hover:underline duration-700">
+              <button className="text-deepblue hover:underline duration-700">
                 zBlock2
               </button>
             </Link>
@@ -93,7 +93,7 @@ function ZBlock1Modules() {
         Participants
       </h1>
       <div className="grid lg:grid-cols-5 gap-8">
-        <div className="lg:col-span-1 flex flex-col py-6 rounded-xl bg-[#E8FFF8]">
+        <div className="lg:col-span-1 flex flex-col py-6 bg-zinc-50 border border-zinc-100">
           <img alt="" src="/logo.svg" className="h-8 mb-6" />
           <ul className="list-disc text-zinc-700 px-12">
             {electiteam.map((member) => {
@@ -112,7 +112,7 @@ function ZBlock1Modules() {
             })}
           </ul>
         </div>
-        <div className="lg:col-span-2 flex flex-col p-4 px-12 rounded-xl bg-[#E8FFF8]">
+        <div className="lg:col-span-2 flex flex-col p-4 px-12 bg-zinc-50 border border-zinc-100">
           <h4 className="text-xl py-4 text-center font-semibold mb-4">
             Fellows
           </h4>
@@ -154,7 +154,7 @@ function ZBlock1Modules() {
           </div>
           <p className="text-center p-4 text-zinc-700"> * Top Fellows</p>
         </div>
-        <div className="lg:col-span-1 flex flex-col p-6 rounded-xl bg-[#E8FFF8]">
+        <div className="lg:col-span-1 flex flex-col p-6 bg-zinc-50 border border-zinc-100">
           <img alt="" src="/zblock/pse-0xparc.svg" className="h-14 mx-4 mb-6" />
           <ul className="list-disc text-zinc-700 px-8">
             {pseteam.map((member) => {
@@ -173,7 +173,7 @@ function ZBlock1Modules() {
             })}
           </ul>
         </div>
-        <div className="lg:col-span-1 flex flex-col p-4 px-8 rounded-xl bg-[#E8FFF8]">
+        <div className="lg:col-span-1 flex flex-col p-4 px-8 bg-zinc-50 border border-zinc-100">
           <h4 className="text-xl py-4 text-center font-semibold">
             Guest Speakers
           </h4>
@@ -207,7 +207,7 @@ function ZBlock1Modules() {
           <h1 id="discussion1" className="text-2xl font-bold mb-4">
             Discussion
           </h1>
-          <div className="flex flex-row gap-4 p-4 items-center rounded-2xl bg-[#E8FFF8]">
+          <div className="flex flex-row gap-4 p-4 items-center bg-zinc-50 border border-zinc-100">
             <Discussion chat={m1discussion} />
           </div>
         </div>
@@ -215,13 +215,13 @@ function ZBlock1Modules() {
           <h1 id="materials1" className="text-2xl font-bold mt-8 mb-4">
             Supplimentary Materials
           </h1>
-          <div className="flex flex-row gap-4 p-4 items-center rounded-2xl bg-[#E8FFF8]">
+          <div className="flex flex-row gap-4 p-4 items-center bg-zinc-50 border border-zinc-100">
             <Notes notes={m1notes} />
           </div>
           <h1 id="exercise1" className="text-2xl font-bold my-4">
             Exercises
           </h1>
-          <div className="flex flex-col  gap-6 p-6 rounded-2xl bg-[#E8FFF8]">
+          <div className="flex flex-col  gap-6 p-6 bg-zinc-50 border border-zinc-100">
             {m1exercises.map((exercise) => {
               return (
                 <div
@@ -254,7 +254,7 @@ function ZBlock1Modules() {
           <h1 id="discussion1" className="text-2xl font-bold mb-4">
             Discussion
           </h1>
-          <div className="flex flex-row gap-4 p-4 items-center rounded-2xl bg-[#E8FFF8]">
+          <div className="flex flex-row gap-4 p-4 items-center bg-zinc-50 border border-zinc-100">
             <Discussion chat={m2discussion} />
           </div>
         </div>
@@ -263,7 +263,7 @@ function ZBlock1Modules() {
           <VideoSection videoData={m2guestLectures} />
 
           <h1 className="text-2xl font-bold my-4">Audit Reports</h1>
-          <div className="flex flex-row gap-4 p-4 items-center rounded-2xl bg-[#E8FFF8]">
+          <div className="flex flex-row gap-4 p-4 items-center bg-zinc-50 border border-zinc-100">
             <Report report={m2report} />
           </div>
         </div>
@@ -283,13 +283,13 @@ function ZBlock1Modules() {
           <h1 id="discussion1" className="text-2xl font-bold mb-4">
             Discussion
           </h1>
-          <div className="flex flex-row gap-4 p-4 items-center rounded-2xl  bg-[#E8FFF8]">
+          <div className="flex flex-row gap-4 p-4 items-center  bg-zinc-50 border border-zinc-100">
             <Discussion chat={m2discussion} />
           </div>
           <h1 id="exercise1" className="text-2xl font-bold my-4">
             Exercises
           </h1>
-          <div className="flex flex-col  gap-6 p-6 rounded-2xl  bg-[#E8FFF8]">
+          <div className="flex flex-col  gap-6 p-6  bg-zinc-50 border border-zinc-100">
             {m3exercises.map((exercise) => {
               return (
                 <div
@@ -311,7 +311,7 @@ function ZBlock1Modules() {
           </div>
 
           <h1 className="text-2xl font-bold my-4">Audit Reports</h1>
-          <div className="flex flex-row gap-4 p-4 items-center rounded-2xl  bg-[#E8FFF8]">
+          <div className="flex flex-row gap-4 p-4 items-center  bg-zinc-50 border border-zinc-100">
             <Report report={m3report} />
           </div>
         </div>

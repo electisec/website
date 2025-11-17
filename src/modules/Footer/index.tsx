@@ -20,7 +20,7 @@ export default function Footer() {
       <img alt="" src="/logo.svg" className="h-[5rem]" />
       <DockDemo />
       <p className="text-sm text-zinc-500 mt-10 text-center">
-        Copyright © 2025 Electisec. All rights reserved.
+        Copyright © 2025 yAudit. All rights reserved.
       </p>
     </div>
   );
@@ -91,11 +91,11 @@ export const Icons = {
 const DATA = {
   navbar: [
     {
-      href: "https://reports.electisec.com",
+      href: "https://reports.yaudit.dev",
       icon: BookCopyIcon,
       label: "Reports",
     },
-    { href: "https://blog.electisec.com", icon: PencilIcon, label: "Blog" },
+    { href: "https://blog.yaudit.dev", icon: PencilIcon, label: "Blog" },
   ],
   contact: {
     social: {
@@ -121,7 +121,7 @@ const DATA = {
       },
       email: {
         name: "Send Email",
-        url: "mailto:hello@electisec.com",
+        url: "mailto:hello@yaudit.dev",
         icon: Icons.email,
       },
     },
@@ -143,7 +143,7 @@ export function DockDemo() {
                     aria-label={item.label}
                     className={cn(
                       buttonVariants({ variant: "ghost", size: "icon" }),
-                      "size-14 rounded-full"
+                      "size-14"
                     )}
                   >
                     <item.icon className="size-4" />
@@ -166,7 +166,7 @@ export function DockDemo() {
                     aria-label={social.name}
                     className={cn(
                       buttonVariants({ variant: "ghost", size: "icon" }),
-                      "size-12 rounded-full"
+                      "size-12"
                     )}
                   >
                     <social.icon className="size-4" />

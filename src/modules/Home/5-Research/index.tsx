@@ -2,8 +2,6 @@
 
 import { cn } from "@/lib/utils";
 import { AnimatedList } from "@/components/ui/animated-list";
-import HyperText from "@/components/ui/hyper-text";
-
 import AvatarCircles from "@/components/ui/avatar-circles";
 
 interface Item {
@@ -17,7 +15,7 @@ let notifications = [
   {
     name: "From 0 to Bi(ge)nius: field extensions",
     description: "𝔽₂ and Beyond: A Gentle Guide to Field Extensions",
-    link: "https://blog.electisec.com/binius-1-extension-fields",
+    link: "https://blog.yaudit.dev/binius-1-extension-fields",
     avatars: [
       {
         imageUrl:
@@ -28,7 +26,7 @@ let notifications = [
   {
     name: "Reed-Solomon Codes: The Math Behind Error Correction and Zero-Knowledge Proofs",
     description: "From QR codes to ZK, discover how Reed-Solomon codes correct errors and secure digital communication",
-    link: "https://blog.electisec.com/reed-solomon",
+    link: "https://blog.yaudit.dev/reed-solomon",
     avatars: [
       {
         imageUrl:
@@ -39,7 +37,7 @@ let notifications = [
   {
     name: "FRI: Folding Polynomials and Catching Cheaters",
     description: "Folding and Merkle trees, understand the magic behind STARKs",
-    link: "https://blog.electisec.com/fri",
+    link: "https://blog.yaudit.dev/fri",
     avatars: [
       {
         imageUrl:
@@ -50,7 +48,7 @@ let notifications = [
     {
     name: "Sum-Check: The Backbone of ZK Proofs",
     description: "Compressing Computation One Bit at a Time",
-    link: "https://blog.electisec.com/sumcheck",
+    link: "https://blog.yaudit.dev/sumcheck",
     avatars: [
       {
         imageUrl:
@@ -61,7 +59,7 @@ let notifications = [
   {
     name: "Security notes on ERC4337 and smart wallets",
     description: "An analysis of the security aspects of Account Abstraction",
-    link: "https://blog.electisec.com/blogs/2024-09-09-security-notes-erc4337",
+    link: "https://blog.yaudit.dev/blogs/2024-09-09-security-notes-erc4337",
     avatars: [
       {
         imageUrl:
@@ -73,7 +71,7 @@ let notifications = [
   {
     name: "When L2s Fall",
     description: "Newsflash - single points of failure can fail",
-    link: "https://blog.electisec.com/blogs/2024-08-19-when-L2s-fall",
+    link: "https://blog.yaudit.dev/blogs/2024-08-19-when-L2s-fall",
     avatars: [
       {
         imageUrl:
@@ -85,7 +83,7 @@ let notifications = [
   {
     name: "Are Inverse TWAP Prices Inaccurate",
     description: "Price Data is Hard - Part 1",
-    link: "https://blog.electisec.com/blogs/2024-05-24-are-inverse-TWAP-prices-inaccurate",
+    link: "https://blog.yaudit.dev/blogs/2024-05-24-are-inverse-TWAP-prices-inaccurate",
     avatars: [
       {
         imageUrl:
@@ -102,7 +100,7 @@ const Notification = ({ name, description, link, avatars }: Item) => {
   return (
     <figure
       className={cn(
-        "w-full min-h-fit cursor-pointer overflow-hidden rounded-2xl p-4 mx-auto",
+        "w-full min-h-fit cursor-pointer overflow-hidden p-4 mx-auto",
         // animation styles
         "transition-all duration-200 ease-in-out hover:scale-[103%]",
         // light styles
@@ -149,18 +147,17 @@ export default function Research() {
   return (
     <div className="h-full grid lg:grid-cols-2 my-12 sm:mx-6 md:mx-6 lg:mx-[20vw]">
       <div className="col-span-1 mr-10 sm:mr-0 sm:flex sm:flex-col w-full overflow-hidden">
-        <HyperText
-          className="lg:text-4xl text-3xl font-bold sm:text-center"
-          text="Research"
-        />
+        <h2 className="lg:text-4xl text-3xl font-bold sm:text-center">
+          Research
+        </h2>
         <AnimatedListDemo className="mt-8 md:hidden lg:hidden" />
         <p className="text-zinc-500 mb-8 sm:text-justify">
           <br />
           We dig, that&apos;s what we do - always.
           <br />
         </p>
-        <a target="_blank" href="https://blog.electisec.com/">
-          <button className="px-8 py-3 sm:w-full rounded-xl text-md text-darkgreen text-bold bg-emeraldlight bg-opacity-25 hover:bg-opacity-5 hover:text-emeraldlight duration-700">
+        <a target="_blank" href="https://blog.yaudit.dev/">
+          <button className="px-8 py-3 sm:w-full text-md text-white text-bold bg-deepblue hover:bg-white hover:text-deepblue hover:border hover:border-deepblue duration-700">
             Technical Blog Posts
           </button>
         </a>

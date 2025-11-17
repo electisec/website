@@ -89,7 +89,7 @@ export default function Summary() {
     <div className="my-16">
       <h2 className="text-3xl font-bold text-center mb-8">Choose your hard</h2>
       <div className="sm:block">
-        <div className="bg-emeraldlight bg-opacity-5 rounded-xl">
+        <div className="border border-deepblue">
           <nav className="-mb-px grid grid-cols-3" aria-label="Tabs">
             {tabs.map((tab) => (
               <a 
@@ -102,10 +102,10 @@ export default function Summary() {
                 className="col-span-1"
               >
                 <button
-                  className={`w-full p-3 rounded-xl text-md hover:bg-emeraldlight hover:bg-opacity-25 hover:text-darkgreen duration-700 ${
+                  className={`w-full p-3 text-md hover:bg-deepblue hover:text-white duration-700 ${
                     tab.name === currentTab
-                      ? "bg-emeraldlight bg-opacity-25 text-darkgreen"
-                      : "text-emeraldlight"
+                      ? "bg-deepblue bg-opacity-100 text-white"
+                      : "text-deepblue"
                   }`}
                 >
                   {tab.name}
@@ -126,9 +126,9 @@ export default function Summary() {
           {currentTab === "Guest Auditor Program" && <GuestAuditor />}
         </div>
       </div>
-      <div className="my-16 flex flex-row gap-4 p-8 items-center rounded-2xl bg-[#E8FFF8]">
+      <div className="my-16 flex flex-row gap-4 p-8 items-center border border-deepblue">
         <img alt="" src="./icons/bulb.svg" className="h-16" />
-        <p className="text-darkgreen text-sm">
+        <p className="text-deepblue text-sm">
           If you think our program is too advanced for you now, fear not, you
           can still join after going through an introductory program such as{" "}
           <a

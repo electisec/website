@@ -16,7 +16,7 @@ function Stats() {
         </p>
         <p className="text-zinc-500">
           <br />
-          Electisec fellowships are <strong>
+          yAudit fellowships are <strong>
             not introductory programs
           </strong>{" "}
           to software auditing. They are trial-by-fire programs where you will
@@ -46,7 +46,7 @@ function Stats() {
             You are not required to have experience in auditing in the Web3
             space, but you must be proficient in software engineering generally
             and have published proof of technical work. Please note that as the
-            Electisec fellowship continues getting more popular, the competition
+            yAudit fellowship continues getting more popular, the competition
             to join our programs is increasing with each iteration.
           </li>
           <br />

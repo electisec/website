@@ -2,7 +2,6 @@
 "use client";
 
 import { useEffect, useRef, useState } from "react";
-import HyperText from "@/components/ui/hyper-text";
 import {
   Tooltip,
   TooltipContent,
@@ -151,7 +150,7 @@ export default function ClientSection() {
   return (
     <section className="bg-white m-2">
       <div className="lg:mx-[20vw]">
-        <HyperText className="lg:text-4xl text-3xl font-bold" text="Clients" />
+        <h2 className="lg:text-4xl text-3xl font-bold">Clients</h2>
         <EllipticalOrbitDemo />
       </div>
     </section>
@@ -262,14 +261,14 @@ function EllipticalOrbitDemo() {
   // During SSR or before mount, return a placeholder or default layout
   if (!isMounted) {
     return (
-      <div className="relative flex lg:h-[50vh] md:h-[40vh] sm:h-[25vh] flex-col items-center justify-center overflow-hidden rounded-lg bg-white">
+      <div className="relative flex lg:h-[50vh] md:h-[40vh] sm:h-[25vh] flex-col items-center justify-center overflow-hidden bg-white">
         {/* Optional loading state or static content */}
       </div>
     );
   }
 
   return (
-    <div className="relative flex lg:h-[50vh] md:h-[40vh] sm:h-[25vh] flex-col items-center justify-center overflow-hidden rounded-lg bg-white">
+    <div className="relative flex lg:h-[50vh] md:h-[40vh] sm:h-[25vh] flex-col items-center justify-center overflow-hidden bg-white">
       <svg
         className="absolute top-0 left-0 w-full h-full"
         style={{

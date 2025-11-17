@@ -1,4 +1,3 @@
-import HyperText from "@/components/ui/hyper-text";
 import Image from "next/image";
 import Link from "next/link";
 
@@ -7,20 +6,24 @@ export default function DueDiligence() {
     <>
       <div className="lg:grid md:grid sm:flex grid-cols-2 gap-16 sm:flex-col my-16 justify-between text-left">
         <div className="lg:cols-span-1 md:cols-span-1">
-          <img alt="" src="./illustrations/code.svg" className="h-[16rem] justify-self-center" />
+          <img alt="Consulting" src="/dd.png" className="h-[26rem] justify-self-center object-cover" />
         </div>
         <div className="lg:cols-span-1 md:cols-span-1 flex flex-col">
-          <HyperText
-            className="lg:text-4xl text-3xl font-bold"
-            text="Consulting"
-          />
-          <p className="text-zinc-500 mb-8">
+          <h2 className="lg:text-4xl text-3xl font-bold">
+            Consulting
+          </h2>
+          <p className="text-zinc-500 mb-4">
             <br />
-            Get due diligence on blockchain projects and protocols :
-            architecture, design, code, algorithms, and approach.
+            Beyond traditional audits, we offer comprehensive consulting services for blockchain projects at any stage of development. Our team provides strategic guidance on security architecture, protocol design, cryptographic implementations, and best practices for building secure decentralized systems.
+          </p>
+          <p className="text-zinc-500 mb-4">
+            Our due diligence services include in-depth analysis of project architecture, algorithm correctness verification, threat modeling, and risk assessment. We evaluate the technical foundations of protocols, identifying potential weaknesses in design before they become code-level vulnerabilities.
+          </p>
+          <p className="text-zinc-500 mb-8">
+            Whether you're building a new ZK proof system, designing a novel consensus mechanism, or integrating complex cryptographic primitives, our consultants bring the expertise to validate your approach. We work closely with your team to ensure security is built in from the ground up, not bolted on as an afterthought.
           </p>
           <Link href={"/contact-us"}>
-            <button className="px-8 py-3 sm:w-full rounded-xl text-md text-darkgreen text-bold bg-emeraldlight bg-opacity-25 hover:bg-opacity-5 hover:text-emeraldlight duration-700">
+            <button className="px-8 py-3 sm:w-full text-md text-white text-bold bg-deepblue hover:bg-white hover:text-deepblue hover:border hover:border-deepblue duration-700">
               Enquire
             </button>
           </Link>

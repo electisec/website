@@ -64,7 +64,7 @@ function EnhancedTypewriter() {
   return (
     <h1 className="lg:leading-normal lg:text-5xl md:text-3xl sm:text-3xl font-bold">
       Breaking your <br />
-      <span className="bg-gradient-to-r from-green-500 to-emerald-500 bg-clip-text text-transparent">
+      <span className="bg-gradient-to-r from-deepblue to-deepblue bg-clip-text text-transparent">
         {currentText}
         <span className="animate-pulse">|</span>
       </span>
@@ -82,16 +82,16 @@ function AuthorityMetrics() {
   
   return (
     <div className="grid grid-cols-3 gap-4 mb-8">
-      <div className="bg-green-50 p-4 rounded-xl text-center border border-green-100">
-        <div className="text-2xl font-bold text-green-600">${tvlCount.toFixed(1)}B+</div>
+      <div className="bg-deepblue bg-opacity-5 p-4 text-center border border-deepblue hover:-translate-y-1 transition-transform duration-300">
+        <div className="text-2xl font-bold text-deepblue">${tvlCount.toFixed(1)}B+</div>
         <div className="text-sm text-gray-600">High</div>
       </div>
-      <div className="bg-green-50 p-4 rounded-xl text-center border border-green-100">
-        <div className="text-2xl font-bold text-green-600">{bugsCount}+</div>
+      <div className="bg-deepblue bg-opacity-5 p-4 text-center border border-deepblue hover:-translate-y-1 transition-transform duration-300">
+        <div className="text-2xl font-bold text-deepblue">{bugsCount}+</div>
         <div className="text-sm text-gray-600">Medium</div>
       </div>
-      <div className="bg-green-50 p-4 rounded-xl text-center border border-green-100">
-        <div className="text-2xl font-bold text-green-600">{alumniCount}+</div>
+      <div className="bg-deepblue bg-opacity-5 p-4 text-center border border-deepblue hover:-translate-y-1 transition-transform duration-300">
+        <div className="text-2xl font-bold text-deepblue">{alumniCount}+</div>
         <div className="text-sm text-gray-600">Infollow</div>
       </div>
     </div>
@@ -102,15 +102,15 @@ function AuthorityMetrics() {
 function CredentialBadges() {
   return (
     <div className="flex flex-wrap gap-3 mb-6 justify-center">
-      <div className="flex items-center gap-2 bg-gradient-to-r from-green-100 to-emerald-100 text-green-700 px-4 py-2 rounded-full text-sm font-semibold border border-green-200">
+      <div className="flex items-center gap-2 bg-opacity-10 text-deepblue px-4 py-2 text-sm font-semibold hover:-translate-y-1 transition-transform duration-300">
         <Trophy className="w-4 h-4" />
         Ethereum Foundation Grantee
       </div>
-      <div className="flex items-center gap-2 bg-gradient-to-r from-green-100 to-emerald-100 text-green-700 px-4 py-2 rounded-full text-sm font-semibold border border-green-200">
+      <div className="flex items-center gap-2 bg-opacity-10 text-deepblue px-4 py-2 text-sm font-semibold hover:-translate-y-1 transition-transform duration-300">
         <Shield className="w-4 h-4" />
         Boosted Audits
       </div>
-      <div className="flex items-center gap-2 bg-gradient-to-r from-green-100 to-emerald-100 text-green-700 px-4 py-2 rounded-full text-sm font-semibold border border-green-200">
+      <div className="flex items-center gap-2 bg-opacity-10 text-deepblue px-4 py-2 text-sm font-semibold hover:-translate-y-1 transition-transform duration-300">
         <Users className="w-4 h-4" />
         2 ZK Fellowships Completed
       </div>
@@ -138,7 +138,7 @@ function AchievementTicker() {
   }, [achievements.length]);
   
   return (
-    <div className="bg-white/80 backdrop-blur-sm border border-green-200 rounded-lg p-3 mb-6">
+    <div className="bg-white/80 backdrop-blur-sm p-3 mb-6 hover:-translate-y-1 transition-transform duration-300">
       <div className="flex items-center justify-center gap-2">
         <div className="flex">
           <Star className="w-4 h-4 text-yellow-500 animate-pulse" />
@@ -175,12 +175,12 @@ export default function HeroSection() {
           {/* Enhanced CTA Buttons */}
           <div className="flex flex-row sm:flex-col gap-4 items-center justify-start sm:justify-center mb-8">
             <Link href="/contact-us">
-              <button className="px-8 py-4 rounded-xl text-md text-darkgreen text-bold bg-emeraldlight bg-opacity-25 hover:bg-opacity-5 hover:text-emeraldlight duration-700 shadow-lg hover:shadow-xl transform hover:scale-105">
+              <button className="px-8 py-4 text-md text-white text-bold bg-deepblue hover:bg-white hover:text-deepblue hover:border hover:border-deepblue duration-700 hover:-translate-y-1 transition-transform">
                 Get a Boosted Audit
               </button>
             </Link>
-            <a href="https://research.electisec.com" target="_blank">
-              <button className="px-8 py-4 rounded-xl text-green-600 font-bold border-2 border-green-500 hover:bg-green-50 transition-all duration-300">
+            <a href="https://research.yaudit.dev" target="_blank">
+              <button className="px-8 py-4 text-deepblue font-bold border-2 border-deepblue hover:bg-deepblue hover:bg-opacity-5 transition-all duration-300">
                 View Research
               </button>
             </a>
@@ -190,8 +190,8 @@ export default function HeroSection() {
           <div className="pt-6 border-t border-gray-200">
             <p className="text-sm text-gray-500 mb-3">Trusted by:</p>
             <div className="flex flex-wrap gap-4 items-center justify-start sm:justify-center opacity-60">
-              <div className="bg-green-100 px-3 py-1 rounded text-sm font-medium">PSE Team</div>
-              <div className="bg-green-100 px-3 py-1 rounded text-sm font-medium">Personae Labs</div>
+              <div className="bg-deepblue bg-opacity-10 px-3 py-1 text-sm font-medium">PSE Team</div>
+              <div className="bg-deepblue bg-opacity-10 px-3 py-1 text-sm font-medium">Personae Labs</div>
             </div>
           </div>
         </div>
@@ -202,8 +202,8 @@ export default function HeroSection() {
           <div className="mb-8">
             <img
               alt="ZK Security Hero Illustration"
-              src="/illustrations/hero.svg"
-              className="w-full h-auto max-h-[20rem] object-contain"
+              src="/dd.png"
+              className="w-full h-auto max-h-[24rem] object-contain"
             />
           </div>
           
@@ -211,11 +211,12 @@ export default function HeroSection() {
           <div className="w-full max-w-md">
             <AchievementTicker />
           </div>
-          
+
           {/* Authority Metrics - Moved to Right */}
-          <div className="w-full max-w-md ml-auto">
+          {/* <div className="w-full max-w-md ml-auto">
             <AuthorityMetrics />
-          </div>
+          </div>  */}
+
         </div>
       </div>
     </div>

@@ -3,7 +3,6 @@ import { ArrowRight } from 'lucide-react';
 import Link from "next/link";
 import { cn } from "@/lib/utils";
 import { AnimatedList } from "@/components/ui/animated-list";
-import HyperText from "@/components/ui/hyper-text";
 import AvatarCircles from "@/components/ui/avatar-circles";
 
 // Blog data and components from your existing Research component
@@ -18,7 +17,7 @@ let notifications = [
   {
     name: "From 0 to Bi(ge)nius: field extensions",
     description: "𝔽₂ and Beyond: A Gentle Guide to Field Extensions",
-    link: "https://blog.electisec.com/binius-1-extension-fields",
+    link: "https://blog.yaudit.dev/binius-1-extension-fields",
     avatars: [
       {
         imageUrl: "https://avatars.githubusercontent.com/teddav",
@@ -28,7 +27,7 @@ let notifications = [
   {
     name: "Reed-Solomon Codes: The Math Behind Error Correction and Zero-Knowledge Proofs",
     description: "From QR codes to ZK, discover how Reed-Solomon codes correct errors and secure digital communication",
-    link: "https://blog.electisec.com/reed-solomon",
+    link: "https://blog.yaudit.dev/reed-solomon",
     avatars: [
       {
         imageUrl: "https://avatars.githubusercontent.com/teddav",
@@ -38,7 +37,7 @@ let notifications = [
   {
     name: "FRI: Folding Polynomials and Catching Cheaters",
     description: "Folding and Merkle trees, understand the magic behind STARKs",
-    link: "https://blog.electisec.com/fri",
+    link: "https://blog.yaudit.dev/fri",
     avatars: [
       {
         imageUrl: "https://avatars.githubusercontent.com/teddav",
@@ -48,7 +47,7 @@ let notifications = [
   {
     name: "Sum-Check: The Backbone of ZK Proofs",
     description: "Compressing Computation One Bit at a Time",
-    link: "https://blog.electisec.com/sumcheck",
+    link: "https://blog.yaudit.dev/sumcheck",
     avatars: [
       {
         imageUrl: "https://avatars.githubusercontent.com/teddav",
@@ -58,7 +57,7 @@ let notifications = [
   {
     name: "GKR: Sumcheck's best friend",
     description: "Verifying Computations Layer by Layer",
-    link: "https://blog.electisec.com/gkr",
+    link: "https://blog.yaudit.dev/gkr",
     avatars: [
       {
         imageUrl: "https://avatars.githubusercontent.com/teddav",
@@ -69,7 +68,7 @@ let notifications = [
   {
     name: "From a failing test to calling SEAL911",
     description: "A small detail influencing major cryptographic libraries",
-    link: "https://blog.electisec.com/from-failing-test-to-calling-911",
+    link: "https://blog.yaudit.dev/from-failing-test-to-calling-911",
     avatars: [
       {
         imageUrl: "https://avatars.githubusercontent.com/u/92337658?v=4",
@@ -85,10 +84,10 @@ const Notification = ({ name, description, link, avatars }: Item) => {
   return (
     <figure
       className={cn(
-        "w-full min-h-fit cursor-pointer overflow-hidden rounded-2xl p-4 mx-auto",
-        "transition-all duration-200 ease-in-out hover:scale-[103%]",
-        "bg-white [box-shadow:0_0_0_1px_rgba(0,0,0,.03),0_2px_4px_rgba(0,0,0,.05),0_12px_24px_rgba(0,0,0,.05)]",
-        "transform-gpu dark:bg-transparent dark:backdrop-blur-md dark:[border:1px_solid_rgba(255,255,255,.1)] dark:[box-shadow:0_-20px_80px_-20px_#ffffff1f_inset]"
+        "w-full min-h-fit cursor-pointer overflow-hidden p-4 mx-auto",
+        "border border-zinc-100 hover:-translate-y-1 transition-transform duration-300",
+        "bg-white",
+        "transform-gpu dark:bg-transparent dark:backdrop-blur-md dark:[border:1px_solid_rgba(255,255,255,.1)]"
       )}
     >
       <div className="flex flex-row items-center gap-3 w-full">
@@ -132,21 +131,21 @@ function AnimatedListDemo({ className }: { className?: string }) {
 // Featured Research Highlight Component
 function FeaturedResearchHighlight() {
   return (
-    <div className="bg-gray-50 rounded-3xl border border-green-200 shadow-sm hover:shadow-lg transition-all duration-300 cursor-pointer group overflow-hidden">
+    <div className="bg-gray-50 border border-zinc-200 cursor-pointer group overflow-hidden hover:-translate-y-1 transition-transform duration-300">
       {/* Hero Banner Image */}
       <div className="relative h-[20rem] overflow-hidden">
         
         <img 
-          src="/mpc0.jpg" 
+          src="/mpc.png" 
           alt="Multi Party Computation Research" 
-          className="w-full h-full object-cover"
+          className="w-full h-full object-cover opacity-85"
         />
         {/* Featured Badge Overlay */}
         <div className="absolute top-4 left-4 flex items-center gap-2">
-          {/* <span className="bg-white/90 text-green-700 px-3 py-1 rounded-full text-sm font-semibold backdrop-blur-sm">
+          {/* <span className="bg-white/90 text-deepblue px-3 py-1 rounded-full text-sm font-semibold backdrop-blur-sm">
              Featured Research
           </span> */}
-          <span className="bg-green-500 text-white px-3 py-1 rounded-full text-sm font-medium">
+          <span className="bg-deepblue text-white px-3 py-1 text-sm font-medium">
             ⭐ Latest
           </span>
         </div>
@@ -157,17 +156,19 @@ function FeaturedResearchHighlight() {
         {/* Main Content */}
         <h1 className="text-xl lg:text-3xl font-bold text-gray-900 mb-4 leading-tight">
           MPC Research on  {' '}
-          <span className="bg-gradient-to-r from-green-600 to-emerald-600 bg-clip-text text-transparent">
+          <span className="text-deepblue">
             Vole, Quicksilver
           </span>
         </h1>
 
         {/* CTA Section */}
         <div className="grid grid-cols-1 w-full">
-          <button className="flex items-center justify-center gap-2 px-6 py-3 rounded-xl text-md text-darkgreen text-bold bg-emeraldlight bg-opacity-25 hover:bg-opacity-5 hover:text-emeraldlight duration-700">
-            Coming Soon
-            {/* <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" /> */}
-          </button>
+          <a href="https://research.yaudit.dev/mpc" target="_blank" rel="noopener noreferrer">
+            <button className="flex items-center justify-center gap-2 px-6 py-3 text-md text-white text-bold bg-deepblue hover:bg-white hover:text-deepblue hover:border hover:border-deepblue duration-700 w-full">
+              View Research
+              {/* <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" /> */}
+            </button>
+          </a>
         </div>
       </div>
     </div>
@@ -179,10 +180,9 @@ function BlogSection() {
   return (
     <div className="h-full">
       <div className="w-full overflow-hidden">
-        <HyperText
-          className="lg:text-4xl text-3xl font-bold text-center"
-          text="Blogs"
-        />
+        <h2 className="lg:text-4xl text-3xl font-bold text-center">
+          Blogs
+        </h2>
       </div>
       
       <div className="block">
@@ -194,7 +194,7 @@ function BlogSection() {
 
 export default function ResearchSection() {
   return (
-    <div className="bg-[#E8FFF8]">
+    <div className="bg-zinc-50 border border-zinc-100">
       <div className="lg:my-12 p-12 lg:px-64">
         <div className="grid sm:grid-cols-1 grid-cols-2 gap-12 items-start">
           {/* Left Side - Featured Research Highlight */}

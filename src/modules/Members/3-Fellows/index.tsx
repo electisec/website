@@ -109,7 +109,7 @@ export function Template({
           </svg>
         </span>
       </h2>
-      <h3 className={"sm:text-xs italic text-gray-900 hover:underline mb-12"}>
+      <h3 className={"sm:text-xs italic text-deepblue hover:underline mb-12"}>
         * promoted to Resident
       </h3>
       <ul
@@ -152,10 +152,13 @@ export function Template({
                   {person.url?.length > 0 ? (
                     <a href={person.url} target="_blank">
                       {person.name}
-                      {person.promotedToResident ? "*" : ""}
+                      {person.promotedToResident ? <span className="text-deepblue">*</span> : ""}
                     </a>
                   ) : (
-                    person.name + (person.promotedToResident ? "*" : "")
+                    <>
+                      {person.name}
+                      {person.promotedToResident ? <span className="text-deepblue">*</span> : ""}
+                    </>
                   )}
                 </h3>
               </div>

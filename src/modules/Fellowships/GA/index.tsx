@@ -43,19 +43,19 @@ function GuestAuditor() {
           </div>
           <p>
             If you think you are a good fit for the program (yay!), please
-            contact us at hello AT electisec DOT com
+            contact us at hello AT yaudit DOT dev
           </p>
           {/* <Link href={"/fellowships"}>
-            <button className="w-1/2 px-8 py-3 rounded-xl text-md text-darkgreen text-bold bg-emeraldlight bg-opacity-25 hover:bg-opacity-5 hover:text-emeraldlight duration-700">
+            <button className="w-1/2 px-8 py-3 text-md text-white text-bold bg-deepblue hover:bg-white hover:text-deepblue hover:border hover:border-deepblue duration-700">
               Apply
             </button>
           </Link> */}
         </div>
         <div className="col-span-1 justify-self-center">
           <img
-            alt="fist-bump"
-            src="./illustrations/fist-bump.svg"
-            className="py-4 h-[20rem]"
+            alt="Guest Auditor"
+            src="/ga.jpeg"
+            className="py-4 h-[30rem]"
           />
         </div>
       </div>

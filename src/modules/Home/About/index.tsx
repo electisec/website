@@ -1,16 +1,13 @@
-import HyperText from "@/components/ui/hyper-text";
-
 export const About = () => {
   return (
     <div className="bg-white text-lg my-16">
-      <HyperText
-        className="lg:text-4xl text-3xl font-bold"
-        text="About the Team"
-      />
+      <h2 className="lg:text-4xl text-3xl font-bold">
+        About the Team
+      </h2>
       <div className="grid lg:grid-cols-2 sm:grid-cols-1 gap-8 text-zinc-700  mt-8">
-        <div className="cols-span-1">
+        <div className="cols-span-1 text-md">
           <p className="">
-            Electisec is focused on smart contracts and zero-knowledge security:{" "}
+            yAudit is focused on smart contracts and zero-knowledge security:{" "}
             <i className="font-semibold">
               auditing, research, and increasingly tooling.
             </i>
@@ -57,7 +54,7 @@ export const About = () => {
           <p>
             Our expansion in ZK Security was accelerated by {" "}
             <a
-              className="hover:underline font-bold duration-700 text-darkgreen"
+              className="hover:underline font-bold duration-700 text-deepblue"
               href="https://x.com/electisec/status/1787559678026948811"
             >
               a grant from the Ethereum Foundation
@@ -67,7 +64,8 @@ export const About = () => {
         </div>
         <div className="lg:cols-span-1 sm:hidden md:hidden">
           <img
-            src="./illustrations/hands on shield.svg"
+            src="/team.jpeg"
+            alt="Team"
             className="h-[26rem] mx-auto mt-6"
           />
         </div>

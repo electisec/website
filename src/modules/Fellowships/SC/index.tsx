@@ -46,26 +46,26 @@ function SmartContracts() {
         </div>
         <div className="col-span-1 m-4">
           <div className="grid grid-cols-2 gap-2">
-            <div className="border col-span-1 rounded-xl p-4">
+            <div className="border border-deepblue col-span-1 p-4 hover:-translate-y-1 transition-transform duration-300">
               <p className="text-xl font-semibold leading-6 text-gray-600">
                 Duration
               </p>
-              <p className="text-sm font-semibold leading-6 text-darkgreen">
+              <p className="text-sm font-semibold leading-6 text-deepblue">
                 4-6 weeks
               </p>
             </div>
-            <div className="border col-span-1 rounded-xl p-4">
+            <div className="border border-deepblue col-span-1 p-4 hover:-translate-y-1 transition-transform duration-300">
               <p className="text-xl font-semibold leading-6 text-gray-600">
                 Time Commitment
               </p>
-              <p className="text-sm font-semibold leading-6 text-darkgreen">
+              <p className="text-sm font-semibold leading-6 text-deepblue">
                 {">"} 20 hours/week
               </p>
             </div>
           </div>
           <p className="my-4">
             There is a requirement to{" "}
-            <span className="text-green-600 font-bold">stake some ETH</span> to
+            <span className="text-deepblue font-bold">stake some ETH</span> to
             ensure engagement and participation from all fellows.
           </p>
           <p>
@@ -74,14 +74,14 @@ function SmartContracts() {
               onClick={() => {
                 window.scrollTo({ top: 0, behavior: "smooth" });
               }}
-              className="text-green-600 font-bold hover:underline duration-700 mb-4"
+              className="text-deepblue font-bold hover:underline duration-700 mb-4"
             >
               general structure and guidelines of our programs
             </button>
             .
           </p>
           <a href="https://tally.so/r/nG9o6e" target="_blank">
-            <button className="w-1/2 px-8 py-3 rounded-xl text-md text-darkgreen text-bold bg-emeraldlight bg-opacity-25 hover:bg-opacity-5 hover:text-emeraldlight duration-700">
+            <button className="w-1/2 px-8 py-3 text-md text-white text-bold bg-deepblue hover:bg-white hover:text-deepblue hover:border hover:border-deepblue duration-700">
               Apply
             </button>
           </a>

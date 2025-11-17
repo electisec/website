@@ -3,12 +3,12 @@ import NumberTicker from "@/components/ui/number-ticker";
 
 export function AuditStats() {
   return (
-    <div className="relative lg:h-[40vh] md:h-[28vh] sm:h-[50vh] my-6 rounded-lg w-full bg-background overflow-hidden">
+    <div className="relative lg:h-[40vh] md:h-[28vh] sm:h-[50vh] my-6 w-full bg-background overflow-hidden">
       <FlickeringGrid
         className="z-0 absolute inset-0 size-full"
         squareSize={4}
         gridGap={6}
-        color="#080444"
+        color="#000000"
         maxOpacity={0.1}
         flickerChance={0.1}
         height={1000}
