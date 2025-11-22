@@ -111,7 +111,7 @@ const DATA = {
       },
       X: {
         name: "X",
-        url: "https://www.x.com/electisec",
+        url: "https://www.x.com/yAuditDAO",
         icon: Icons.x,
       },
       youtube: {

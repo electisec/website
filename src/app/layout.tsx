@@ -60,8 +60,8 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    site: "@electisec",
-    creator: "@electisec",
+    site: "@yauditdao",
+    creator: "@yauditdao",
     images: "https://yaudit.dev/twitter.png",
   },
 };
