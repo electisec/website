@@ -10,7 +10,7 @@
     "setup-webhook": "ts-node scripts/setup-webhook.ts"
   },
   "engines": {
-    "node": "20.9.0"
+    "node": "22.13.0"
   },
   "dependencies": {
     "@ant-design/icons": "^4.8.3",
