@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import "./globals.css";
 import { Space_Grotesk } from "next/font/google";
 import GoogleAnalytics from "@/app/gtag";
+import RebrandingBanner from "@/components/RebrandingBanner";
 
 const spaceGrotesk = Space_Grotesk({
   subsets: ["latin"],
@@ -18,7 +19,10 @@ export default function RootLayout({
       <head>
         <GoogleAnalytics />
       </head>
-      <body className={""}>{children}</body>
+      <body className={""}>
+        <RebrandingBanner />
+        {children}
+      </body>
     </html>
   );
 }
