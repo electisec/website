@@ -75,7 +75,7 @@ export default function RebrandingBanner() {
           </svg>
           Read our{" "}
           <a
-            href="https://yaudit.dev"
+            href="https://x.com/yAuditDAO/status/1993281108138442902"
             target="_blank"
             rel="noopener noreferrer"
             className="font-semibold underline hover:no-underline"
